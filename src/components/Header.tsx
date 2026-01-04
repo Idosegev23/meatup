@@ -48,7 +48,7 @@ export default function Header() {
     { href: '#contact', id: 'contact', label: dict.nav.contact },
   ];
 
-  const allNavItems = [...leftNavItems, ...rightNavItems];
+  const allNavItems: { href: string; id: string; label: string; isExternal?: boolean }[] = [...leftNavItems, ...rightNavItems];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
