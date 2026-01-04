@@ -162,15 +162,18 @@ export default function HomePage() {
             />
           </div>
 
-          {/* CTA Cards (like Kisu) */}
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(2, 1fr)', 
-            gap: '24px', 
-            marginTop: '60px',
-            maxWidth: '700px',
-            margin: '60px auto 0 auto'
-          }}>
+        </div>
+
+        {/* CTA Cards (like Kisu) - Full width */}
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(2, 1fr)', 
+          gap: '64px', 
+          marginTop: '40px',
+          maxWidth: '1200px',
+          margin: '40px auto 0 auto',
+          padding: '0 24px',
+        }}>
             {/* Reserve Table Card */}
             <a
               href={config.tabitUrl}
@@ -178,15 +181,14 @@ export default function HomePage() {
               rel="noopener noreferrer"
               style={{
                 position: 'relative',
-                aspectRatio: '4/3',
-                borderRadius: '8px',
+                aspectRatio: '16/10',
                 overflow: 'hidden',
                 display: 'block',
                 textDecoration: 'none',
               }}
             >
               <Image
-                src="/imgs/meatupimgs/img22_processed.webp"
+                src="/imgs/meatupimgs/new1.webp"
                 alt={language === 'he' ? 'הזמנת שולחן' : 'Reserve Table'}
                 fill
                 className="object-cover transition-transform duration-300 hover:scale-105"
@@ -198,11 +200,11 @@ export default function HomePage() {
                 display: 'flex',
                 alignItems: 'flex-end',
                 justifyContent: 'center',
-                padding: '20px',
+                padding: '24px',
               }}>
                 <span style={{
                   color: '#F4F4F2',
-                  fontSize: '1.25rem',
+                  fontSize: '1.5rem',
                   fontWeight: 600,
                   textShadow: '0 2px 4px rgba(0,0,0,0.3)',
                 }}>
@@ -218,15 +220,14 @@ export default function HomePage() {
               rel="noopener noreferrer"
               style={{
                 position: 'relative',
-                aspectRatio: '4/3',
-                borderRadius: '8px',
+                aspectRatio: '16/10',
                 overflow: 'hidden',
                 display: 'block',
                 textDecoration: 'none',
               }}
             >
               <Image
-                src="/imgs/meatupimgs/img21_processed.webp"
+                src="/imgs/meatupimgs/new2.webp"
                 alt={language === 'he' ? 'משלוחים' : 'Delivery'}
                 fill
                 className="object-cover transition-transform duration-300 hover:scale-105"
@@ -238,11 +239,11 @@ export default function HomePage() {
                 display: 'flex',
                 alignItems: 'flex-end',
                 justifyContent: 'center',
-                padding: '20px',
+                padding: '24px',
               }}>
                 <span style={{
                   color: '#F4F4F2',
-                  fontSize: '1.25rem',
+                  fontSize: '1.5rem',
                   fontWeight: 600,
                   textShadow: '0 2px 4px rgba(0,0,0,0.3)',
                 }}>
@@ -251,7 +252,6 @@ export default function HomePage() {
               </div>
             </a>
           </div>
-        </div>
       </section>
 
       {/* Menu Section */}
@@ -276,20 +276,20 @@ export default function HomePage() {
         }}>
           <span style={{
             color: '#0D0D0D',
-            fontSize: '1.1rem',
-            fontWeight: 500,
+            fontSize: '2rem',
+            fontWeight: 700,
           }}>
             {language === 'he' 
-              ? 'רוצים לחגוג אצלנו ב-MEATUP? אירועים פרטיים, ימי הולדת ומפגשים עסקיים' 
-              : 'Want to celebrate at MEATUP? Private events, birthdays and business meetings'}
+              ? 'רוצים לחגוג אצלנו ב-MEATUP? לחצו להזמנת שולחן!' 
+              : 'Want to celebrate at MEATUP? Click to reserve a table!'}
           </span>
           <a
             href={config.tabitUrl}
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              backgroundColor: '#0D0D0D',
-              color: '#F4F4F2',
+              backgroundColor: '#CD7F32',
+              color: '#0D0D0D',
               padding: '12px 28px',
               fontWeight: 600,
               fontSize: '0.95rem',
@@ -298,13 +298,14 @@ export default function HomePage() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
+              border: '2px solid #0D0D0D',
             }}
             onMouseEnter={(e) => { 
-              e.currentTarget.style.backgroundColor = '#1A1A1A'; 
+              e.currentTarget.style.backgroundColor = '#b8722d'; 
               e.currentTarget.style.transform = 'translateY(-2px)'; 
             }}
             onMouseLeave={(e) => { 
-              e.currentTarget.style.backgroundColor = '#0D0D0D'; 
+              e.currentTarget.style.backgroundColor = '#CD7F32'; 
               e.currentTarget.style.transform = 'translateY(0)'; 
             }}
           >

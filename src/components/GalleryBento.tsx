@@ -32,16 +32,8 @@ export default function GalleryBento() {
 
   return (
     <section id="gallery" className="bg-[#0D0D0D]">
-      {/* Header */}
-      <div style={{ padding: '80px 24px 48px 24px', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '2.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '24px' }}>
-          {dict.gallery.title}
-        </h2>
-        <div style={{ width: '64px', height: '2px', backgroundColor: '#CD7F32', margin: '0 auto' }} />
-      </div>
-
-      {/* Full Width Grid Gallery - no padding */}
-      <div className="grid grid-cols-3 md:grid-cols-5" style={{ gap: '2px' }}>
+      {/* Full Width Grid Gallery - minimal padding */}
+      <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: '4px', padding: '0 4px' }}>
           {galleryImages.map((image, index) => (
             <button
               key={image.id}
@@ -53,7 +45,7 @@ export default function GalleryBento() {
                 alt={language === 'he' ? image.alt.he : image.alt.en}
                 fill
                 className="object-cover transition-transform duration-300 hover:scale-105"
-                sizes="(max-width: 768px) 33vw, 250px"
+                sizes="(max-width: 768px) 50vw, 25vw"
               />
             </button>
           ))}

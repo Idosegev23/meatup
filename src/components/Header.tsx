@@ -80,7 +80,7 @@ export default function Header() {
       target={item.isExternal ? '_blank' : undefined}
       rel={item.isExternal ? 'noopener noreferrer' : undefined}
       style={{
-        fontSize: '14px',
+        fontSize: '16px',
         fontWeight: 500,
         color: activeSection === item.id ? '#CD7F32' : '#0D0D0D',
         transition: 'color 0.2s',
@@ -137,14 +137,14 @@ export default function Header() {
           style={{
             position: 'relative',
             width: '100%',
-            maxWidth: '750px',
+            maxWidth: '900px',
           }}
         >
           {/* Logo with social icons - Positioned above the container (like Kisu) */}
           <div
             style={{
               position: 'absolute',
-              left: '50%',
+              left: 'calc(50% + 30px)',
               top: '50%',
               transform: 'translate(-50%, -50%)',
               zIndex: 10,
@@ -244,7 +244,7 @@ export default function Header() {
           {/* Main Header Bar */}
           <header
             style={{
-              height: '56px',
+              height: '64px',
               backgroundColor: '#F4F4F2',
               borderRadius: '0',
               boxShadow: '0 4px 20px rgba(0, 0, 0, 0.12)',

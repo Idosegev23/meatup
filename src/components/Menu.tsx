@@ -53,9 +53,9 @@ export default function Menu() {
                 {/* Square Image (no radius) */}
                 <div style={{ 
                   position: 'relative', 
-                  width: '140px', 
-                  height: '140px', 
-                  borderRadius: '0', 
+                  width: '180px', 
+                  height: '180px', 
+                  borderRadius: '50%', 
                   overflow: 'hidden', 
                   border: '4px solid rgba(50,50,50,0.8)',
                   boxShadow: '0 4px 20px rgba(0,0,0,0.4), inset 0 0 20px rgba(0,0,0,0.3)',
@@ -94,20 +94,20 @@ export default function Menu() {
 
             {/* Modal Content */}
             <motion.div
-              className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
+              className="fixed inset-0 z-50 flex items-center justify-center p-6 md:p-12"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
               <motion.div
-                className="w-full max-w-2xl max-h-[80vh] overflow-hidden"
+                className="w-full max-w-2xl max-h-[85vh] overflow-hidden"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ type: 'spring', damping: 25, stiffness: 300 }}
                 onClick={(e) => e.stopPropagation()}
               >
-              <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] rounded-2xl overflow-hidden shadow-2xl border border-[#CD7F32]/20">
+              <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] rounded-2xl overflow-hidden shadow-2xl border border-[#CD7F32]/20" style={{ margin: '16px' }}>
                 {/* Header */}
                 <div className="relative h-32 md:h-40">
                   <Image
@@ -137,8 +137,8 @@ export default function Menu() {
                 </div>
 
                 {/* Items List */}
-                <div className="p-8 md:p-10 overflow-y-auto max-h-[calc(80vh-10rem)] custom-scrollbar">
-                  <div className="space-y-1">
+                <div style={{ padding: '32px 40px', overflowY: 'auto', maxHeight: 'calc(85vh - 12rem)' }} className="custom-scrollbar">
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                     {selectedCategory.items.map((item, index) => (
                       item.isSubheader ? (
                         // Subheader styling
