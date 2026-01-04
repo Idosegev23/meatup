@@ -165,15 +165,7 @@ export default function HomePage() {
         </div>
 
         {/* CTA Cards (like Kisu) - Full width */}
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(2, 1fr)', 
-          gap: '64px', 
-          marginTop: '40px',
-          maxWidth: '1200px',
-          margin: '40px auto 0 auto',
-          padding: '0 24px',
-        }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 mt-10 max-w-[1200px] mx-auto px-4 md:px-6">
             {/* Reserve Table Card */}
             <a
               href={config.tabitUrl}

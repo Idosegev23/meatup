@@ -141,6 +141,7 @@ export const menuData: MenuCategory[] = [
     image: "/imgs/meatupimgs/wine.webp",
     items: [
       // בירות מהחבית
+      { id: "subheader-draft", name: { he: "בירות מהחבית", en: "Draft Beers" }, price: 0, isSubheader: true },
       { id: "tuborg-draft-small", name: { he: "טובורג מהחבית 1/3", en: "Tuborg Draft 1/3" }, price: 24 },
       { id: "tuborg-draft-large", name: { he: "טובורג מהחבית 1/2", en: "Tuborg Draft 1/2" }, price: 32 },
       { id: "carlsberg-draft-small", name: { he: "קרלסברג מהחבית 1/3", en: "Carlsberg Draft 1/3" }, price: 24 },
@@ -148,6 +149,7 @@ export const menuData: MenuCategory[] = [
       { id: "weihenstephan-small", name: { he: "וויינשטפן 1/3", en: "Weihenstephan 1/3" }, price: 26 },
       { id: "weihenstephan-large", name: { he: "וויינשטפן 1/2", en: "Weihenstephan 1/2" }, price: 34 },
       // בירות בבקבוק
+      { id: "subheader-bottle", name: { he: "בירות בבקבוק", en: "Bottled Beers" }, price: 0, isSubheader: true },
       { id: "tuborg-bottle", name: { he: "טובורג בקבוק", en: "Tuborg Bottle" }, price: 28 },
       { id: "stella-bottle", name: { he: "סטלה", en: "Stella" }, price: 28 },
       { id: "goldstar-bottle", name: { he: "גולדסטאר", en: "Goldstar" }, price: 28 },
@@ -156,24 +158,29 @@ export const menuData: MenuCategory[] = [
       { id: "malka-bottle", name: { he: "מלכה בהירה", en: "Malka Light" }, price: 28 },
       { id: "carlsberg-zero", name: { he: "קרלסברג 0% אלכוהול", en: "Carlsberg 0% Alcohol" }, price: 18 },
       // יינות
+      { id: "subheader-wine", name: { he: "יינות", en: "Wines" }, price: 0, isSubheader: true },
       { id: "barkan-platinum", name: { he: "ברקן פלטינום בציר", en: "Barkan Platinum Vintage" }, price: 160 },
       { id: "barkan-seven-hills", name: { he: "ברקן סבן הילס בציר", en: "Barkan Seven Hills" }, price: 140 },
       { id: "morelli-cs", name: { he: "מורלי ק.ס.", en: "Morelli C.S." }, price: 120 },
       { id: "morelli-chardonnay", name: { he: "מורלי שרדונה", en: "Morelli Chardonnay" }, price: 120 },
       // אפריטיף
+      { id: "subheader-aperitif", name: { he: "אפריטיף", en: "Aperitifs" }, price: 0, isSubheader: true },
       { id: "martini", name: { he: "מרטיני ביאנקו / רוסו", en: "Martini Bianco / Rosso" }, price: 26 },
       { id: "campari", name: { he: "קמפרי", en: "Campari" }, price: 28 },
       { id: "aperol", name: { he: "אפרול", en: "Aperol" }, price: 28 },
       // ערק ואוזו
+      { id: "subheader-arak", name: { he: "ערק ואוזו", en: "Arak & Ouzo" }, price: 0, isSubheader: true },
       { id: "arak-ayalot", name: { he: "ערק איילות", en: "Arak Ayalot" }, price: 26 },
       { id: "arak-zafir", name: { he: "ערק זפייר", en: "Arak Zafir" }, price: 28 },
       { id: "ouzo-12", name: { he: "אוזו 12", en: "Ouzo 12" }, price: 28 },
       // וודקה
+      { id: "subheader-vodka", name: { he: "וודקה", en: "Vodka" }, price: 0, isSubheader: true },
       { id: "smirnoff", name: { he: "סמירנוף", en: "Smirnoff" }, price: 28 },
       { id: "ketel-one", name: { he: "קטל ONE", en: "Ketel One" }, price: 36 },
       { id: "grey-goose", name: { he: "גרייגוס", en: "Grey Goose" }, price: 42 },
       { id: "beluga", name: { he: "בלוגה", en: "Beluga" }, price: 42 },
       // וויסקי
+      { id: "subheader-whiskey", name: { he: "וויסקי", en: "Whiskey" }, price: 0, isSubheader: true },
       { id: "jw-red", name: { he: "ג'וני ווקר אדום", en: "Johnnie Walker Red" }, price: 32 },
       { id: "jw-black", name: { he: "ג'וני ווקר שחור", en: "Johnnie Walker Black" }, price: 42 },
       { id: "jw-gold", name: { he: "ג'וני ווקר גולד", en: "Johnnie Walker Gold" }, price: 55 },
@@ -187,16 +194,20 @@ export const menuData: MenuCategory[] = [
       { id: "jack-daniels", name: { he: "ג'ק דניאלס", en: "Jack Daniel's" }, price: 38 },
       { id: "gentleman-jack", name: { he: "ג'נטלמן ג'ק", en: "Gentleman Jack" }, price: 46 },
       // טקילה
+      { id: "subheader-tequila", name: { he: "טקילה", en: "Tequila" }, price: 0, isSubheader: true },
       { id: "don-julio", name: { he: "דון חוליו רפוסדו", en: "Don Julio Reposado" }, price: 42 },
       { id: "cuervo", name: { he: "קווארבו", en: "Jose Cuervo" }, price: 34 },
       { id: "patron", name: { he: "פטרון", en: "Patron" }, price: 55 },
       // רום
+      { id: "subheader-rum", name: { he: "רום", en: "Rum" }, price: 0, isSubheader: true },
       { id: "captain-morgan-spiced", name: { he: "קפטן מורגן SPICED", en: "Captain Morgan Spiced" }, price: 32 },
       { id: "captain-morgan-white", name: { he: "קפטן מורגן לבן", en: "Captain Morgan White" }, price: 24 },
       // ג'ין
+      { id: "subheader-gin", name: { he: "ג'ין", en: "Gin" }, price: 0, isSubheader: true },
       { id: "gordons", name: { he: "גורדונס", en: "Gordon's" }, price: 36 },
       { id: "tanqueray", name: { he: "טנקרי", en: "Tanqueray" }, price: 36 },
       // דז'סטיף
+      { id: "subheader-digestif", name: { he: "דז'סטיף", en: "Digestif" }, price: 0, isSubheader: true },
       { id: "fernet-branca", name: { he: "פרנה ברנקה", en: "Fernet Branca" }, price: 32 }
     ]
   },

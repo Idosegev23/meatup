@@ -38,23 +38,22 @@ export default function Menu() {
           </div>
 
           {/* Category Circles */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '40px' }}>
+          <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-6 md:gap-10">
             {menuData.map((category, index) => (
               <motion.button
                 key={category.id}
                 onClick={() => setSelectedCategory(category)}
-                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'none', border: 'none', cursor: 'pointer' }}
+                className="flex flex-col items-center"
+                style={{ background: 'none', border: 'none', cursor: 'pointer' }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.4 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {/* Square Image (no radius) */}
-                <div style={{ 
+                {/* Circle Image */}
+                <div className="w-[120px] h-[120px] md:w-[180px] md:h-[180px]" style={{ 
                   position: 'relative', 
-                  width: '180px', 
-                  height: '180px', 
                   borderRadius: '50%', 
                   overflow: 'hidden', 
                   border: '4px solid rgba(50,50,50,0.8)',
