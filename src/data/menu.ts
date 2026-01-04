@@ -97,7 +97,7 @@ export const menuData: MenuCategory[] = [
       he: "מנות ילדים",
       en: "Kids Menu"
     },
-    image: "/imgs/meatupimgs/burgers.webp",
+    image: "/imgs/meatupimgs/img6_processed.webp",
     items: [
       { id: "kids-burger", name: { he: "בורגר ילדים", en: "Kids Burger" }, price: 58 },
       { id: "kids-schnitzel", name: { he: "שניצלוני חזה עוף", en: "Chicken Breast Schnitzel" }, price: 58 },
