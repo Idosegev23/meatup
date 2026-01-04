@@ -327,32 +327,57 @@ export default function Header() {
                 style={{
                   overflow: 'hidden',
                   transition: 'max-height 0.3s ease, opacity 0.3s ease',
-                  maxHeight: isMobileMenuOpen ? '400px' : '0',
+                  maxHeight: isMobileMenuOpen ? '500px' : '0',
                   opacity: isMobileMenuOpen ? 1 : 0,
-                  backgroundColor: '#F4F4F2',
-                  borderRadius: '0',
-                  marginTop: '-20px',
-                  paddingTop: '20px',
+                  backgroundColor: '#0D0D0D',
+                  marginTop: '8px',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
                 }}
                 className="md:hidden"
               >
-            <nav style={{ padding: '16px 24px' }}>
+            <nav style={{ padding: '24px 32px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
               {allNavItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
+                  onClick={item.isExternal ? undefined : (e) => handleNavClick(e, item.href)}
+                  target={item.isExternal ? '_blank' : undefined}
+                  rel={item.isExternal ? 'noopener noreferrer' : undefined}
                   style={{
                     display: 'block',
-                    padding: '12px 0',
-                    fontSize: '16px',
+                    padding: '14px 16px',
+                    fontSize: '18px',
                     fontWeight: 500,
-                    color: activeSection === item.id ? '#CD7F32' : '#0D0D0D',
+                    color: activeSection === item.id ? '#CD7F32' : '#F4F4F2',
+                    textAlign: 'center',
+                    borderBottom: '1px solid rgba(255,255,255,0.1)',
+                    textDecoration: 'none',
                   }}
                 >
                   {item.label}
                 </a>
               ))}
+              
+              {/* Reserve Button in Mobile Menu */}
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  handleReserveClick();
+                }}
+                style={{
+                  marginTop: '16px',
+                  padding: '16px 24px',
+                  backgroundColor: '#CD7F32',
+                  color: '#0D0D0D',
+                  fontWeight: 600,
+                  fontSize: '18px',
+                  border: 'none',
+                  cursor: 'pointer',
+                  width: '100%',
+                }}
+              >
+                {dict.nav.reserve}
+              </button>
             </nav>
           </div>
         </div>
