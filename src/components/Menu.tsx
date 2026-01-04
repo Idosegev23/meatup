@@ -147,9 +147,11 @@ export default function Menu() {
                             <h4 className="text-lg font-semibold text-[#F4F4F2] mb-1">
                               {language === 'he' ? item.name.he : item.name.en}
                             </h4>
-                            <p className="text-[#F4F4F2]/50 text-sm leading-relaxed">
-                              {language === 'he' ? item.description.he : item.description.en}
-                            </p>
+                            {item.description && (
+                              <p className="text-[#F4F4F2]/50 text-sm leading-relaxed">
+                                {language === 'he' ? item.description.he : item.description.en}
+                              </p>
+                            )}
                           </div>
                           <div className="text-lg font-bold text-[#CD7F32] whitespace-nowrap">
                             {dict.menu.currency}{item.price}
