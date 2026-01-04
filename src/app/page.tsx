@@ -161,6 +161,96 @@ export default function HomePage() {
               className="object-cover"
             />
           </div>
+
+          {/* CTA Cards (like Kisu) */}
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(2, 1fr)', 
+            gap: '24px', 
+            marginTop: '60px',
+            maxWidth: '700px',
+            margin: '60px auto 0 auto'
+          }}>
+            {/* Reserve Table Card */}
+            <a
+              href={config.tabitUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                position: 'relative',
+                aspectRatio: '4/3',
+                borderRadius: '8px',
+                overflow: 'hidden',
+                display: 'block',
+                textDecoration: 'none',
+              }}
+            >
+              <Image
+                src="/imgs/meatupimgs/img22_processed.webp"
+                alt={language === 'he' ? 'הזמנת שולחן' : 'Reserve Table'}
+                fill
+                className="object-cover transition-transform duration-300 hover:scale-105"
+              />
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2))',
+                display: 'flex',
+                alignItems: 'flex-end',
+                justifyContent: 'center',
+                padding: '20px',
+              }}>
+                <span style={{
+                  color: '#F4F4F2',
+                  fontSize: '1.25rem',
+                  fontWeight: 600,
+                  textShadow: '0 2px 4px rgba(0,0,0,0.3)',
+                }}>
+                  {language === 'he' ? 'הזמנת שולחן' : 'Reserve Table'}
+                </span>
+              </div>
+            </a>
+
+            {/* Delivery Card */}
+            <a
+              href={config.tabitUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                position: 'relative',
+                aspectRatio: '4/3',
+                borderRadius: '8px',
+                overflow: 'hidden',
+                display: 'block',
+                textDecoration: 'none',
+              }}
+            >
+              <Image
+                src="/imgs/meatupimgs/img21_processed.webp"
+                alt={language === 'he' ? 'משלוחים' : 'Delivery'}
+                fill
+                className="object-cover transition-transform duration-300 hover:scale-105"
+              />
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2))',
+                display: 'flex',
+                alignItems: 'flex-end',
+                justifyContent: 'center',
+                padding: '20px',
+              }}>
+                <span style={{
+                  color: '#F4F4F2',
+                  fontSize: '1.25rem',
+                  fontWeight: 600,
+                  textShadow: '0 2px 4px rgba(0,0,0,0.3)',
+                }}>
+                  {language === 'he' ? 'משלוחים / איסוף עצמי' : 'Delivery / Pickup'}
+                </span>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
 

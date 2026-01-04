@@ -50,13 +50,22 @@ export default function Menu() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {/* Circle Image */}
-                <div style={{ position: 'relative', width: '130px', height: '130px', borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(205,127,50,0.4)' }}>
+                {/* Circle Image (Kisu style - dark border) */}
+                <div style={{ 
+                  position: 'relative', 
+                  width: '140px', 
+                  height: '140px', 
+                  borderRadius: '50%', 
+                  overflow: 'hidden', 
+                  border: '4px solid rgba(50,50,50,0.8)',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.4), inset 0 0 20px rgba(0,0,0,0.3)',
+                }}>
                   <Image
                     src={category.image}
                     alt={language === 'he' ? category.name.he : category.name.en}
                     fill
                     className="object-cover"
+                    style={{ filter: 'brightness(0.9) contrast(1.05)' }}
                   />
                 </div>
                 
