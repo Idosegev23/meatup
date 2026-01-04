@@ -26,8 +26,14 @@ export default function About() {
             
             <div className="w-16 h-0.5 bg-bronze mb-8" />
             
+            <p className="text-lg text-off-white/80 leading-relaxed mb-4">
+              {dict.about.text1}
+            </p>
+            <p className="text-lg text-off-white/80 leading-relaxed mb-4">
+              {dict.about.text2}
+            </p>
             <p className="text-lg text-off-white/80 leading-relaxed mb-8">
-              {dict.about.text}
+              {dict.about.text3}
             </p>
 
             <a
