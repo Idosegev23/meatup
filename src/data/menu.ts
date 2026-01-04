@@ -253,6 +253,106 @@ export const menuData: MenuCategory[] = [
     ]
   },
   {
+    id: "drinks",
+    name: {
+      he: "משקאות",
+      en: "Drinks"
+    },
+    image: "/imgs/meatupimgs/bevreges.webp",
+    items: [
+      {
+        id: "coca-cola",
+        name: { he: "קוקה קולה", en: "Coca Cola" },
+        price: 14
+      },
+      {
+        id: "cola-zero",
+        name: { he: "קולה זירו", en: "Cola Zero" },
+        price: 14
+      },
+      {
+        id: "diet-cola",
+        name: { he: "דיאט קולה", en: "Diet Cola" },
+        price: 14
+      },
+      {
+        id: "fanta",
+        name: { he: "פאנטה", en: "Fanta" },
+        price: 14
+      },
+      {
+        id: "sprite",
+        name: { he: "ספרייט", en: "Sprite" },
+        price: 14
+      },
+      {
+        id: "sprite-zero",
+        name: { he: "ספרייט זירו", en: "Sprite Zero" },
+        price: 14
+      },
+      {
+        id: "prigat-grapes",
+        name: { he: "פריגת ענבים", en: "Prigat Grapes" },
+        price: 14
+      },
+      {
+        id: "prigat-orange",
+        name: { he: "פריגת תפוזים", en: "Prigat Orange" },
+        price: 14
+      },
+      {
+        id: "prigat-grapefruit",
+        name: { he: "פריגת אשכוליות", en: "Prigat Grapefruit" },
+        price: 14
+      },
+      {
+        id: "prigat-lemonade",
+        name: { he: "פריגת לימונענע", en: "Prigat Lemonade" },
+        price: 14
+      },
+      {
+        id: "prigat-apple",
+        name: { he: "פריגת תפוחים", en: "Prigat Apple" },
+        price: 14
+      },
+      {
+        id: "fuze-tea",
+        name: { he: "פיוז טי אפרסק", en: "Fuze Tea Peach" },
+        price: 14
+      },
+      {
+        id: "nesher-malt",
+        name: { he: "נשר מאלט", en: "Nesher Malt" },
+        price: 14
+      },
+      {
+        id: "neviot-peach",
+        name: { he: "נביעות בטעמים אפרסק", en: "Neviot Peach" },
+        price: 14
+      },
+      {
+        id: "neviot-apple",
+        name: { he: "נביעות בטעמים תפוח", en: "Neviot Apple" },
+        price: 14
+      },
+      {
+        id: "neviot-grapes",
+        name: { he: "נביעות בטעמים ענבים", en: "Neviot Grapes" },
+        price: 14
+      },
+      {
+        id: "soda",
+        name: { he: "סודה", en: "Soda" },
+        price: 12
+      },
+      {
+        id: "mineral-water",
+        name: { he: "מים מינרליים", en: "Mineral Water" },
+        price: 12
+      }
+    ]
+  },
+  {
     id: "desserts",
     name: {
       he: "קינוחים",
