@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { config } from '@/data/config';
@@ -9,9 +9,24 @@ import Menu from '@/components/Menu';
 import GalleryBento from '@/components/GalleryBento';
 import Contact from '@/components/Contact';
 
+const heroImages = [
+  '/imgs/meatupimgs/hero.webp',
+  '/imgs/meatupimgs/meats.webp',
+  '/imgs/meatupimgs/img17_processed.webp',
+];
+
 export default function HomePage() {
   const { dict, language } = useLanguage();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Auto-rotate hero images
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000); // Change image every 5 seconds
+    return () => clearInterval(interval);
+  }, []);
 
   const handleReserveClick = () => {
     if (typeof window !== 'undefined' && window.innerWidth < 768) {
@@ -32,15 +47,27 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-end justify-center" style={{ paddingBottom: '35vh' }}>
-        {/* Background Image */}
+        {/* Background Images - Rotating */}
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/imgs/meatupimgs/hero.webp"
-            alt="Premium steak"
-            fill
-            priority
-            className="object-cover"
-          />
+          {heroImages.map((src, index) => (
+            <div
+              key={src}
+              style={{
+                position: 'absolute',
+                inset: 0,
+                opacity: currentImageIndex === index ? 1 : 0,
+                transition: 'opacity 1s ease-in-out',
+              }}
+            >
+              <Image
+                src={src}
+                alt="Premium steak"
+                fill
+                priority={index === 0}
+                className="object-cover"
+              />
+            </div>
+          ))}
           <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/70 via-[#0D0D0D]/50 to-[#0D0D0D]" />
         </div>
 
