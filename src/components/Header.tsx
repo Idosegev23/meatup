@@ -134,10 +134,9 @@ export default function Header() {
 
         {/* Menu Container */}
         <div
+          className="w-full md:max-w-[900px]"
           style={{
             position: 'relative',
-            width: '100%',
-            maxWidth: '900px',
           }}
         >
           {/* Logo with social icons - Desktop: above container, Mobile: inside header */}
@@ -243,9 +242,9 @@ export default function Header() {
 
           {/* Main Header Bar */}
           <header
+            className="bg-[#0D0D0D] md:bg-[#F4F4F2]"
             style={{
               height: '64px',
-              backgroundColor: '#F4F4F2',
               borderRadius: '0',
               boxShadow: '0 4px 20px rgba(0, 0, 0, 0.12)',
               display: 'flex',
@@ -298,7 +297,7 @@ export default function Header() {
               </button>
             </div>
 
-            {/* Mobile Logo - Inside header */}
+            {/* Mobile Logo - Inside header, centered */}
             <a
               href="#hero"
               onClick={(e) => handleNavClick(e, '#hero')}
@@ -306,41 +305,73 @@ export default function Header() {
               style={{
                 position: 'absolute',
                 left: '50%',
-                top: '50%',
-                transform: 'translate(-50%, -50%)',
+                transform: 'translateX(-50%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
             >
               <img
                 src="/logofull.png"
                 alt="MEATUP"
                 style={{ 
-                  height: '50px', 
+                  height: '45px', 
                   width: 'auto',
                 }}
               />
             </a>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - Burger Style with Animation */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden"
               style={{
                 padding: '8px',
-                color: '#0D0D0D',
                 background: 'none',
                 border: 'none',
                 cursor: 'pointer',
                 marginRight: 'auto',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '4px',
+                width: '36px',
+                height: '36px',
+                position: 'relative',
               }}
               aria-label={isMobileMenuOpen ? dict.a11y.closeMenu : dict.a11y.openMenu}
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {isMobileMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
+              {/* Top bun / X line 1 */}
+              <span style={{ 
+                display: 'block',
+                width: '24px', 
+                height: '5px', 
+                backgroundColor: '#CD7F32', 
+                borderRadius: isMobileMenuOpen ? '2px' : '6px 6px 2px 2px',
+                transition: 'all 0.3s ease',
+                transform: isMobileMenuOpen ? 'translateY(9px) rotate(45deg)' : 'translateY(0) rotate(0)',
+              }} />
+              {/* Patty / hidden */}
+              <span style={{ 
+                display: 'block',
+                width: '26px', 
+                height: '5px', 
+                backgroundColor: '#8B4513', 
+                borderRadius: '2px',
+                transition: 'all 0.3s ease',
+                opacity: isMobileMenuOpen ? 0 : 1,
+              }} />
+              {/* Bottom bun / X line 2 */}
+              <span style={{ 
+                display: 'block',
+                width: '24px', 
+                height: '5px', 
+                backgroundColor: '#CD7F32', 
+                borderRadius: isMobileMenuOpen ? '2px' : '2px 2px 4px 4px',
+                transition: 'all 0.3s ease',
+                transform: isMobileMenuOpen ? 'translateY(-9px) rotate(-45deg)' : 'translateY(0) rotate(0)',
+              }} />
             </button>
           </header>
 
@@ -354,10 +385,11 @@ export default function Header() {
                   backgroundColor: '#0D0D0D',
                   marginTop: '8px',
                   boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
+                  width: '100%',
                 }}
                 className="md:hidden"
               >
-            <nav style={{ padding: '24px 32px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            <nav style={{ padding: '20px 24px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
               {allNavItems.map((item) => (
                 <a
                   key={item.href}
