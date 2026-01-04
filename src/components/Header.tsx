@@ -246,7 +246,7 @@ export default function Header() {
             style={{
               height: '56px',
               backgroundColor: '#F4F4F2',
-              borderRadius: '50px',
+              borderRadius: '0',
               boxShadow: '0 4px 20px rgba(0, 0, 0, 0.12)',
               display: 'flex',
               alignItems: 'center',
@@ -272,21 +272,21 @@ export default function Header() {
               {rightNavItems.map((item) => (
                 <NavLink key={item.href} item={item} />
               ))}
-              <button
-                onClick={handleReserveClick}
-                style={{
-                  padding: '10px 20px',
-                  backgroundColor: '#CD7F32',
-                  color: '#F4F4F2',
-                  fontWeight: 600,
-                  fontSize: '13px',
-                  border: 'none',
-                  borderRadius: '25px',
-                  cursor: 'pointer',
-                  transition: 'background-color 0.2s',
-                  whiteSpace: 'nowrap',
-                  marginLeft: '8px',
-                }}
+                  <button
+                    onClick={handleReserveClick}
+                    style={{
+                      padding: '10px 20px',
+                      backgroundColor: '#CD7F32',
+                      color: '#F4F4F2',
+                      fontWeight: 600,
+                      fontSize: '13px',
+                      border: 'none',
+                      borderRadius: '0',
+                      cursor: 'pointer',
+                      transition: 'background-color 0.2s',
+                      whiteSpace: 'nowrap',
+                      marginLeft: '8px',
+                    }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = '#b8722d';
                 }}
@@ -322,20 +322,20 @@ export default function Header() {
             </button>
           </header>
 
-          {/* Mobile Menu */}
-          <div
-            style={{
-              overflow: 'hidden',
-              transition: 'max-height 0.3s ease, opacity 0.3s ease',
-              maxHeight: isMobileMenuOpen ? '400px' : '0',
-              opacity: isMobileMenuOpen ? 1 : 0,
-              backgroundColor: '#F4F4F2',
-              borderRadius: '0 0 24px 24px',
-              marginTop: '-20px',
-              paddingTop: '20px',
-            }}
-            className="md:hidden"
-          >
+              {/* Mobile Menu */}
+              <div
+                style={{
+                  overflow: 'hidden',
+                  transition: 'max-height 0.3s ease, opacity 0.3s ease',
+                  maxHeight: isMobileMenuOpen ? '400px' : '0',
+                  opacity: isMobileMenuOpen ? 1 : 0,
+                  backgroundColor: '#F4F4F2',
+                  borderRadius: '0',
+                  marginTop: '-20px',
+                  paddingTop: '20px',
+                }}
+                className="md:hidden"
+              >
             <nav style={{ padding: '16px 24px' }}>
               {allNavItems.map((item) => (
                 <a
