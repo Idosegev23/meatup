@@ -7,7 +7,7 @@ import { galleryImages } from '@/data/gallery';
 import Lightbox from '@/components/Lightbox';
 
 export default function GalleryPage() {
-  const { dict } = useLanguage();
+  const { dict, language } = useLanguage();
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const openLightbox = (index: number) => {
@@ -79,7 +79,7 @@ export default function GalleryPage() {
                 >
                   <Image
                     src={image.src}
-                    alt={image.alt}
+                    alt={language === 'he' ? image.alt.he : image.alt.en}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -101,7 +101,11 @@ export default function GalleryPage() {
       {/* Lightbox */}
       {lightboxIndex !== null && (
         <Lightbox
-          images={galleryImages}
+          images={galleryImages.map(img => ({
+            id: img.id,
+            src: img.src,
+            alt: language === 'he' ? img.alt.he : img.alt.en
+          }))}
           currentIndex={lightboxIndex}
           onClose={closeLightbox}
           onPrev={goToPrev}
