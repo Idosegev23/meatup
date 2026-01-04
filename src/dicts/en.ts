@@ -80,7 +80,9 @@ export const en: Dictionary = {
   // Footer
   footer: {
     rights: "All Rights Reserved",
-    kosher: "Kosher"
+    kosher: "Kosher",
+    accessibility: "Accessibility Statement",
+    privacyPolicy: "Privacy Policy"
   },
   
   // Accessibility
