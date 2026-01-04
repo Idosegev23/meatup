@@ -1,26 +1,506 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Colors - Updated */
+  --charcoal: #0D0D0D;
+  --off-white: #F4F4F2;
+  --bronze: #CD7F32;
+  --wood: #5C3E2B;
+  
+  /* Functional */
+  --background: var(--charcoal);
+  --foreground: var(--off-white);
+  
+  /* MagicBento */
+  --glow-color: 205, 127, 50;
+  --border-color: var(--wood);
+  --background-dark: var(--charcoal);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-charcoal: #0D0D0D;
+  --color-off-white: #F4F4F2;
+  --color-bronze: #CD7F32;
+  --color-wood: #5C3E2B;
+  --color-background: var(--charcoal);
+  --color-foreground: var(--off-white);
+  --font-heebo: var(--font-heebo);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--charcoal);
+  color: var(--off-white);
+  font-family: var(--font-heebo), Arial, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Font - Heebo for all languages */
+body {
+  font-family: var(--font-heebo), Arial, sans-serif;
+}
+
+/* Selection */
+::selection {
+  background: var(--bronze);
+  color: var(--charcoal);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--charcoal);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--wood);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bronze);
+}
+
+/* Focus States */
+*:focus-visible {
+  outline: 2px solid var(--bronze);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+a, button {
+  transition: all 0.2s ease;
+}
+
+/* ========================================
+   MagicBento Styles
+   ======================================== */
+
+.card-grid {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+  width: 100%;
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+}
+
+.magic-bento-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  aspect-ratio: 4/3;
+  min-height: 200px;
+  width: 100%;
+  max-width: 100%;
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid var(--wood);
+  background: var(--charcoal);
+  font-weight: 300;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  --glow-x: 50%;
+  --glow-y: 50%;
+  --glow-intensity: 0;
+  --glow-radius: 200px;
+}
+
+.magic-bento-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.magic-bento-card__header,
+.magic-bento-card__content {
+  display: flex;
+  position: relative;
+  color: var(--off-white);
+}
+
+.magic-bento-card__header {
+  gap: 0.75em;
+  justify-content: space-between;
+}
+
+.magic-bento-card__content {
+  flex-direction: column;
+}
+
+.magic-bento-card__label {
+  font-size: 14px;
+  color: var(--bronze);
+}
+
+.magic-bento-card__title {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0 0 0.25em;
+}
+
+.magic-bento-card__description {
+  font-size: 12px;
+  line-height: 1.2;
+  opacity: 0.8;
+}
+
+/* Border glow effect - Bronze */
+.magic-bento-card--border-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 6px;
+  background: radial-gradient(
+    var(--glow-radius) circle at var(--glow-x) var(--glow-y),
+    rgba(205, 127, 50, calc(var(--glow-intensity) * 0.8)) 0%,
+    rgba(205, 127, 50, calc(var(--glow-intensity) * 0.4)) 30%,
+    transparent 60%
+  );
+  border-radius: inherit;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.magic-bento-card--border-glow:hover::after {
+  opacity: 1;
+}
+
+.magic-bento-card--border-glow:hover {
+  box-shadow:
+    0 4px 20px rgba(92, 62, 43, 0.4),
+    0 0 30px rgba(205, 127, 50, 0.2);
+}
+
+.particle-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.particle::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: rgba(205, 127, 50, 0.2);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.particle-container:hover {
+  box-shadow:
+    0 4px 20px rgba(92, 62, 43, 0.2),
+    0 0 30px rgba(205, 127, 50, 0.2);
+}
+
+/* Global spotlight styles */
+.global-spotlight {
+  mix-blend-mode: screen;
+  will-change: transform, opacity;
+  z-index: 200 !important;
+  pointer-events: none;
+}
+
+.bento-section {
+  position: relative;
+  user-select: none;
+}
+
+/* Responsive Grid */
+@media (max-width: 599px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .magic-bento-card {
+    min-height: 180px;
+  }
+}
+
+@media (min-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+  }
+
+  /* Bento Grid Layout */
+  .magic-bento-card:nth-child(1) {
+    grid-column: span 7;
+    grid-row: span 2;
+  }
+
+  .magic-bento-card:nth-child(2) {
+    grid-column: span 5;
+    grid-row: span 1;
+  }
+
+  .magic-bento-card:nth-child(3) {
+    grid-column: span 5;
+    grid-row: span 1;
+  }
+
+  .magic-bento-card:nth-child(4) {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+
+  .magic-bento-card:nth-child(5) {
+    grid-column: span 8;
+    grid-row: span 2;
+  }
+
+  .magic-bento-card:nth-child(6) {
+    grid-column: span 6;
+    grid-row: span 1;
+  }
+
+  .magic-bento-card:nth-child(7) {
+    grid-column: span 6;
+    grid-row: span 1;
+  }
+}
+
+/* Gallery Image Overlay */
+.gallery-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13, 13, 13, 0.8) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.magic-bento-card:hover .gallery-image-overlay {
+  opacity: 1;
+}
+
+/* Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 13, 13, 0.95);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: var(--off-white);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.lightbox-close:hover {
+  color: var(--bronze);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(13, 13, 13, 0.8);
+  border: 1px solid var(--wood);
+  color: var(--off-white);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.lightbox-nav:hover {
+  background: var(--bronze);
+  color: var(--charcoal);
+  border-color: var(--bronze);
+}
+
+.lightbox-prev {
+  left: -60px;
+}
+
+.lightbox-next {
+  right: -60px;
+}
+
+@media (max-width: 768px) {
+  .lightbox-prev {
+    left: 10px;
+  }
+  
+  .lightbox-next {
+    right: 10px;
+  }
+}
+
+/* ========================================
+   Animated Button with Running Border
+   ======================================== */
+
+.animated-button {
+  position: relative;
+  display: inline-block;
+  padding: 16px 40px;
+  color: var(--bronze);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.animated-button::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  width: 50%;
+  background: rgba(205, 127, 50, 0.05);
+  pointer-events: none;
+}
+
+.animated-button:hover {
+  color: var(--off-white);
+  background: rgba(205, 127, 50, 0.1);
+}
+
+/* Running border lines */
+.animated-button span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--bronze));
+  animation: animateBorderTop 1.5s linear infinite;
+}
+
+@keyframes animateBorderTop {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+.animated-button span:nth-child(2) {
+  position: absolute;
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--bronze));
+  animation: animateBorderRight 1.5s linear infinite;
+  animation-delay: 0.375s;
+}
+
+@keyframes animateBorderRight {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+
+.animated-button span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, var(--bronze));
+  animation: animateBorderBottom 1.5s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animateBorderBottom {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+
+.animated-button span:nth-child(4) {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--bronze));
+  animation: animateBorderLeft 1.5s linear infinite;
+  animation-delay: 1.125s;
+}
+
+@keyframes animateBorderLeft {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
 }
