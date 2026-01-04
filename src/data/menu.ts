@@ -9,6 +9,7 @@ export interface MenuItem {
     en: string;
   };
   price: number;
+  isSubheader?: boolean; // For section dividers within a category
 }
 
 export interface MenuCategory {
@@ -66,19 +67,23 @@ export const menuData: MenuCategory[] = [
       { id: "topup-300", name: { he: "טופאפ 300", en: "TopUp 300" }, price: 82 },
       { id: "smash-and-eggs", name: { he: "סמאש אנד אגס", en: "Smash and Eggs" }, price: 66 },
       { id: "chicken-ranch", name: { he: "צ'יקן ראנצ'", en: "Chicken Ranch" }, price: 62 },
-      // תוספות
+      // תוספות מעל
+      { id: "subheader-toppings", name: { he: "תוספות מעל", en: "Toppings" }, price: 0, isSubheader: true },
+      { id: "caramelized-onion", name: { he: "בצל מקורמל", en: "Caramelized Onion" }, price: 6 },
+      { id: "jalapeno", name: { he: "חלפניו על הפלנצ'ה", en: "Grilled Jalapeño" }, price: 6 },
+      { id: "smash-patty-100", name: { he: "קציצת סמאש 100 גרם", en: "Smash Patty 100g" }, price: 22 },
+      { id: "patty-230", name: { he: "קציצה 230 גרם", en: "Patty 230g" }, price: 30 },
+      { id: "fried-egg", name: { he: "ביצת עין", en: "Fried Egg" }, price: 10 },
+      // תוספות בצד
+      { id: "subheader-sides", name: { he: "תוספות בצד", en: "Sides" }, price: 0, isSubheader: true },
       { id: "ranch-salad", name: { he: "סלט חסות ראנץ", en: "Ranch Lettuce Salad" }, price: 22 },
       { id: "green-salad", name: { he: "סלט ירוק", en: "Green Salad" }, price: 22 },
       { id: "fries", name: { he: "צ'יפס", en: "Fries" }, price: 20 },
       { id: "potatoes", name: { he: "פוטטוס", en: "Potatoes" }, price: 24 },
       { id: "mashed", name: { he: "פירה", en: "Mashed Potatoes" }, price: 24 },
       { id: "green-beans", name: { he: "שעועית ירוקה", en: "Green Beans" }, price: 24 },
-      { id: "caramelized-onion", name: { he: "בצל מקורמל", en: "Caramelized Onion" }, price: 6 },
-      { id: "jalapeno", name: { he: "חלפניו על הפלנצ'ה", en: "Grilled Jalapeño" }, price: 6 },
-      { id: "smash-patty-100", name: { he: "קציצת סמאש 100 גרם", en: "Smash Patty 100g" }, price: 22 },
-      { id: "patty-230", name: { he: "קציצה 230 גרם", en: "Patty 230g" }, price: 30 },
-      { id: "fried-egg", name: { he: "ביצת עין", en: "Fried Egg" }, price: 10 },
       // רטבים
+      { id: "subheader-sauces", name: { he: "רטבים", en: "Sauces" }, price: 0, isSubheader: true },
       { id: "aioli-coriander", name: { he: "איולי כוסברה", en: "Coriander Aioli" }, price: 4 },
       { id: "aioli-garlic", name: { he: "איולי שום", en: "Garlic Aioli" }, price: 4 },
       { id: "aioli-meatup", name: { he: "איולי מיט אפ", en: "Meatup Aioli" }, price: 4 },

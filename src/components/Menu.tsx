@@ -128,36 +128,59 @@ export default function Menu() {
                 </div>
 
                 {/* Items List */}
-                <div className="p-6 overflow-y-auto max-h-[calc(80vh-10rem)] custom-scrollbar">
+                <div className="p-8 md:p-10 overflow-y-auto max-h-[calc(80vh-10rem)] custom-scrollbar">
                   <div className="space-y-1">
                     {selectedCategory.items.map((item, index) => (
-                      <motion.div
-                        key={item.id}
-                        initial={{ opacity: 0, x: language === 'he' ? 20 : -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.05 }}
-                        className={`py-4 ${
-                          index !== selectedCategory.items.length - 1 
-                            ? 'border-b border-[#F4F4F2]/10' 
-                            : ''
-                        }`}
-                      >
-                        <div className="flex justify-between items-start gap-4">
-                          <div className="flex-1">
-                            <h4 className="text-lg font-semibold text-[#F4F4F2] mb-1">
-                              {language === 'he' ? item.name.he : item.name.en}
-                            </h4>
-                            {item.description && (
-                              <p className="text-[#F4F4F2]/50 text-sm leading-relaxed">
-                                {language === 'he' ? item.description.he : item.description.en}
-                              </p>
-                            )}
-                          </div>
-                          <div className="text-lg font-bold text-[#CD7F32] whitespace-nowrap">
-                            {dict.menu.currency}{item.price}
-                          </div>
+                      item.isSubheader ? (
+                        // Subheader styling
+                        <div
+                          key={item.id}
+                          style={{
+                            paddingTop: index === 0 ? '0' : '24px',
+                            paddingBottom: '12px',
+                            marginTop: index === 0 ? '0' : '16px',
+                            borderTop: index === 0 ? 'none' : '1px solid rgba(205, 127, 50, 0.3)',
+                          }}
+                        >
+                          <h5 style={{
+                            fontSize: '1rem',
+                            fontWeight: 600,
+                            color: '#CD7F32',
+                            textAlign: language === 'he' ? 'right' : 'left',
+                          }}>
+                            {language === 'he' ? item.name.he : item.name.en}
+                          </h5>
                         </div>
-                      </motion.div>
+                      ) : (
+                        // Regular item styling
+                        <motion.div
+                          key={item.id}
+                          initial={{ opacity: 0, x: language === 'he' ? 20 : -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: index * 0.03 }}
+                          className={`py-3 ${
+                            index !== selectedCategory.items.length - 1 && !selectedCategory.items[index + 1]?.isSubheader
+                              ? 'border-b border-[#F4F4F2]/10' 
+                              : ''
+                          }`}
+                        >
+                          <div className="flex justify-between items-start gap-4">
+                            <div className="flex-1">
+                              <h4 className="text-base font-medium text-[#F4F4F2]">
+                                {language === 'he' ? item.name.he : item.name.en}
+                              </h4>
+                              {item.description && (
+                                <p className="text-[#F4F4F2]/50 text-sm leading-relaxed mt-1">
+                                  {language === 'he' ? item.description.he : item.description.en}
+                                </p>
+                              )}
+                            </div>
+                            <div className="text-base font-bold text-[#CD7F32] whitespace-nowrap">
+                              {dict.menu.currency}{item.price}
+                            </div>
+                          </div>
+                        </motion.div>
+                      )
                     ))}
                   </div>
                 </div>
