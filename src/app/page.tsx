@@ -257,6 +257,65 @@ export default function HomePage() {
       {/* Menu Section */}
       <Menu />
 
+      {/* Celebration Strip */}
+      <section 
+        style={{
+          backgroundColor: '#CD7F32',
+          padding: '24px 16px',
+        }}
+      >
+        <div style={{
+          maxWidth: '1000px',
+          margin: '0 auto',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '16px',
+          flexWrap: 'wrap',
+          textAlign: 'center',
+        }}>
+          <span style={{
+            color: '#0D0D0D',
+            fontSize: '1.1rem',
+            fontWeight: 500,
+          }}>
+            {language === 'he' 
+              ? 'רוצים לחגוג אצלנו ב-MEATUP? אירועים פרטיים, ימי הולדת ומפגשים עסקיים' 
+              : 'Want to celebrate at MEATUP? Private events, birthdays and business meetings'}
+          </span>
+          <a
+            href={config.tabitUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              backgroundColor: '#0D0D0D',
+              color: '#F4F4F2',
+              padding: '12px 28px',
+              fontWeight: 600,
+              fontSize: '0.95rem',
+              textDecoration: 'none',
+              transition: 'all 0.2s',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+            }}
+            onMouseEnter={(e) => { 
+              e.currentTarget.style.backgroundColor = '#1A1A1A'; 
+              e.currentTarget.style.transform = 'translateY(-2px)'; 
+            }}
+            onMouseLeave={(e) => { 
+              e.currentTarget.style.backgroundColor = '#0D0D0D'; 
+              e.currentTarget.style.transform = 'translateY(0)'; 
+            }}
+          >
+            {language === 'he' ? 'לחצו להזמנה' : 'Book Now'}
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
       {/* Gallery Section */}
       <GalleryBento />
 
