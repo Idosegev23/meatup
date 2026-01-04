@@ -140,15 +140,15 @@ export default function Header() {
             maxWidth: '900px',
           }}
         >
-          {/* Logo with social icons - Positioned above the container (like Kisu) */}
+          {/* Logo with social icons - Desktop: above container, Mobile: inside header */}
           <div
+            className="hidden md:flex"
             style={{
               position: 'absolute',
               left: 'calc(50% + 30px)',
               top: '50%',
               transform: 'translate(-50%, -50%)',
               zIndex: 10,
-              display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
             }}
@@ -297,6 +297,28 @@ export default function Header() {
                 {dict.nav.reserve}
               </button>
             </div>
+
+            {/* Mobile Logo - Inside header */}
+            <a
+              href="#hero"
+              onClick={(e) => handleNavClick(e, '#hero')}
+              className="md:hidden"
+              style={{
+                position: 'absolute',
+                left: '50%',
+                top: '50%',
+                transform: 'translate(-50%, -50%)',
+              }}
+            >
+              <img
+                src="/logofull.png"
+                alt="MEATUP"
+                style={{ 
+                  height: '50px', 
+                  width: 'auto',
+                }}
+              />
+            </a>
 
             {/* Mobile Menu Button */}
             <button
