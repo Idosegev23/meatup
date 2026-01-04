@@ -146,7 +146,7 @@ export default function Header() {
               position: 'absolute',
               left: 'calc(50% + 30px)',
               top: '50%',
-              transform: 'translate(-50%, -50%)',
+              transform: 'translate(-50%, -40%)',
               zIndex: 10,
               flexDirection: 'column',
               alignItems: 'center',
@@ -166,8 +166,8 @@ export default function Header() {
               <div
                 style={{
                   position: 'absolute',
-                  width: '100px',
-                  height: '100px',
+                  width: '110px',
+                  height: '110px',
                   backgroundColor: '#0D0D0D',
                   borderRadius: '50%',
                   boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
@@ -301,14 +301,11 @@ export default function Header() {
             <a
               href="#hero"
               onClick={(e) => handleNavClick(e, '#hero')}
-              className="md:hidden"
+              className="flex md:hidden items-center justify-center"
               style={{
                 position: 'absolute',
                 left: '50%',
                 transform: 'translateX(-50%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
               }}
             >
               <img
@@ -324,17 +321,13 @@ export default function Header() {
             {/* Mobile Menu Button - Burger Style with Animation */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden"
+              className="flex md:hidden flex-col items-center justify-center"
               style={{
                 padding: '8px',
                 background: 'none',
                 border: 'none',
                 cursor: 'pointer',
                 marginRight: 'auto',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
                 gap: '4px',
                 width: '36px',
                 height: '36px',
