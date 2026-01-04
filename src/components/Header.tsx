@@ -39,10 +39,11 @@ export default function Header() {
   const leftNavItems = [
     { href: '#hero', id: 'hero', label: dict.nav.home },
     { href: '#about', id: 'about', label: dict.nav.about },
-    { href: '#menu', id: 'menu', label: dict.nav.menu },
+    { href: config.tabitUrl, id: 'delivery', label: language === 'he' ? 'משלוח/איסוף' : 'Delivery', isExternal: true },
   ];
 
   const rightNavItems = [
+    { href: '#menu', id: 'menu', label: dict.nav.menu },
     { href: '#gallery', id: 'gallery', label: dict.nav.gallery },
     { href: '#contact', id: 'contact', label: dict.nav.contact },
   ];
@@ -72,10 +73,12 @@ export default function Header() {
     }
   };
 
-  const NavLink = ({ item }: { item: { href: string; id: string; label: string } }) => (
+  const NavLink = ({ item }: { item: { href: string; id: string; label: string; isExternal?: boolean } }) => (
     <a
       href={item.href}
-      onClick={(e) => handleNavClick(e, item.href)}
+      onClick={item.isExternal ? undefined : (e) => handleNavClick(e, item.href)}
+      target={item.isExternal ? '_blank' : undefined}
+      rel={item.isExternal ? 'noopener noreferrer' : undefined}
       style={{
         fontSize: '14px',
         fontWeight: 500,
