@@ -9,7 +9,7 @@ export interface GalleryImage {
 
 export const galleryImages: GalleryImage[] = [
   { id: "img3", src: "/imgs/meatupimgs/img3.webp", alt: { he: "מנה מהמסעדה", en: "Restaurant dish" } },
-  { id: "new1", src: "/imgs/meatupimgs/new1.webp", alt: { he: "מנה מהמסעדה", en: "Restaurant dish" } },
+  { id: "img20", src: "/imgs/meatupimgs/img20_processed.webp", alt: { he: "מנה מהמסעדה", en: "Restaurant dish" } },
   { id: "img7", src: "/imgs/meatupimgs/img7_processed.webp", alt: { he: "מנה מהמסעדה", en: "Restaurant dish" } },
   { id: "img10", src: "/imgs/meatupimgs/img10_processed.webp", alt: { he: "מנה מהמסעדה", en: "Restaurant dish" } },
   { id: "new2", src: "/imgs/meatupimgs/new2.webp", alt: { he: "מנה מהמסעדה", en: "Restaurant dish" } },

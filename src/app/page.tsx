@@ -204,7 +204,7 @@ export default function HomePage() {
               }}
             >
               <Image
-                src="/imgs/meatupimgs/new1.webp"
+                src="/imgs/meatupimgs/new3.webp"
                 alt={language === 'he' ? 'הזמנת שולחן' : 'Reserve Table'}
                 fill
                 className="object-cover transition-transform duration-300 hover:scale-105"
@@ -276,11 +276,25 @@ export default function HomePage() {
       {/* Celebration Strip */}
       <section 
         style={{
-          backgroundColor: '#BF9B7A',
-          padding: '24px 16px',
+          position: 'relative',
+          padding: '48px 16px',
+          backgroundImage: 'url(/imgs/meatupimgs/new1.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
       >
+        {/* Overlay */}
         <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(191, 155, 122, 0.92)',
+        }} />
+        <div style={{
+          position: 'relative',
+          zIndex: 1,
           maxWidth: '1000px',
           margin: '0 auto',
           display: 'flex',
@@ -291,7 +305,8 @@ export default function HomePage() {
           textAlign: 'center',
         }}>
           <span style={{
-            color: '#0a1628',
+            color: '#F2F1F0',
+            textShadow: '0 2px 8px rgba(0,0,0,0.3)',
             fontSize: '2rem',
             fontWeight: 700,
           }}>
