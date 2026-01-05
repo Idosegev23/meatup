@@ -19,7 +19,7 @@ export default function Menu() {
     <>
       <section id="menu" className="bg-[#0D0D0D]" style={{ padding: '80px 0 100px 0' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
-          {/* Header */}
+        {/* Header */}
           <h2 style={{ fontSize: '2.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '24px' }}>
             {dict.menu.title}
           </h2>
@@ -35,7 +35,7 @@ export default function Menu() {
               height={80}
               style={{ margin: '0 auto', filter: 'brightness(0) invert(1)' }}
             />
-          </div>
+        </div>
 
           {/* Category Circles */}
           <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-6 md:gap-10">
@@ -70,7 +70,7 @@ export default function Menu() {
                 
                 {/* Category Name */}
                 <span style={{ marginTop: '14px', fontSize: '0.9rem', fontWeight: 500, color: 'rgba(244,244,242,0.8)', maxWidth: '130px' }}>
-                  {language === 'he' ? category.name.he : category.name.en}
+                {language === 'he' ? category.name.he : category.name.en}
                 </span>
               </motion.button>
             ))}
@@ -141,8 +141,8 @@ export default function Menu() {
                     {selectedCategory.items.map((item, index) => (
                       item.isSubheader ? (
                         // Subheader styling
-                        <div
-                          key={item.id}
+                  <div
+                    key={item.id}
                           style={{
                             paddingTop: index === 0 ? '0' : '24px',
                             paddingBottom: '12px',
@@ -170,23 +170,23 @@ export default function Menu() {
                             index !== selectedCategory.items.length - 1 && !selectedCategory.items[index + 1]?.isSubheader
                               ? 'border-b border-[#F4F4F2]/10' 
                               : ''
-                          }`}
-                        >
-                          <div className="flex justify-between items-start gap-4">
-                            <div className="flex-1">
+                    }`}
+                  >
+                    <div className="flex justify-between items-start gap-4">
+                      <div className="flex-1">
                               <h4 className="text-base font-medium text-[#F4F4F2]">
-                                {language === 'he' ? item.name.he : item.name.en}
+                          {language === 'he' ? item.name.he : item.name.en}
                               </h4>
                               {item.description && (
                                 <p className="text-[#F4F4F2]/50 text-sm leading-relaxed mt-1">
-                                  {language === 'he' ? item.description.he : item.description.en}
-                                </p>
+                          {language === 'he' ? item.description.he : item.description.en}
+                        </p>
                               )}
-                            </div>
+                      </div>
                             <div className="text-base font-bold text-[#CD7F32] whitespace-nowrap">
-                              {dict.menu.currency}{item.price}
-                            </div>
-                          </div>
+                        {dict.menu.currency}{item.price}
+                      </div>
+                    </div>
                         </motion.div>
                       )
                     ))}

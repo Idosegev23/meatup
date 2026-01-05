@@ -103,24 +103,25 @@ export default function Header() {
 
   return (
     <>
-      {/* Spacer to push content below header */}
-      <div style={{ height: '120px' }} />
+      {/* Spacer to push content below header - none on mobile (hero is full screen) */}
+      <div className="h-0 md:h-[120px]" />
       
       {/* Full Width Header Row */}
       <div
+        className="md:px-6"
         style={{
           position: 'fixed',
-          top: '20px',
+          top: '0',
           left: '0',
           right: '0',
           zIndex: 50,
           display: 'flex',
-          alignItems: 'center',
+          alignItems: 'flex-start',
           justifyContent: 'center',
-          padding: '0 24px',
         }}
       >
-        {/* Language Toggle - Left Outside */}
+        {/* Mobile: NO background - transparent header like Kisu */}
+        {/* Language Toggle - Left Outside (Desktop) */}
         <div 
           className="hidden md:flex"
           style={{ 
@@ -131,6 +132,165 @@ export default function Header() {
           <LanguageToggle variant="dark" />
         </div>
 
+        {/* ========== MOBILE FIXED ELEMENTS ========== */}
+        
+        {/* Mobile Left Side - Quick Actions (fixed) - Waze first, then Phone */}
+        <div 
+          className="flex md:hidden items-center gap-2"
+          style={{
+            position: 'absolute',
+            left: '16px',
+            top: '10px',
+            zIndex: 60,
+          }}
+        >
+          {/* Waze Button - Black circle with custom colors */}
+          <a
+            href={config.wazeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              width: '38px',
+              height: '38px',
+              borderRadius: '50%',
+              backgroundColor: '#0D0D0D',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+            aria-label="Waze"
+          >
+            <svg width="22" height="22" viewBox="0 0 122.71 122.88" style={{ overflow: 'visible' }}>
+              {/* Face fill - black */}
+              <path fill="#0D0D0D" d="M55.14,104.21c4.22,0,8.44,0.19,12.66-0.09c3.84-0.19,7.88-0.56,11.63-1.5c29.82-7.31,45.76-40.23,32.72-68.07 C104.27,17.76,90.77,8.19,72.3,6.22c-14.16-1.5-26.82,2.72-37.51,12.28c-10.5,9.47-15.94,21.28-16.31,35.44 c-0.09,3.28,0,6.66,0,9.94C18.38,71.02,14.35,76.55,7.5,78.7c-0.09,0-0.28,0.19-0.38,0.19c2.63,6.94,13.31,17.16,19.97,19.69 C35.45,87.14,52.32,91.18,55.14,104.21L55.14,104.21z"/>
+              {/* Outline - orange */}
+              <path fill="#CD7F32" d="M54.95,110.49c-1.03,4.69-3.56,8.16-7.69,10.31c-5.25,2.72-10.6,2.63-15.57-0.56c-5.16-3.28-7.41-8.25-7.03-14.35 c0.09-1.03-0.19-1.41-1.03-1.88c-9.1-4.78-16.31-11.44-21.28-20.44c-0.94-1.78-1.69-3.66-2.16-5.63c-0.66-2.72,0.38-4.03,3.19-4.31 c3.38-0.38,6.38-1.69,7.88-4.88c0.66-1.41,1.03-3.09,1.03-4.69c0.19-4.03,0-8.06,0.19-12.1c1.03-15.57,7.5-28.5,19.32-38.63 C42.67,3.97,55.42-0.43,69.76,0.03c25.04,0.94,46.51,18.57,51.57,43.23c4.59,22.32-2.34,40.98-20.07,55.51 c-1.03,0.84-2.16,1.69-3.38,2.44c-0.66,0.47-0.84,0.84-0.56,1.59c2.34,7.13-0.94,15-7.5,18.38c-8.91,4.41-19.22-0.09-21.94-9.66 c-0.09-0.38-0.56-0.84-0.84-0.84C63.11,110.4,59.07,110.49,54.95,110.49L54.95,110.49z M55.14,104.21c4.22,0,8.44,0.19,12.66-0.09 c3.84-0.19,7.88-0.56,11.63-1.5c29.82-7.31,45.76-40.23,32.72-68.07C104.27,17.76,90.77,8.19,72.3,6.22 c-14.16-1.5-26.82,2.72-37.51,12.28c-10.5,9.47-15.94,21.28-16.31,35.44c-0.09,3.28,0,6.66,0,9.94 C18.38,71.02,14.35,76.55,7.5,78.7c-0.09,0-0.28,0.19-0.38,0.19c2.63,6.94,13.31,17.16,19.97,19.69 C35.45,87.14,52.32,91.18,55.14,104.21L55.14,104.21z"/>
+              {/* Smile - orange */}
+              <path fill="#CD7F32" d="M74.92,79.74c-11.07-0.56-18.38-4.97-23.07-13.78c-1.13-2.16-0.09-4.31,2.06-4.78c1.31-0.28,2.53,0.66,3.47,2.16 c1.22,1.88,2.44,3.75,4.03,5.25c8.81,8.34,23.25,5.72,28.79-5.06c0.66-1.31,1.5-2.34,3.09-2.34c2.34,0.09,3.66,2.44,2.63,4.59 c-2.91,5.91-7.5,10.22-13.69,12.28C79.51,78.99,76.7,79.36,74.92,79.74L74.92,79.74z"/>
+              {/* Left eye - orange */}
+              <path fill="#CD7F32" d="M55.32,48.98c-3.38,0-6.09-2.72-6.09-6.09s2.72-6.09,6.09-6.09s6.09,2.72,6.09,6.09C61.42,46.17,58.7,48.98,55.32,48.98 L55.32,48.98z"/>
+              {/* Right eye - orange */}
+              <path fill="#CD7F32" d="M98.27,42.79c0,3.38-2.72,6.09-6,6.19c-3.38,0-6.09-2.63-6.09-6.09c0-3.38,2.63-6.09,6-6.19 C95.46,36.7,98.17,39.42,98.27,42.79L98.27,42.79z"/>
+            </svg>
+          </a>
+
+          {/* Phone Button - Black circle with orange icon */}
+          <a
+            href={config.phoneLink}
+            style={{
+              width: '38px',
+              height: '38px',
+              borderRadius: '50%',
+              backgroundColor: '#0D0D0D',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+            aria-label="Call"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#CD7F32" strokeWidth="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </a>
+        </div>
+
+        {/* Language Toggle - Mobile (below icons on left, subtle bookmark style) */}
+        <div 
+          className="flex md:hidden"
+          style={{ 
+            position: 'absolute',
+            left: '0px',
+            top: '68px',
+            zIndex: 60,
+            backgroundColor: '#f5f5f5',
+            padding: '2px 6px 2px 8px',
+          }}
+        >
+          <LanguageToggle variant="dark" />
+        </div>
+
+        {/* Mobile Center - Logo (fixed) - starts from top of screen */}
+        <a
+          href="#hero"
+          onClick={(e) => handleNavClick(e, '#hero')}
+          className="flex md:hidden items-center justify-center"
+          style={{
+            position: 'absolute',
+            left: '50%',
+            top: '19px', // Start from very top
+            transform: 'translateX(-50%)',
+            zIndex: 60,
+          }}
+        >
+          {/* Black circle background - larger */}
+          <div
+            style={{
+              position: 'absolute',
+              width: '90px',  // Bigger circle
+              height: '90px',
+              backgroundColor: '#0D0D0D',
+              borderRadius: '50%',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+            }}
+          />
+          <img
+            src="/logofull.png"
+            alt="MEATUP"
+            style={{ 
+              height: '70px',  // Bigger logo
+              width: 'auto',
+              position: 'relative',
+              zIndex: 1,
+            }}
+          />
+        </a>
+
+        {/* Mobile Right Side - Hamburger Menu (fixed) */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="flex md:hidden flex-col items-center justify-center"
+          style={{
+            position: 'absolute',
+            right: '16px',
+            top: '13px',
+            zIndex: 60,
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            gap: '7px',
+            width: '50px',
+            height: '50px',
+          }}
+          aria-label={isMobileMenuOpen ? dict.a11y.closeMenu : dict.a11y.openMenu}
+        >
+          {/* 3 thin lines / X animation */}
+          <span style={{ 
+            display: 'block',
+            width: '32px', 
+            height: '2px', 
+            backgroundColor: '#1a1a1a', 
+            transition: 'all 0.3s ease',
+            transform: isMobileMenuOpen ? 'translateY(9px) rotate(45deg)' : 'none',
+          }} />
+          <span style={{ 
+            display: 'block',
+            width: '32px', 
+            height: '2px', 
+            backgroundColor: '#1a1a1a', 
+            transition: 'all 0.3s ease',
+            opacity: isMobileMenuOpen ? 0 : 1,
+          }} />
+          <span style={{ 
+            display: 'block',
+            width: '32px', 
+            height: '2px', 
+            backgroundColor: '#1a1a1a', 
+            transition: 'all 0.3s ease',
+            transform: isMobileMenuOpen ? 'translateY(-9px) rotate(-45deg)' : 'none',
+          }} />
+        </button>
+
+        {/* ========== END MOBILE FIXED ELEMENTS ========== */}
 
         {/* Menu Container */}
         <div
@@ -240,17 +400,16 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Main Header Bar */}
+          {/* Main Header Bar - Mobile: soft white-gray like Kisu */}
           <header
-            className="bg-white md:bg-[#F4F4F2]"
+            className="md:bg-[#F4F4F2] md:shadow-lg md:mt-5 h-[60px] md:h-[64px]"
             style={{
-              height: '56px',
               borderRadius: '0',
-              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.12)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              ...headerPadding,
+              padding: '0 16px',
+              backgroundColor: '#f5f5f5',
             }}
           >
             {/* Left Side - Nav */}
@@ -297,141 +456,21 @@ export default function Header() {
               </button>
             </div>
 
-            {/* Mobile Logo - Circle centered, half visible above header */}
-            <a
-              href="#hero"
-              onClick={(e) => handleNavClick(e, '#hero')}
-              className="flex md:hidden items-center justify-center"
-              style={{
-                position: 'absolute',
-                left: '50%',
-                top: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}
-            >
-              {/* Black circle background */}
-              <div
-                style={{
-                  position: 'absolute',
-                  width: '48px',
-                  height: '48px',
-                  backgroundColor: '#0D0D0D',
-                  borderRadius: '50%',
-                }}
-              />
-              <img
-                src="/logofull.png"
-                alt="MEATUP"
-                style={{ 
-                  height: '34px', 
-                  width: 'auto',
-                  position: 'relative',
-                  zIndex: 1,
-                }}
-              />
-            </a>
-
-            {/* Mobile Left Side - Menu + Quick Actions */}
-            <div className="flex md:hidden items-center gap-3" style={{ marginRight: 'auto' }}>
-              {/* Mobile Menu Button - Burger Style with Animation */}
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="flex flex-col items-center justify-center"
-                style={{
-                  padding: '8px',
-                  background: 'none',
-                  border: 'none',
-                  cursor: 'pointer',
-                  gap: '4px',
-                  width: '36px',
-                  height: '36px',
-                  position: 'relative',
-                }}
-                aria-label={isMobileMenuOpen ? dict.a11y.closeMenu : dict.a11y.openMenu}
-              >
-                {/* Top bun / X line 1 */}
-                <span style={{ 
-                  display: 'block',
-                  width: '24px', 
-                  height: '5px', 
-                  backgroundColor: '#CD7F32', 
-                  borderRadius: isMobileMenuOpen ? '2px' : '6px 6px 2px 2px',
-                  transition: 'all 0.3s ease',
-                  transform: isMobileMenuOpen ? 'translateY(9px) rotate(45deg)' : 'translateY(0) rotate(0)',
-                }} />
-                {/* Patty / hidden */}
-                <span style={{ 
-                  display: 'block',
-                  width: '26px', 
-                  height: '5px', 
-                  backgroundColor: '#8B4513', 
-                  borderRadius: '2px',
-                  transition: 'all 0.3s ease',
-                  opacity: isMobileMenuOpen ? 0 : 1,
-                }} />
-                {/* Bottom bun / X line 2 */}
-                <span style={{ 
-                  display: 'block',
-                  width: '24px', 
-                  height: '5px', 
-                  backgroundColor: '#CD7F32', 
-                  borderRadius: isMobileMenuOpen ? '2px' : '2px 2px 4px 4px',
-                  transition: 'all 0.3s ease',
-                  transform: isMobileMenuOpen ? 'translateY(-9px) rotate(-45deg)' : 'translateY(0) rotate(0)',
-                }} />
-              </button>
-
-              {/* Waze Button */}
-              <a
-                href={config.wazeLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  width: '36px',
-                  height: '36px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-                aria-label="Waze"
-              >
-                <img src="/waze.svg" alt="Waze" style={{ width: '24px', height: '24px' }} />
-              </a>
-
-              {/* Phone Button */}
-              <a
-                href={config.phoneLink}
-                style={{
-                  width: '36px',
-                  height: '36px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-                aria-label="Call"
-              >
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0D0D0D" strokeWidth="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                </svg>
-              </a>
-            </div>
           </header>
 
-              {/* Mobile Menu */}
+              {/* Mobile Menu - same solid color as header bar */}
               <div
                 style={{
                   overflow: 'hidden',
                   transition: 'max-height 0.3s ease, opacity 0.3s ease',
                   maxHeight: isMobileMenuOpen ? '500px' : '0',
                   opacity: isMobileMenuOpen ? 1 : 0,
-                  backgroundColor: '#0D0D0D',
-                  marginTop: '8px',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
+                  backgroundColor: '#f5f5f5',
                   width: '100%',
                 }}
                 className="md:hidden"
               >
-            <nav style={{ padding: '20px 24px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            <nav style={{ paddingTop: '40px', paddingLeft: '24px', paddingRight: '24px', paddingBottom: '20px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
               {allNavItems.map((item) => (
                 <a
                   key={item.href}
@@ -444,9 +483,9 @@ export default function Header() {
                     padding: '14px 16px',
                     fontSize: '18px',
                     fontWeight: 500,
-                    color: activeSection === item.id ? '#CD7F32' : '#F4F4F2',
+                    color: activeSection === item.id ? '#CD7F32' : '#0D0D0D',
                     textAlign: 'center',
-                    borderBottom: '1px solid rgba(255,255,255,0.1)',
+                    borderBottom: '1px solid rgba(0,0,0,0.1)',
                     textDecoration: 'none',
                   }}
                 >
@@ -461,10 +500,10 @@ export default function Header() {
                   handleReserveClick();
                 }}
                 style={{
-                  marginTop: '16px',
+                  marginTop: '12px',
                   padding: '16px 24px',
                   backgroundColor: '#CD7F32',
-                  color: '#0D0D0D',
+                  color: '#F4F4F2',
                   fontWeight: 600,
                   fontSize: '18px',
                   border: 'none',

@@ -90,9 +90,9 @@ export default function MenuPage() {
                             {language === 'he' ? item.name.he : item.name.en}
                           </h3>
                           {item.description && (
-                            <p className="text-charcoal/60 text-sm leading-relaxed">
-                              {language === 'he' ? item.description.he : item.description.en}
-                            </p>
+                          <p className="text-charcoal/60 text-sm leading-relaxed">
+                            {language === 'he' ? item.description.he : item.description.en}
+                          </p>
                           )}
                         </div>
                         <div className="text-lg font-semibold text-bronze whitespace-nowrap">

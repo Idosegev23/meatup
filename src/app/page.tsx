@@ -10,9 +10,9 @@ import GalleryBento from '@/components/GalleryBento';
 import Contact from '@/components/Contact';
 
 const heroImages = [
-  '/imgs/meatupimgs/hero.webp',
+  '/imgs/meatupimgs/img23_processed.webp',
   '/imgs/meatupimgs/meats.webp',
-  '/imgs/meatupimgs/img17_processed.webp',
+  '/imgs/meatupimgs/burgers.webp',
 ];
 
 export default function HomePage() {
@@ -73,7 +73,7 @@ export default function HomePage() {
 
         {/* Content */}
         <div className="relative z-10 text-center px-6 sm:px-10 lg:px-16 w-full max-w-4xl mx-auto flex flex-col items-center">
-          {/* Hero Text - Mobile: center screen, larger, grayish, line break */}
+          {/* Hero Text - Mobile: very large, one word per line */}
           <p 
             className="md:mb-14"
             style={{ 
@@ -86,8 +86,8 @@ export default function HomePage() {
               lineHeight: 1.3,
             }}
           >
-            <span className="md:hidden">
-              GRILL BURGERS<br />& MORE
+            <span className="md:hidden" style={{ fontSize: 'clamp(3rem, 12vw, 5rem)', lineHeight: 1.1, display: 'block', opacity: 0.75 }}>
+              GRILL<br />BURGERS<br />& MORE
             </span>
             <span className="hidden md:inline">
               {dict.hero.subtitle}
@@ -138,19 +138,54 @@ export default function HomePage() {
             </a>
           </div>
 
-          {/* Mobile Scroll Arrow */}
+        </div>
+
+        {/* Mobile: Dots + Arrow at bottom of hero */}
+        <div 
+          className="flex md:hidden flex-col items-center"
+          style={{
+            position: 'absolute',
+            bottom: '40px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            zIndex: 20,
+          }}
+        >
+          {/* Dots */}
+          <div className="flex items-center gap-3">
+            {heroImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                style={{
+                  width: currentImageIndex === index ? '12px' : '10px',
+                  height: currentImageIndex === index ? '12px' : '10px',
+                  borderRadius: '50%',
+                  backgroundColor: currentImageIndex === index ? '#CD7F32' : 'rgba(244,244,242,0.4)',
+                  border: 'none',
+                  padding: 0,
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                }}
+                aria-label={`Go to image ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Large Scroll Arrow - elegant and prominent */}
           <button
             onClick={scrollToMenu}
-            className="flex md:hidden flex-col items-center mt-8"
+            className="flex flex-col items-center"
             style={{
+              marginTop: '36px',
               background: 'none',
               border: 'none',
               cursor: 'pointer',
-              animation: 'bounce 2s infinite',
+              animation: 'bounce 1s infinite',
             }}
           >
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(244,244,242,0.7)" strokeWidth="2">
-              <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+            <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.5)" strokeWidth="0.5">
+              <path d="M5 9l7 7 7-7"/>
             </svg>
           </button>
         </div>

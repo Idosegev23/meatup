@@ -51,16 +51,16 @@ export default function GalleryBento() {
           ))}
         </div>
 
-      {/* Lightbox */}
-      {lightboxOpen && (
-        <Lightbox
-          images={lightboxImages}
-          currentIndex={currentImageIndex}
-          onClose={() => setLightboxOpen(false)}
-          onPrev={handlePrev}
-          onNext={handleNext}
-        />
-      )}
+        {/* Lightbox */}
+        {lightboxOpen && (
+          <Lightbox
+            images={lightboxImages}
+            currentIndex={currentImageIndex}
+            onClose={() => setLightboxOpen(false)}
+            onPrev={handlePrev}
+            onNext={handleNext}
+          />
+        )}
     </section>
   );
 }
