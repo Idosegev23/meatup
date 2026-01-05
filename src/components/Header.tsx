@@ -242,9 +242,9 @@ export default function Header() {
 
           {/* Main Header Bar */}
           <header
-            className="bg-[#0D0D0D] md:bg-[#F4F4F2]"
+            className="bg-white md:bg-[#F4F4F2]"
             style={{
-              height: '64px',
+              height: '56px',
               borderRadius: '0',
               boxShadow: '0 4px 20px rgba(0, 0, 0, 0.12)',
               display: 'flex',
@@ -297,7 +297,7 @@ export default function Header() {
               </button>
             </div>
 
-            {/* Mobile Logo - Inside header, centered */}
+            {/* Mobile Logo - Circle centered, half visible above header */}
             <a
               href="#hero"
               onClick={(e) => handleNavClick(e, '#hero')}
@@ -305,67 +305,116 @@ export default function Header() {
               style={{
                 position: 'absolute',
                 left: '50%',
-                transform: 'translateX(-50%)',
+                top: '50%',
+                transform: 'translate(-50%, -50%)',
               }}
             >
+              {/* Black circle background */}
+              <div
+                style={{
+                  position: 'absolute',
+                  width: '48px',
+                  height: '48px',
+                  backgroundColor: '#0D0D0D',
+                  borderRadius: '50%',
+                }}
+              />
               <img
                 src="/logofull.png"
                 alt="MEATUP"
                 style={{ 
-                  height: '45px', 
+                  height: '34px', 
                   width: 'auto',
+                  position: 'relative',
+                  zIndex: 1,
                 }}
               />
             </a>
 
-            {/* Mobile Menu Button - Burger Style with Animation */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="flex md:hidden flex-col items-center justify-center"
-              style={{
-                padding: '8px',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                marginRight: 'auto',
-                gap: '4px',
-                width: '36px',
-                height: '36px',
-                position: 'relative',
-              }}
-              aria-label={isMobileMenuOpen ? dict.a11y.closeMenu : dict.a11y.openMenu}
-            >
-              {/* Top bun / X line 1 */}
-              <span style={{ 
-                display: 'block',
-                width: '24px', 
-                height: '5px', 
-                backgroundColor: '#CD7F32', 
-                borderRadius: isMobileMenuOpen ? '2px' : '6px 6px 2px 2px',
-                transition: 'all 0.3s ease',
-                transform: isMobileMenuOpen ? 'translateY(9px) rotate(45deg)' : 'translateY(0) rotate(0)',
-              }} />
-              {/* Patty / hidden */}
-              <span style={{ 
-                display: 'block',
-                width: '26px', 
-                height: '5px', 
-                backgroundColor: '#8B4513', 
-                borderRadius: '2px',
-                transition: 'all 0.3s ease',
-                opacity: isMobileMenuOpen ? 0 : 1,
-              }} />
-              {/* Bottom bun / X line 2 */}
-              <span style={{ 
-                display: 'block',
-                width: '24px', 
-                height: '5px', 
-                backgroundColor: '#CD7F32', 
-                borderRadius: isMobileMenuOpen ? '2px' : '2px 2px 4px 4px',
-                transition: 'all 0.3s ease',
-                transform: isMobileMenuOpen ? 'translateY(-9px) rotate(-45deg)' : 'translateY(0) rotate(0)',
-              }} />
-            </button>
+            {/* Mobile Left Side - Menu + Quick Actions */}
+            <div className="flex md:hidden items-center gap-3" style={{ marginRight: 'auto' }}>
+              {/* Mobile Menu Button - Burger Style with Animation */}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="flex flex-col items-center justify-center"
+                style={{
+                  padding: '8px',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  gap: '4px',
+                  width: '36px',
+                  height: '36px',
+                  position: 'relative',
+                }}
+                aria-label={isMobileMenuOpen ? dict.a11y.closeMenu : dict.a11y.openMenu}
+              >
+                {/* Top bun / X line 1 */}
+                <span style={{ 
+                  display: 'block',
+                  width: '24px', 
+                  height: '5px', 
+                  backgroundColor: '#CD7F32', 
+                  borderRadius: isMobileMenuOpen ? '2px' : '6px 6px 2px 2px',
+                  transition: 'all 0.3s ease',
+                  transform: isMobileMenuOpen ? 'translateY(9px) rotate(45deg)' : 'translateY(0) rotate(0)',
+                }} />
+                {/* Patty / hidden */}
+                <span style={{ 
+                  display: 'block',
+                  width: '26px', 
+                  height: '5px', 
+                  backgroundColor: '#8B4513', 
+                  borderRadius: '2px',
+                  transition: 'all 0.3s ease',
+                  opacity: isMobileMenuOpen ? 0 : 1,
+                }} />
+                {/* Bottom bun / X line 2 */}
+                <span style={{ 
+                  display: 'block',
+                  width: '24px', 
+                  height: '5px', 
+                  backgroundColor: '#CD7F32', 
+                  borderRadius: isMobileMenuOpen ? '2px' : '2px 2px 4px 4px',
+                  transition: 'all 0.3s ease',
+                  transform: isMobileMenuOpen ? 'translateY(-9px) rotate(-45deg)' : 'translateY(0) rotate(0)',
+                }} />
+              </button>
+
+              {/* Waze Button */}
+              <a
+                href={config.wazeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  width: '36px',
+                  height: '36px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+                aria-label="Waze"
+              >
+                <img src="/waze.svg" alt="Waze" style={{ width: '24px', height: '24px' }} />
+              </a>
+
+              {/* Phone Button */}
+              <a
+                href={config.phoneLink}
+                style={{
+                  width: '36px',
+                  height: '36px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+                aria-label="Call"
+              >
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0D0D0D" strokeWidth="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </a>
+            </div>
           </header>
 
               {/* Mobile Menu */}

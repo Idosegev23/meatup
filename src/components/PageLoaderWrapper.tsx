@@ -8,3 +8,4 @@ export default function PageLoaderWrapper() {
   return <PageLoader isLoading={isLoading} />;
 }
 
+

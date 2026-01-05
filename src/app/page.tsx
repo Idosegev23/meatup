@@ -73,18 +73,29 @@ export default function HomePage() {
 
         {/* Content */}
         <div className="relative z-10 text-center px-6 sm:px-10 lg:px-16 w-full max-w-4xl mx-auto flex flex-col items-center">
-          <p style={{ 
-            fontSize: 'clamp(1.75rem, 5vw, 2.75rem)', 
-            fontWeight: 600, 
-            color: '#F4F4F2', 
-            marginBottom: '56px',
-            letterSpacing: '0.02em',
-            textShadow: '0 2px 20px rgba(0,0,0,0.3)'
-          }}>
-            {dict.hero.subtitle}
+          {/* Hero Text - Mobile: center screen, larger, grayish, line break */}
+          <p 
+            className="md:mb-14"
+            style={{ 
+              fontSize: 'clamp(2rem, 6vw, 2.75rem)', 
+              fontWeight: 700, 
+              color: 'rgba(244,244,242,0.85)', 
+              marginBottom: '40px',
+              letterSpacing: '0.02em',
+              textShadow: '0 2px 20px rgba(0,0,0,0.3)',
+              lineHeight: 1.3,
+            }}
+          >
+            <span className="md:hidden">
+              GRILL BURGERS<br />& MORE
+            </span>
+            <span className="hidden md:inline">
+              {dict.hero.subtitle}
+            </span>
           </p>
 
-          <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+          {/* Desktop Buttons - Hidden on Mobile */}
+          <div className="hidden md:flex" style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
             <button
               onClick={handleReserveClick}
               style={{
@@ -126,6 +137,22 @@ export default function HomePage() {
               {dict.hero.cta.menu}
             </a>
           </div>
+
+          {/* Mobile Scroll Arrow */}
+          <button
+            onClick={scrollToMenu}
+            className="flex md:hidden flex-col items-center mt-8"
+            style={{
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              animation: 'bounce 2s infinite',
+            }}
+          >
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(244,244,242,0.7)" strokeWidth="2">
+              <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+            </svg>
+          </button>
         </div>
 
       </section>
