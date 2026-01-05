@@ -73,76 +73,28 @@ export default function HomePage() {
 
         {/* Content */}
         <div className="relative z-10 text-center px-6 sm:px-10 lg:px-16 w-full max-w-4xl mx-auto flex flex-col items-center">
-          {/* Hero Text - Mobile: very large, one word per line */}
+          {/* Hero Text - both mobile and desktop */}
           <p 
-            className="md:mb-14"
             style={{ 
-              fontSize: 'clamp(2rem, 6vw, 2.75rem)', 
+              fontSize: 'clamp(3rem, 8vw, 5rem)', 
               fontWeight: 700, 
               color: 'rgba(244,244,242,0.85)', 
               marginBottom: '40px',
               letterSpacing: '0.02em',
               textShadow: '0 2px 20px rgba(0,0,0,0.3)',
-              lineHeight: 1.3,
+              lineHeight: 1.1,
+              opacity: 0.75,
             }}
           >
-            <span className="md:hidden" style={{ fontSize: 'clamp(3rem, 12vw, 5rem)', lineHeight: 1.1, display: 'block', opacity: 0.75 }}>
-              GRILL<br />BURGERS<br />& MORE
-            </span>
-            <span className="hidden md:inline">
-              {dict.hero.subtitle}
-            </span>
+            <span className="md:hidden">GRILL<br />BURGERS<br />& MORE</span>
+            <span className="hidden md:block">GRILL BURGERS & MORE</span>
           </p>
-
-          {/* Desktop Buttons - Hidden on Mobile */}
-          <div className="hidden md:flex" style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-            <button
-              onClick={handleReserveClick}
-              style={{
-                padding: '18px 48px',
-                backgroundColor: '#CD7F32',
-                color: '#0D0D0D',
-                fontWeight: 600,
-                fontSize: '1rem',
-                border: 'none',
-                borderRadius: '50px',
-                cursor: 'pointer',
-                transition: 'all 0.3s',
-                boxShadow: '0 4px 20px rgba(205, 127, 50, 0.4)',
-              }}
-              onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#b8722d'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 6px 25px rgba(205, 127, 50, 0.5)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#CD7F32'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(205, 127, 50, 0.4)'; }}
-            >
-              {dict.hero.cta.reserve}
-            </button>
-            <a
-              href="#menu"
-              onClick={scrollToMenu}
-              style={{
-                padding: '18px 48px',
-                backgroundColor: 'rgba(255,255,255,0.1)',
-                backdropFilter: 'blur(10px)',
-                color: '#F4F4F2',
-                fontWeight: 600,
-                fontSize: '1rem',
-                border: '2px solid rgba(244,244,242,0.5)',
-                borderRadius: '50px',
-                textDecoration: 'none',
-                transition: 'all 0.3s',
-                textAlign: 'center',
-              }}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#CD7F32'; e.currentTarget.style.color = '#CD7F32'; e.currentTarget.style.backgroundColor = 'rgba(205, 127, 50, 0.1)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(244,244,242,0.5)'; e.currentTarget.style.color = '#F4F4F2'; e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'; }}
-            >
-              {dict.hero.cta.menu}
-            </a>
-          </div>
 
         </div>
 
-        {/* Mobile: Dots + Arrow at bottom of hero */}
+        {/* Dots + Arrow at bottom of hero - both mobile and desktop */}
         <div 
-          className="flex md:hidden flex-col items-center"
+          className="flex flex-col items-center"
           style={{
             position: 'absolute',
             bottom: '40px',
