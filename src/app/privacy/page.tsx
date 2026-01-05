@@ -8,12 +8,12 @@ export default function PrivacyPolicyPage() {
   const isHebrew = language === 'he';
 
   return (
-    <div style={{ backgroundColor: '#0D0D0D', minHeight: '100vh', paddingTop: '140px', paddingBottom: '80px' }}>
+    <div style={{ backgroundColor: '#0a1628', minHeight: '100vh', paddingTop: '140px', paddingBottom: '80px' }}>
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 24px' }}>
-        <h1 style={{ fontSize: '2.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', textAlign: 'center' }}>
+        <h1 style={{ fontSize: '2.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', textAlign: 'center' }}>
           {isHebrew ? 'מדיניות פרטיות' : 'Privacy Policy'}
         </h1>
-        <div style={{ width: '64px', height: '2px', backgroundColor: '#CD7F32', margin: '0 auto 48px auto' }} />
+        <div style={{ width: '64px', height: '2px', backgroundColor: '#BF9B7A', margin: '0 auto 48px auto' }} />
 
         <div style={{ color: 'rgba(244,244,242,0.85)', lineHeight: 1.8, fontSize: '1rem' }}>
           {isHebrew ? (
@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
                 בהתאם לחוק הגנת הפרטיות, התשמ"א-1981, ותיקון 13 שנכנס לתוקף באוגוסט 2025.
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 1. המידע שאנו אוספים
               </h2>
               <p style={{ marginBottom: '16px' }}>אנו עשויים לאסוף את סוגי המידע הבאים:</p>
@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
                 <li style={{ marginBottom: '8px' }}><strong>עוגיות (Cookies):</strong> קבצים קטנים המאוחסנים במכשירכם לשיפור חוויית הגלישה</li>
               </ul>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 2. מטרות השימוש במידע
               </h2>
               <p style={{ marginBottom: '16px' }}>אנו משתמשים במידע למטרות הבאות:</p>
@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
                 <li style={{ marginBottom: '8px' }}>עמידה בדרישות חוקיות</li>
               </ul>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 3. שיתוף מידע עם צדדים שלישיים
               </h2>
               <p style={{ marginBottom: '24px' }}>
@@ -61,7 +61,7 @@ export default function PrivacyPolicyPage() {
                 <li style={{ marginBottom: '8px' }}>רשויות חוק כאשר נדרש על פי דין</li>
               </ul>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 4. אבטחת מידע
               </h2>
               <p style={{ marginBottom: '24px' }}>
@@ -69,7 +69,7 @@ export default function PrivacyPolicyPage() {
                 גישה מוגבלת למידע, וניטור שוטף. עם זאת, אין שיטת העברה באינטרנט מאובטחת ב-100%.
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 5. שמירת מידע
               </h2>
               <p style={{ marginBottom: '24px' }}>
@@ -77,7 +77,7 @@ export default function PrivacyPolicyPage() {
                 או כנדרש על פי חוק. לאחר מכן, המידע יימחק או יאנונם.
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 6. זכויותיכם
               </h2>
               <p style={{ marginBottom: '16px' }}>בהתאם לחוק, עומדות לכם הזכויות הבאות:</p>
@@ -92,7 +92,7 @@ export default function PrivacyPolicyPage() {
                 למימוש זכויותיכם, פנו אלינו בפרטי הקשר המופיעים להלן.
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 7. עוגיות (Cookies)
               </h2>
               <p style={{ marginBottom: '24px' }}>
@@ -100,21 +100,21 @@ export default function PrivacyPolicyPage() {
                 דרך הגדרות הדפדפן שלכם. חסימת עוגיות מסוימות עשויה להשפיע על פונקציונליות האתר.
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 8. שינויים במדיניות
               </h2>
               <p style={{ marginBottom: '24px' }}>
                 אנו עשויים לעדכן מדיניות זו מעת לעת. שינויים מהותיים יפורסמו באתר עם תאריך העדכון החדש.
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 9. יצירת קשר
               </h2>
               <p style={{ marginBottom: '16px' }}>לשאלות בנוגע למדיניות הפרטיות, ניתן לפנות אלינו:</p>
               <ul style={{ marginBottom: '24px', paddingRight: '24px' }}>
                 <li style={{ marginBottom: '8px' }}>טלפון: {config.phone}</li>
                 <li style={{ marginBottom: '8px' }}>
-                  וואטסאפ: <a href={config.whatsappLink} style={{ color: '#CD7F32' }}>לחצו כאן</a>
+                  וואטסאפ: <a href={config.whatsappLink} style={{ color: '#BF9B7A' }}>לחצו כאן</a>
                 </li>
                 <li style={{ marginBottom: '8px' }}>כתובת: {config.address.he}</li>
               </ul>
@@ -131,7 +131,7 @@ export default function PrivacyPolicyPage() {
                 in accordance with the Privacy Protection Law, 5741-1981, and Amendment 13 which came into effect in August 2025.
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 1. Information We Collect
               </h2>
               <p style={{ marginBottom: '16px' }}>We may collect the following types of information:</p>
@@ -141,7 +141,7 @@ export default function PrivacyPolicyPage() {
                 <li style={{ marginBottom: '8px' }}><strong>Cookies:</strong> Small files stored on your device to improve browsing experience</li>
               </ul>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 2. How We Use Your Information
               </h2>
               <p style={{ marginBottom: '16px' }}>We use the information for the following purposes:</p>
@@ -153,7 +153,7 @@ export default function PrivacyPolicyPage() {
                 <li style={{ marginBottom: '8px' }}>Complying with legal requirements</li>
               </ul>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 3. Sharing Information with Third Parties
               </h2>
               <p style={{ marginBottom: '24px' }}>
@@ -164,7 +164,7 @@ export default function PrivacyPolicyPage() {
                 <li style={{ marginBottom: '8px' }}>Legal authorities when required by law</li>
               </ul>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 4. Data Security
               </h2>
               <p style={{ marginBottom: '24px' }}>
@@ -172,7 +172,7 @@ export default function PrivacyPolicyPage() {
                 restricted access, and ongoing monitoring. However, no method of internet transmission is 100% secure.
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 5. Data Retention
               </h2>
               <p style={{ marginBottom: '24px' }}>
@@ -180,7 +180,7 @@ export default function PrivacyPolicyPage() {
                 or as required by law. After that, the information will be deleted or anonymized.
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 6. Your Rights
               </h2>
               <p style={{ marginBottom: '16px' }}>Under the law, you have the following rights:</p>
@@ -195,7 +195,7 @@ export default function PrivacyPolicyPage() {
                 To exercise your rights, contact us using the details below.
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 7. Cookies
               </h2>
               <p style={{ marginBottom: '24px' }}>
@@ -203,21 +203,21 @@ export default function PrivacyPolicyPage() {
                 through your browser settings. Blocking certain cookies may affect website functionality.
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 8. Policy Changes
               </h2>
               <p style={{ marginBottom: '24px' }}>
                 We may update this policy from time to time. Material changes will be published on the website with the new update date.
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 9. Contact Us
               </h2>
               <p style={{ marginBottom: '16px' }}>For questions regarding the privacy policy, you can contact us:</p>
               <ul style={{ marginBottom: '24px', paddingLeft: '24px' }}>
                 <li style={{ marginBottom: '8px' }}>Phone: {config.phone}</li>
                 <li style={{ marginBottom: '8px' }}>
-                  WhatsApp: <a href={config.whatsappLink} style={{ color: '#CD7F32' }}>Click here</a>
+                  WhatsApp: <a href={config.whatsappLink} style={{ color: '#BF9B7A' }}>Click here</a>
                 </li>
                 <li style={{ marginBottom: '8px' }}>Address: {config.address.en}</li>
               </ul>

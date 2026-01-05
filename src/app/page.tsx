@@ -68,7 +68,7 @@ export default function HomePage() {
               />
             </div>
           ))}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/70 via-[#0D0D0D]/50 to-[#0D0D0D]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628]/70 via-[#0a1628]/50 to-[#0a1628]" />
         </div>
 
         {/* Content */}
@@ -113,7 +113,7 @@ export default function HomePage() {
                   width: currentImageIndex === index ? '12px' : '10px',
                   height: currentImageIndex === index ? '12px' : '10px',
                   borderRadius: '50%',
-                  backgroundColor: currentImageIndex === index ? '#CD7F32' : 'rgba(244,244,242,0.4)',
+                  backgroundColor: currentImageIndex === index ? '#BF9B7A' : 'rgba(244,244,242,0.4)',
                   border: 'none',
                   padding: 0,
                   cursor: 'pointer',
@@ -145,14 +145,14 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 md:py-28 bg-[#0D0D0D]">
+      <section id="about" className="py-20 md:py-28 bg-[#0a1628]">
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
           {/* Text Content */}
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '24px' }}>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '24px' }}>
             {dict.about.title}
           </h2>
           
-          <div style={{ width: '64px', height: '2px', backgroundColor: '#CD7F32', margin: '0 auto 32px auto' }} />
+          <div style={{ width: '64px', height: '2px', backgroundColor: '#BF9B7A', margin: '0 auto 32px auto' }} />
           
           <p style={{ fontSize: '1.125rem', color: 'rgba(244,244,242,0.85)', lineHeight: 1.8, marginBottom: '24px' }}>
             {dict.about.text1}
@@ -219,7 +219,7 @@ export default function HomePage() {
                 padding: '24px',
               }}>
                 <span style={{
-                  color: '#F4F4F2',
+                  color: '#F2F1F0',
                   fontSize: '1.5rem',
                   fontWeight: 600,
                   textShadow: '0 2px 4px rgba(0,0,0,0.3)',
@@ -258,7 +258,7 @@ export default function HomePage() {
                 padding: '24px',
               }}>
                 <span style={{
-                  color: '#F4F4F2',
+                  color: '#F2F1F0',
                   fontSize: '1.5rem',
                   fontWeight: 600,
                   textShadow: '0 2px 4px rgba(0,0,0,0.3)',
@@ -276,7 +276,7 @@ export default function HomePage() {
       {/* Celebration Strip */}
       <section 
         style={{
-          backgroundColor: '#CD7F32',
+          backgroundColor: '#BF9B7A',
           padding: '24px 16px',
         }}
       >
@@ -291,7 +291,7 @@ export default function HomePage() {
           textAlign: 'center',
         }}>
           <span style={{
-            color: '#0D0D0D',
+            color: '#0a1628',
             fontSize: '2rem',
             fontWeight: 700,
           }}>
@@ -304,8 +304,8 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              backgroundColor: '#CD7F32',
-              color: '#0D0D0D',
+              backgroundColor: '#BF9B7A',
+              color: '#0a1628',
               padding: '12px 28px',
               fontWeight: 600,
               fontSize: '0.95rem',
@@ -314,14 +314,14 @@ export default function HomePage() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              border: '2px solid #0D0D0D',
+              border: '2px solid #0a1628',
             }}
             onMouseEnter={(e) => { 
-              e.currentTarget.style.backgroundColor = '#b8722d'; 
+              e.currentTarget.style.backgroundColor = '#A8876A'; 
               e.currentTarget.style.transform = 'translateY(-2px)'; 
             }}
             onMouseLeave={(e) => { 
-              e.currentTarget.style.backgroundColor = '#CD7F32'; 
+              e.currentTarget.style.backgroundColor = '#BF9B7A'; 
               e.currentTarget.style.transform = 'translateY(0)'; 
             }}
           >

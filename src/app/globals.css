@@ -2,9 +2,9 @@
 
 :root {
   /* Brand Colors - Updated */
-  --charcoal: #0D0D0D;
-  --off-white: #F4F4F2;
-  --bronze: #CD7F32;
+  --charcoal: #0a1628;
+  --off-white: #F2F1F0;
+  --bronze: #BF9B7A;
   --wood: #5C3E2B;
   
   /* Functional */
@@ -18,9 +18,9 @@
 }
 
 @theme inline {
-  --color-charcoal: #0D0D0D;
-  --color-off-white: #F4F4F2;
-  --color-bronze: #CD7F32;
+  --color-charcoal: #0a1628;
+  --color-off-white: #F2F1F0;
+  --color-bronze: #BF9B7A;
   --color-wood: #5C3E2B;
   --color-background: var(--charcoal);
   --color-foreground: var(--off-white);

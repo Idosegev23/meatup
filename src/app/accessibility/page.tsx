@@ -8,12 +8,12 @@ export default function AccessibilityPage() {
   const isHebrew = language === 'he';
 
   return (
-    <div style={{ backgroundColor: '#0D0D0D', minHeight: '100vh', paddingTop: '140px', paddingBottom: '80px' }}>
+    <div style={{ backgroundColor: '#0a1628', minHeight: '100vh', paddingTop: '140px', paddingBottom: '80px' }}>
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 24px' }}>
-        <h1 style={{ fontSize: '2.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', textAlign: 'center' }}>
+        <h1 style={{ fontSize: '2.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', textAlign: 'center' }}>
           {isHebrew ? 'הצהרת נגישות' : 'Accessibility Statement'}
         </h1>
-        <div style={{ width: '64px', height: '2px', backgroundColor: '#CD7F32', margin: '0 auto 48px auto' }} />
+        <div style={{ width: '64px', height: '2px', backgroundColor: '#BF9B7A', margin: '0 auto 48px auto' }} />
 
         <div style={{ color: 'rgba(244,244,242,0.85)', lineHeight: 1.8, fontSize: '1rem' }}>
           {isHebrew ? (
@@ -22,7 +22,7 @@ export default function AccessibilityPage() {
                 <strong>תאריך עדכון אחרון:</strong> ינואר 2026
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 מחויבות לנגישות
               </h2>
               <p style={{ marginBottom: '24px' }}>
@@ -31,7 +31,7 @@ export default function AccessibilityPage() {
                 לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע"ג-2013.
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 תקן הנגישות
               </h2>
               <p style={{ marginBottom: '24px' }}>
@@ -39,7 +39,7 @@ export default function AccessibilityPage() {
                 אנו ממשיכים לשפר את נגישות האתר באופן שוטף.
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 התאמות הנגישות שבוצעו
               </h2>
               <ul style={{ marginBottom: '24px', paddingRight: '24px' }}>
@@ -53,7 +53,7 @@ export default function AccessibilityPage() {
                 <li style={{ marginBottom: '8px' }}>תמיכה בכיוון RTL לעברית</li>
               </ul>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 נגישות המסעדה
               </h2>
               <ul style={{ marginBottom: '24px', paddingRight: '24px' }}>
@@ -63,7 +63,7 @@ export default function AccessibilityPage() {
                 <li style={{ marginBottom: '8px' }}>צוות מאומן לסיוע לאורחים עם מוגבלויות</li>
               </ul>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 יצירת קשר בנושאי נגישות
               </h2>
               <p style={{ marginBottom: '16px' }}>
@@ -72,7 +72,7 @@ export default function AccessibilityPage() {
               <ul style={{ marginBottom: '24px', paddingRight: '24px' }}>
                 <li style={{ marginBottom: '8px' }}>טלפון: {config.phone}</li>
                 <li style={{ marginBottom: '8px' }}>
-                  וואטסאפ: <a href={config.whatsappLink} style={{ color: '#CD7F32' }}>לחצו כאן</a>
+                  וואטסאפ: <a href={config.whatsappLink} style={{ color: '#BF9B7A' }}>לחצו כאן</a>
                 </li>
                 <li style={{ marginBottom: '8px' }}>כתובת: {config.address.he}</li>
               </ul>
@@ -87,7 +87,7 @@ export default function AccessibilityPage() {
                 <strong>Last Updated:</strong> January 2026
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 Commitment to Accessibility
               </h2>
               <p style={{ marginBottom: '24px' }}>
@@ -97,7 +97,7 @@ export default function AccessibilityPage() {
                 (Service Accessibility Adjustments), 5773-2013.
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 Accessibility Standard
               </h2>
               <p style={{ marginBottom: '24px' }}>
@@ -105,7 +105,7 @@ export default function AccessibilityPage() {
                 WCAG 2.1 Level AA guidelines. We continue to improve the accessibility of the site on an ongoing basis.
               </p>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 Accessibility Features
               </h2>
               <ul style={{ marginBottom: '24px', paddingLeft: '24px' }}>
@@ -119,7 +119,7 @@ export default function AccessibilityPage() {
                 <li style={{ marginBottom: '8px' }}>RTL support for Hebrew</li>
               </ul>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 Restaurant Accessibility
               </h2>
               <ul style={{ marginBottom: '24px', paddingLeft: '24px' }}>
@@ -129,7 +129,7 @@ export default function AccessibilityPage() {
                 <li style={{ marginBottom: '8px' }}>Staff trained to assist guests with disabilities</li>
               </ul>
 
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '16px', marginTop: '32px' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', marginTop: '32px' }}>
                 Contact Us About Accessibility
               </h2>
               <p style={{ marginBottom: '16px' }}>
@@ -139,7 +139,7 @@ export default function AccessibilityPage() {
               <ul style={{ marginBottom: '24px', paddingLeft: '24px' }}>
                 <li style={{ marginBottom: '8px' }}>Phone: {config.phone}</li>
                 <li style={{ marginBottom: '8px' }}>
-                  WhatsApp: <a href={config.whatsappLink} style={{ color: '#CD7F32' }}>Click here</a>
+                  WhatsApp: <a href={config.whatsappLink} style={{ color: '#BF9B7A' }}>Click here</a>
                 </li>
                 <li style={{ marginBottom: '8px' }}>Address: {config.address.en}</li>
               </ul>
@@ -154,6 +154,7 @@ export default function AccessibilityPage() {
     </div>
   );
 }
+
 
 
 

@@ -60,8 +60,8 @@ export default function AccessibilityWidget() {
           width: '56px',
           height: '56px',
           borderRadius: '50%',
-          backgroundColor: '#CD7F32',
-          color: '#0D0D0D',
+          backgroundColor: '#BF9B7A',
+          color: '#0a1628',
           border: 'none',
           cursor: 'pointer',
           boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
@@ -102,7 +102,7 @@ export default function AccessibilityWidget() {
               left: isHebrew ? '24px' : 'auto',
               right: isHebrew ? 'auto' : '24px',
               width: '320px',
-              backgroundColor: '#1A1A1A',
+              backgroundColor: '#0a1628',
               borderRadius: '16px',
               padding: '24px',
               zIndex: 1002,
@@ -112,7 +112,7 @@ export default function AccessibilityWidget() {
             <h3 style={{ 
               fontSize: '1.25rem', 
               fontWeight: 600, 
-              color: '#F4F4F2', 
+              color: '#F2F1F0', 
               marginBottom: '20px',
               textAlign: isHebrew ? 'right' : 'left'
             }}>
@@ -136,7 +136,7 @@ export default function AccessibilityWidget() {
                     flex: 1,
                     padding: '10px',
                     backgroundColor: 'rgba(205,127,50,0.2)',
-                    color: '#CD7F32',
+                    color: '#BF9B7A',
                     border: '1px solid rgba(205,127,50,0.3)',
                     borderRadius: '8px',
                     cursor: 'pointer',
@@ -152,7 +152,7 @@ export default function AccessibilityWidget() {
                     flex: 1,
                     padding: '10px',
                     backgroundColor: 'rgba(244,244,242,0.1)',
-                    color: '#F4F4F2',
+                    color: '#F2F1F0',
                     border: '1px solid rgba(244,244,242,0.2)',
                     borderRadius: '8px',
                     cursor: 'pointer',
@@ -167,7 +167,7 @@ export default function AccessibilityWidget() {
                     flex: 1,
                     padding: '10px',
                     backgroundColor: 'rgba(205,127,50,0.2)',
-                    color: '#CD7F32',
+                    color: '#BF9B7A',
                     border: '1px solid rgba(205,127,50,0.3)',
                     borderRadius: '8px',
                     cursor: 'pointer',
@@ -191,10 +191,10 @@ export default function AccessibilityWidget() {
                   justifyContent: 'space-between',
                   padding: '12px 16px',
                   backgroundColor: settings.contrast ? 'rgba(205,127,50,0.2)' : 'rgba(244,244,242,0.05)',
-                  border: settings.contrast ? '1px solid #CD7F32' : '1px solid rgba(244,244,242,0.1)',
+                  border: settings.contrast ? '1px solid #BF9B7A' : '1px solid rgba(244,244,242,0.1)',
                   borderRadius: '8px',
                   cursor: 'pointer',
-                  color: '#F4F4F2',
+                  color: '#F2F1F0',
                   width: '100%',
                   textAlign: isHebrew ? 'right' : 'left',
                 }}
@@ -204,14 +204,14 @@ export default function AccessibilityWidget() {
                   width: '20px', 
                   height: '20px', 
                   borderRadius: '4px', 
-                  backgroundColor: settings.contrast ? '#CD7F32' : 'transparent',
-                  border: '2px solid #CD7F32',
+                  backgroundColor: settings.contrast ? '#BF9B7A' : 'transparent',
+                  border: '2px solid #BF9B7A',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}>
                   {settings.contrast && (
-                    <svg style={{ width: '14px', height: '14px' }} fill="#0D0D0D" viewBox="0 0 24 24">
+                    <svg style={{ width: '14px', height: '14px' }} fill="#0a1628" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
                   )}
@@ -227,10 +227,10 @@ export default function AccessibilityWidget() {
                   justifyContent: 'space-between',
                   padding: '12px 16px',
                   backgroundColor: settings.highlightLinks ? 'rgba(205,127,50,0.2)' : 'rgba(244,244,242,0.05)',
-                  border: settings.highlightLinks ? '1px solid #CD7F32' : '1px solid rgba(244,244,242,0.1)',
+                  border: settings.highlightLinks ? '1px solid #BF9B7A' : '1px solid rgba(244,244,242,0.1)',
                   borderRadius: '8px',
                   cursor: 'pointer',
-                  color: '#F4F4F2',
+                  color: '#F2F1F0',
                   width: '100%',
                   textAlign: isHebrew ? 'right' : 'left',
                 }}
@@ -240,14 +240,14 @@ export default function AccessibilityWidget() {
                   width: '20px', 
                   height: '20px', 
                   borderRadius: '4px', 
-                  backgroundColor: settings.highlightLinks ? '#CD7F32' : 'transparent',
-                  border: '2px solid #CD7F32',
+                  backgroundColor: settings.highlightLinks ? '#BF9B7A' : 'transparent',
+                  border: '2px solid #BF9B7A',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}>
                   {settings.highlightLinks && (
-                    <svg style={{ width: '14px', height: '14px' }} fill="#0D0D0D" viewBox="0 0 24 24">
+                    <svg style={{ width: '14px', height: '14px' }} fill="#0a1628" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
                   )}
@@ -263,10 +263,10 @@ export default function AccessibilityWidget() {
                   justifyContent: 'space-between',
                   padding: '12px 16px',
                   backgroundColor: settings.pauseAnimations ? 'rgba(205,127,50,0.2)' : 'rgba(244,244,242,0.05)',
-                  border: settings.pauseAnimations ? '1px solid #CD7F32' : '1px solid rgba(244,244,242,0.1)',
+                  border: settings.pauseAnimations ? '1px solid #BF9B7A' : '1px solid rgba(244,244,242,0.1)',
                   borderRadius: '8px',
                   cursor: 'pointer',
-                  color: '#F4F4F2',
+                  color: '#F2F1F0',
                   width: '100%',
                   textAlign: isHebrew ? 'right' : 'left',
                 }}
@@ -276,14 +276,14 @@ export default function AccessibilityWidget() {
                   width: '20px', 
                   height: '20px', 
                   borderRadius: '4px', 
-                  backgroundColor: settings.pauseAnimations ? '#CD7F32' : 'transparent',
-                  border: '2px solid #CD7F32',
+                  backgroundColor: settings.pauseAnimations ? '#BF9B7A' : 'transparent',
+                  border: '2px solid #BF9B7A',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}>
                   {settings.pauseAnimations && (
-                    <svg style={{ width: '14px', height: '14px' }} fill="#0D0D0D" viewBox="0 0 24 24">
+                    <svg style={{ width: '14px', height: '14px' }} fill="#0a1628" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
                   )}
@@ -316,7 +316,7 @@ export default function AccessibilityWidget() {
                 display: 'block',
                 textAlign: 'center',
                 marginTop: '16px',
-                color: '#CD7F32',
+                color: '#BF9B7A',
                 fontSize: '0.875rem',
                 textDecoration: 'none',
               }}

@@ -82,18 +82,18 @@ export default function Header() {
       style={{
         fontSize: '16px',
         fontWeight: 500,
-        color: activeSection === item.id ? '#CD7F32' : '#0D0D0D',
+        color: activeSection === item.id ? '#BF9B7A' : '#0a1628',
         transition: 'color 0.2s',
         whiteSpace: 'nowrap',
       }}
       onMouseEnter={(e) => {
         if (activeSection !== item.id) {
-          e.currentTarget.style.color = '#CD7F32';
+          e.currentTarget.style.color = '#BF9B7A';
         }
       }}
       onMouseLeave={(e) => {
         if (activeSection !== item.id) {
-          e.currentTarget.style.color = '#0D0D0D';
+          e.currentTarget.style.color = '#0a1628';
         }
       }}
     >
@@ -151,7 +151,7 @@ export default function Header() {
               width: '38px',
               height: '38px',
               borderRadius: '50%',
-              backgroundColor: '#0D0D0D',
+              backgroundColor: '#0a1628',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -160,15 +160,15 @@ export default function Header() {
           >
             <svg width="22" height="22" viewBox="0 0 122.71 122.88" style={{ overflow: 'visible' }}>
               {/* Face fill - black */}
-              <path fill="#0D0D0D" d="M55.14,104.21c4.22,0,8.44,0.19,12.66-0.09c3.84-0.19,7.88-0.56,11.63-1.5c29.82-7.31,45.76-40.23,32.72-68.07 C104.27,17.76,90.77,8.19,72.3,6.22c-14.16-1.5-26.82,2.72-37.51,12.28c-10.5,9.47-15.94,21.28-16.31,35.44 c-0.09,3.28,0,6.66,0,9.94C18.38,71.02,14.35,76.55,7.5,78.7c-0.09,0-0.28,0.19-0.38,0.19c2.63,6.94,13.31,17.16,19.97,19.69 C35.45,87.14,52.32,91.18,55.14,104.21L55.14,104.21z"/>
+              <path fill="#0a1628" d="M55.14,104.21c4.22,0,8.44,0.19,12.66-0.09c3.84-0.19,7.88-0.56,11.63-1.5c29.82-7.31,45.76-40.23,32.72-68.07 C104.27,17.76,90.77,8.19,72.3,6.22c-14.16-1.5-26.82,2.72-37.51,12.28c-10.5,9.47-15.94,21.28-16.31,35.44 c-0.09,3.28,0,6.66,0,9.94C18.38,71.02,14.35,76.55,7.5,78.7c-0.09,0-0.28,0.19-0.38,0.19c2.63,6.94,13.31,17.16,19.97,19.69 C35.45,87.14,52.32,91.18,55.14,104.21L55.14,104.21z"/>
               {/* Outline - orange */}
-              <path fill="#CD7F32" d="M54.95,110.49c-1.03,4.69-3.56,8.16-7.69,10.31c-5.25,2.72-10.6,2.63-15.57-0.56c-5.16-3.28-7.41-8.25-7.03-14.35 c0.09-1.03-0.19-1.41-1.03-1.88c-9.1-4.78-16.31-11.44-21.28-20.44c-0.94-1.78-1.69-3.66-2.16-5.63c-0.66-2.72,0.38-4.03,3.19-4.31 c3.38-0.38,6.38-1.69,7.88-4.88c0.66-1.41,1.03-3.09,1.03-4.69c0.19-4.03,0-8.06,0.19-12.1c1.03-15.57,7.5-28.5,19.32-38.63 C42.67,3.97,55.42-0.43,69.76,0.03c25.04,0.94,46.51,18.57,51.57,43.23c4.59,22.32-2.34,40.98-20.07,55.51 c-1.03,0.84-2.16,1.69-3.38,2.44c-0.66,0.47-0.84,0.84-0.56,1.59c2.34,7.13-0.94,15-7.5,18.38c-8.91,4.41-19.22-0.09-21.94-9.66 c-0.09-0.38-0.56-0.84-0.84-0.84C63.11,110.4,59.07,110.49,54.95,110.49L54.95,110.49z M55.14,104.21c4.22,0,8.44,0.19,12.66-0.09 c3.84-0.19,7.88-0.56,11.63-1.5c29.82-7.31,45.76-40.23,32.72-68.07C104.27,17.76,90.77,8.19,72.3,6.22 c-14.16-1.5-26.82,2.72-37.51,12.28c-10.5,9.47-15.94,21.28-16.31,35.44c-0.09,3.28,0,6.66,0,9.94 C18.38,71.02,14.35,76.55,7.5,78.7c-0.09,0-0.28,0.19-0.38,0.19c2.63,6.94,13.31,17.16,19.97,19.69 C35.45,87.14,52.32,91.18,55.14,104.21L55.14,104.21z"/>
+              <path fill="#BF9B7A" d="M54.95,110.49c-1.03,4.69-3.56,8.16-7.69,10.31c-5.25,2.72-10.6,2.63-15.57-0.56c-5.16-3.28-7.41-8.25-7.03-14.35 c0.09-1.03-0.19-1.41-1.03-1.88c-9.1-4.78-16.31-11.44-21.28-20.44c-0.94-1.78-1.69-3.66-2.16-5.63c-0.66-2.72,0.38-4.03,3.19-4.31 c3.38-0.38,6.38-1.69,7.88-4.88c0.66-1.41,1.03-3.09,1.03-4.69c0.19-4.03,0-8.06,0.19-12.1c1.03-15.57,7.5-28.5,19.32-38.63 C42.67,3.97,55.42-0.43,69.76,0.03c25.04,0.94,46.51,18.57,51.57,43.23c4.59,22.32-2.34,40.98-20.07,55.51 c-1.03,0.84-2.16,1.69-3.38,2.44c-0.66,0.47-0.84,0.84-0.56,1.59c2.34,7.13-0.94,15-7.5,18.38c-8.91,4.41-19.22-0.09-21.94-9.66 c-0.09-0.38-0.56-0.84-0.84-0.84C63.11,110.4,59.07,110.49,54.95,110.49L54.95,110.49z M55.14,104.21c4.22,0,8.44,0.19,12.66-0.09 c3.84-0.19,7.88-0.56,11.63-1.5c29.82-7.31,45.76-40.23,32.72-68.07C104.27,17.76,90.77,8.19,72.3,6.22 c-14.16-1.5-26.82,2.72-37.51,12.28c-10.5,9.47-15.94,21.28-16.31,35.44c-0.09,3.28,0,6.66,0,9.94 C18.38,71.02,14.35,76.55,7.5,78.7c-0.09,0-0.28,0.19-0.38,0.19c2.63,6.94,13.31,17.16,19.97,19.69 C35.45,87.14,52.32,91.18,55.14,104.21L55.14,104.21z"/>
               {/* Smile - orange */}
-              <path fill="#CD7F32" d="M74.92,79.74c-11.07-0.56-18.38-4.97-23.07-13.78c-1.13-2.16-0.09-4.31,2.06-4.78c1.31-0.28,2.53,0.66,3.47,2.16 c1.22,1.88,2.44,3.75,4.03,5.25c8.81,8.34,23.25,5.72,28.79-5.06c0.66-1.31,1.5-2.34,3.09-2.34c2.34,0.09,3.66,2.44,2.63,4.59 c-2.91,5.91-7.5,10.22-13.69,12.28C79.51,78.99,76.7,79.36,74.92,79.74L74.92,79.74z"/>
+              <path fill="#BF9B7A" d="M74.92,79.74c-11.07-0.56-18.38-4.97-23.07-13.78c-1.13-2.16-0.09-4.31,2.06-4.78c1.31-0.28,2.53,0.66,3.47,2.16 c1.22,1.88,2.44,3.75,4.03,5.25c8.81,8.34,23.25,5.72,28.79-5.06c0.66-1.31,1.5-2.34,3.09-2.34c2.34,0.09,3.66,2.44,2.63,4.59 c-2.91,5.91-7.5,10.22-13.69,12.28C79.51,78.99,76.7,79.36,74.92,79.74L74.92,79.74z"/>
               {/* Left eye - orange */}
-              <path fill="#CD7F32" d="M55.32,48.98c-3.38,0-6.09-2.72-6.09-6.09s2.72-6.09,6.09-6.09s6.09,2.72,6.09,6.09C61.42,46.17,58.7,48.98,55.32,48.98 L55.32,48.98z"/>
+              <path fill="#BF9B7A" d="M55.32,48.98c-3.38,0-6.09-2.72-6.09-6.09s2.72-6.09,6.09-6.09s6.09,2.72,6.09,6.09C61.42,46.17,58.7,48.98,55.32,48.98 L55.32,48.98z"/>
               {/* Right eye - orange */}
-              <path fill="#CD7F32" d="M98.27,42.79c0,3.38-2.72,6.09-6,6.19c-3.38,0-6.09-2.63-6.09-6.09c0-3.38,2.63-6.09,6-6.19 C95.46,36.7,98.17,39.42,98.27,42.79L98.27,42.79z"/>
+              <path fill="#BF9B7A" d="M98.27,42.79c0,3.38-2.72,6.09-6,6.19c-3.38,0-6.09-2.63-6.09-6.09c0-3.38,2.63-6.09,6-6.19 C95.46,36.7,98.17,39.42,98.27,42.79L98.27,42.79z"/>
             </svg>
           </a>
 
@@ -179,14 +179,14 @@ export default function Header() {
               width: '38px',
               height: '38px',
               borderRadius: '50%',
-              backgroundColor: '#0D0D0D',
+              backgroundColor: '#0a1628',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
             }}
             aria-label="Call"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#CD7F32" strokeWidth="2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BF9B7A" strokeWidth="2">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
             </svg>
           </a>
@@ -200,7 +200,7 @@ export default function Header() {
             left: '0px',
             top: '68px',
             zIndex: 60,
-            backgroundColor: '#f5f5f5',
+            backgroundColor: '#F2F1F0',
             padding: '2px 6px 2px 8px',
           }}
         >
@@ -226,7 +226,7 @@ export default function Header() {
               position: 'absolute',
               width: '90px',  // Bigger circle
               height: '90px',
-              backgroundColor: '#0D0D0D',
+              backgroundColor: '#0a1628',
               borderRadius: '50%',
               boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
             }}
@@ -266,7 +266,7 @@ export default function Header() {
             display: 'block',
             width: '32px', 
             height: '2px', 
-            backgroundColor: '#1a1a1a', 
+            backgroundColor: '#0a1628', 
             transition: 'all 0.3s ease',
             transform: isMobileMenuOpen ? 'translateY(9px) rotate(45deg)' : 'none',
           }} />
@@ -274,7 +274,7 @@ export default function Header() {
             display: 'block',
             width: '32px', 
             height: '2px', 
-            backgroundColor: '#1a1a1a', 
+            backgroundColor: '#0a1628', 
             transition: 'all 0.3s ease',
             opacity: isMobileMenuOpen ? 0 : 1,
           }} />
@@ -282,7 +282,7 @@ export default function Header() {
             display: 'block',
             width: '32px', 
             height: '2px', 
-            backgroundColor: '#1a1a1a', 
+            backgroundColor: '#0a1628', 
             transition: 'all 0.3s ease',
             transform: isMobileMenuOpen ? 'translateY(-9px) rotate(-45deg)' : 'none',
           }} />
@@ -326,7 +326,7 @@ export default function Header() {
                   position: 'absolute',
                   width: '110px',
                   height: '110px',
-                  backgroundColor: '#0D0D0D',
+                  backgroundColor: '#0a1628',
                   borderRadius: '50%',
                   boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
                 }}
@@ -346,14 +346,14 @@ export default function Header() {
 
           {/* Main Header Bar - Mobile: soft white-gray like Kisu */}
           <header
-            className="md:bg-[#F4F4F2] md:shadow-lg md:mt-5 h-[60px] md:h-[64px]"
+            className="md:bg-[#F2F1F0] md:shadow-lg md:mt-5 h-[60px] md:h-[64px]"
             style={{
               borderRadius: '0',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
               padding: '0 8px',
-              backgroundColor: '#f5f5f5',
+              backgroundColor: '#F2F1F0',
             }}
           >
             {/* Flex spacer to push left nav toward logo */}
@@ -381,8 +381,8 @@ export default function Header() {
                     onClick={handleReserveClick}
                     style={{
                       padding: '10px 20px',
-                      backgroundColor: '#CD7F32',
-                      color: '#F4F4F2',
+                      backgroundColor: '#BF9B7A',
+                      color: '#F2F1F0',
                       fontWeight: 600,
                       fontSize: '13px',
                       border: 'none',
@@ -393,10 +393,10 @@ export default function Header() {
                       marginLeft: '8px',
                     }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#b8722d';
+                  e.currentTarget.style.backgroundColor = '#A8876A';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = '#CD7F32';
+                  e.currentTarget.style.backgroundColor = '#BF9B7A';
                 }}
               >
                 {dict.nav.reserve}
@@ -416,11 +416,11 @@ export default function Header() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: '#0D0D0D',
+                    color: '#0a1628',
                     transition: 'color 0.2s',
                   }}
-                  onMouseEnter={(e) => { e.currentTarget.style.color = '#CD7F32'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.color = '#0D0D0D'; }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = '#BF9B7A'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.color = '#0a1628'; }}
                   aria-label="Facebook"
                 >
                   <svg style={{ width: '18px', height: '18px' }} fill="currentColor" viewBox="0 0 24 24">
@@ -439,11 +439,11 @@ export default function Header() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: '#0D0D0D',
+                    color: '#0a1628',
                     transition: 'color 0.2s',
                   }}
-                  onMouseEnter={(e) => { e.currentTarget.style.color = '#CD7F32'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.color = '#0D0D0D'; }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = '#BF9B7A'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.color = '#0a1628'; }}
                   aria-label="Instagram"
                 >
                   <svg style={{ width: '18px', height: '18px' }} fill="currentColor" viewBox="0 0 24 24">
@@ -462,7 +462,7 @@ export default function Header() {
                   transition: 'max-height 0.3s ease, opacity 0.3s ease',
                   maxHeight: isMobileMenuOpen ? '500px' : '0',
                   opacity: isMobileMenuOpen ? 1 : 0,
-                  backgroundColor: '#f5f5f5',
+                  backgroundColor: '#F2F1F0',
                   width: '100%',
                 }}
                 className="md:hidden"
@@ -480,7 +480,7 @@ export default function Header() {
                     padding: '14px 16px',
                     fontSize: '18px',
                     fontWeight: 500,
-                    color: activeSection === item.id ? '#CD7F32' : '#0D0D0D',
+                    color: activeSection === item.id ? '#BF9B7A' : '#0a1628',
                     textAlign: 'center',
                     borderBottom: '1px solid rgba(0,0,0,0.1)',
                     textDecoration: 'none',
@@ -499,8 +499,8 @@ export default function Header() {
                 style={{
                   marginTop: '12px',
                   padding: '16px 24px',
-                  backgroundColor: '#CD7F32',
-                  color: '#F4F4F2',
+                  backgroundColor: '#BF9B7A',
+                  color: '#F2F1F0',
                   fontWeight: 600,
                   fontSize: '18px',
                   border: 'none',

@@ -17,14 +17,14 @@ export default function Menu() {
 
   return (
     <>
-      <section id="menu" className="bg-[#0D0D0D]" style={{ padding: '80px 0 100px 0' }}>
+      <section id="menu" className="bg-[#0a1628]" style={{ padding: '80px 0 100px 0' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
         {/* Header */}
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 600, color: '#F4F4F2', marginBottom: '24px' }}>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '24px' }}>
             {dict.menu.title}
           </h2>
           
-          <div style={{ width: '64px', height: '2px', backgroundColor: '#CD7F32', margin: '0 auto 24px auto' }} />
+          <div style={{ width: '64px', height: '2px', backgroundColor: '#BF9B7A', margin: '0 auto 24px auto' }} />
           
           {/* Kosher Logo */}
           <div style={{ marginBottom: '48px' }}>
@@ -106,7 +106,7 @@ export default function Menu() {
                 transition={{ type: 'spring', damping: 25, stiffness: 300 }}
                 onClick={(e) => e.stopPropagation()}
               >
-              <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] rounded-2xl overflow-hidden shadow-2xl border border-[#CD7F32]/20" style={{ margin: '16px' }}>
+              <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0a1628] rounded-2xl overflow-hidden shadow-2xl border border-[#BF9B7A]/20" style={{ margin: '16px' }}>
                 {/* Header */}
                 <div className="relative h-32 md:h-40">
                   <Image
@@ -120,7 +120,7 @@ export default function Menu() {
                   {/* Close Button */}
                   <button
                     onClick={closeModal}
-                    className="absolute top-4 left-4 w-10 h-10 rounded-full bg-[#0D0D0D]/60 backdrop-blur-sm flex items-center justify-center text-[#F4F4F2] hover:bg-[#CD7F32] transition-colors"
+                    className="absolute top-4 left-4 w-10 h-10 rounded-full bg-[#0a1628]/60 backdrop-blur-sm flex items-center justify-center text-[#F2F1F0] hover:bg-[#BF9B7A] transition-colors"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -129,7 +129,7 @@ export default function Menu() {
 
                   {/* Category Title */}
                   <div className="absolute bottom-4 right-6 left-6 text-right">
-                    <h3 className="text-2xl md:text-3xl font-bold text-[#F4F4F2]">
+                    <h3 className="text-2xl md:text-3xl font-bold text-[#F2F1F0]">
                       {language === 'he' ? selectedCategory.name.he : selectedCategory.name.en}
                     </h3>
                   </div>
@@ -153,7 +153,7 @@ export default function Menu() {
                           <h5 style={{
                             fontSize: '1rem',
                             fontWeight: 600,
-                            color: '#CD7F32',
+                            color: '#BF9B7A',
                             textAlign: language === 'he' ? 'right' : 'left',
                           }}>
                             {language === 'he' ? item.name.he : item.name.en}
@@ -168,22 +168,22 @@ export default function Menu() {
                           transition={{ delay: index * 0.03 }}
                           className={`py-3 ${
                             index !== selectedCategory.items.length - 1 && !selectedCategory.items[index + 1]?.isSubheader
-                              ? 'border-b border-[#F4F4F2]/10' 
+                              ? 'border-b border-[#F2F1F0]/10' 
                               : ''
                     }`}
                   >
                     <div className="flex justify-between items-start gap-4">
                       <div className="flex-1">
-                              <h4 className="text-base font-medium text-[#F4F4F2]">
+                              <h4 className="text-base font-medium text-[#F2F1F0]">
                           {language === 'he' ? item.name.he : item.name.en}
                               </h4>
                               {item.description && (
-                                <p className="text-[#F4F4F2]/50 text-sm leading-relaxed mt-1">
+                                <p className="text-[#F2F1F0]/50 text-sm leading-relaxed mt-1">
                           {language === 'he' ? item.description.he : item.description.en}
                         </p>
                               )}
                       </div>
-                            <div className="text-base font-bold text-[#CD7F32] whitespace-nowrap">
+                            <div className="text-base font-bold text-[#BF9B7A] whitespace-nowrap">
                         {dict.menu.currency}{item.price}
                       </div>
                     </div>

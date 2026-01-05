@@ -29,7 +29,7 @@ export default function LanguageToggle({ variant = 'light' }: LanguageToggleProp
         border: 'none',
         cursor: 'pointer',
         transition: 'all 0.2s',
-        color: isDark ? '#0D0D0D' : '#F4F4F2',
+        color: isDark ? '#0a1628' : '#F2F1F0',
       }}
       aria-label={dict.a11y.switchLang}
     >
