@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
-import { menuData, MenuCategory } from '@/data/menu';
+import { menuData, MenuCategory, allergenNotice } from '@/data/menu';
 import { config } from '@/data/config';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -137,6 +137,26 @@ export default function Menu() {
 
                 {/* Items List */}
                 <div style={{ padding: '32px 40px', overflowY: 'auto', maxHeight: 'calc(85vh - 12rem)' }} className="custom-scrollbar">
+                  {/* Category Note (e.g., lunch deal) */}
+                  {selectedCategory.note && (
+                    <div style={{
+                      backgroundColor: 'rgba(191, 155, 122, 0.15)',
+                      borderRadius: '8px',
+                      padding: '12px 16px',
+                      marginBottom: '20px',
+                      border: '1px solid rgba(191, 155, 122, 0.3)',
+                    }}>
+                      <p style={{
+                        fontSize: '0.85rem',
+                        color: '#BF9B7A',
+                        textAlign: language === 'he' ? 'right' : 'left',
+                        lineHeight: 1.5,
+                      }}>
+                        {language === 'he' ? selectedCategory.note.he : selectedCategory.note.en}
+                      </p>
+                    </div>
+                  )}
+                  
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                     {selectedCategory.items.map((item, index) => (
                       item.isSubheader ? (
@@ -191,6 +211,24 @@ export default function Menu() {
                       )
                     ))}
                   </div>
+                  
+                  {/* Allergen Notice - only for burgers category */}
+                  {selectedCategory.id === 'burgers' && (
+                    <div style={{
+                      marginTop: '24px',
+                      paddingTop: '16px',
+                      borderTop: '1px solid rgba(244, 244, 242, 0.1)',
+                    }}>
+                      <p style={{
+                        fontSize: '0.75rem',
+                        color: 'rgba(244, 244, 242, 0.4)',
+                        textAlign: language === 'he' ? 'right' : 'left',
+                        lineHeight: 1.6,
+                      }}>
+                        {language === 'he' ? allergenNotice.he : allergenNotice.en}
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
               </motion.div>
