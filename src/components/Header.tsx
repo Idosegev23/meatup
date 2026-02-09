@@ -377,8 +377,10 @@ export default function Header() {
               {rightNavItems.map((item) => (
                 <NavLink key={item.href} item={item} />
               ))}
-                  <button
-                    onClick={handleReserveClick}
+                  <a
+                    href={config.tabitUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{
                       padding: '10px 20px',
                       backgroundColor: '#BF9B7A',
@@ -391,6 +393,7 @@ export default function Header() {
                       transition: 'background-color 0.2s',
                       whiteSpace: 'nowrap',
                       marginLeft: '8px',
+                      textDecoration: 'none',
                     }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = '#A8876A';
@@ -400,7 +403,7 @@ export default function Header() {
                 }}
               >
                 {dict.nav.reserve}
-              </button>
+              </a>
 
               {/* Social Icons next to nav */}
               <div className="flex items-center gap-2" style={{ marginLeft: '8px' }}>
@@ -491,12 +494,13 @@ export default function Header() {
               ))}
               
               {/* Reserve Button in Mobile Menu */}
-              <button
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  handleReserveClick();
-                }}
+              <a
+                href={config.tabitUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
                 style={{
+                  display: 'block',
                   marginTop: '12px',
                   padding: '16px 24px',
                   backgroundColor: '#BF9B7A',
@@ -506,10 +510,12 @@ export default function Header() {
                   border: 'none',
                   cursor: 'pointer',
                   width: '100%',
+                  textAlign: 'center',
+                  textDecoration: 'none',
                 }}
               >
                 {dict.nav.reserve}
-              </button>
+              </a>
             </nav>
           </div>
         </div>
