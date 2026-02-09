@@ -22,7 +22,10 @@ export const config = {
   },
   
   // Tabit Reservation
-  tabitUrl: "https://tabit.cloud/rsv/meatup",
+  tabitUrl: "https://tabitisrael.co.il/site/meat-up",
+  
+  // Tabit Delivery/Pickup
+  tabitDeliveryUrl: "https://tabitisrael.co.il/tabit-order?siteName=meatup&step=enter",
   
   // Kosher
   kosher: {
