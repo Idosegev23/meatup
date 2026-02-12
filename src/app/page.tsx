@@ -74,6 +74,7 @@ export default function HomePage() {
         <div className="relative z-10 text-center px-6 sm:px-10 lg:px-16 w-full max-w-4xl mx-auto flex flex-col items-center">
           {/* Hero Text - both mobile and desktop */}
           <p 
+            dir="ltr"
             style={{ 
               fontSize: 'clamp(3rem, 8vw, 5rem)', 
               fontWeight: 700, 
@@ -85,7 +86,7 @@ export default function HomePage() {
               opacity: 0.75,
             }}
           >
-            <span className="md:hidden">GRILL<br />BURGER<br />& MORE</span>
+            <span className="md:hidden">GRILL<br />BURGER &<br />MORE</span>
             <span className="hidden md:block">GRILL BURGER & MORE</span>
           </p>
 
