@@ -85,8 +85,8 @@ export default function HomePage() {
               opacity: 0.75,
             }}
           >
-            <span className="md:hidden">GRILL<br />BURGERS &<br />MORE</span>
-            <span className="hidden md:block">GRILL BURGERS & MORE</span>
+            <span className="md:hidden">GRILL<br />BURGER &<br />MORE</span>
+            <span className="hidden md:block">GRILL BURGER & MORE</span>
           </p>
 
         </div>

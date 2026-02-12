@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   title: "MEATUP | Grill Burger & More",
   description: "מיט אפ - המבורגריה ובשרים פרימיום בבני ברק. תפריט כשר בהשגחת הרבנות.",
   keywords: ["מסעדת בשרים", "המבורגר", "בני ברק", "כשר", "MEATUP", "מיט אפ", "גריל"],
+  icons: {
+    icon: '/logoicon.png',
+    apple: '/logoicon.png',
+  },
   openGraph: {
     title: "MEATUP | Grill Burger & More",
     description: "מיט אפ - המבורגריה ובשרים פרימיום בבני ברק",

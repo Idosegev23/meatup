@@ -29,7 +29,7 @@ export default function Contact() {
           <div style={{ width: '64px', height: '2px', backgroundColor: '#BF9B7A', margin: '0 auto 48px auto' }} />
 
           {/* Contact Info Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '32px', marginBottom: '48px', textAlign: 'right' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 text-right">
               {/* Phone */}
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
               <div style={{ width: '48px', height: '48px', borderRadius: '8px', backgroundColor: 'rgba(92,62,43,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#BF9B7A', flexShrink: 0 }}>

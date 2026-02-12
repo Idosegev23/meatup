@@ -109,15 +109,45 @@ export default function AccessibilityWidget() {
               boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
             }}
           >
-            <h3 style={{ 
-              fontSize: '1.25rem', 
-              fontWeight: 600, 
-              color: '#F2F1F0', 
-              marginBottom: '20px',
-              textAlign: isHebrew ? 'right' : 'left'
+            <div style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              marginBottom: '20px'
             }}>
-              {isHebrew ? 'הגדרות נגישות' : 'Accessibility Settings'}
-            </h3>
+              <h3 style={{ 
+                fontSize: '1.25rem', 
+                fontWeight: 600, 
+                color: '#F2F1F0',
+                margin: 0
+              }}>
+                {isHebrew ? 'הגדרות נגישות' : 'Accessibility Settings'}
+              </h3>
+              <button
+                onClick={() => setIsOpen(false)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: '#F2F1F0',
+                  cursor: 'pointer',
+                  padding: '4px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '4px',
+                  transition: 'background-color 0.2s',
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'rgba(244,244,242,0.1)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; }}
+                aria-label={isHebrew ? 'סגור' : 'Close'}
+              >
+                <svg style={{ width: '20px', height: '20px' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
 
             {/* Font Size */}
             <div style={{ marginBottom: '20px' }}>
