@@ -73,11 +73,17 @@ export default function AccessibilityWidget() {
         }}
         onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.1)'; }}
         onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
-        aria-label={isHebrew ? 'פתח תפריט נגישות' : 'Open accessibility menu'}
+        aria-label={isHebrew ? (isOpen ? 'סגור תפריט נגישות' : 'פתח תפריט נגישות') : (isOpen ? 'Close accessibility menu' : 'Open accessibility menu')}
       >
-        <svg style={{ width: '28px', height: '28px' }} viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/>
-        </svg>
+        {isOpen ? (
+          <svg style={{ width: '28px', height: '28px' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        ) : (
+          <svg style={{ width: '28px', height: '28px' }} viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/>
+          </svg>
+        )}
       </button>
 
       {/* Accessibility Panel */}
@@ -109,45 +115,15 @@ export default function AccessibilityWidget() {
               boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
             }}
           >
-            <div style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              marginBottom: '20px'
+            <h3 style={{ 
+              fontSize: '1.25rem', 
+              fontWeight: 600, 
+              color: '#F2F1F0', 
+              marginBottom: '20px',
+              textAlign: isHebrew ? 'right' : 'left'
             }}>
-              <h3 style={{ 
-                fontSize: '1.25rem', 
-                fontWeight: 600, 
-                color: '#F2F1F0',
-                margin: 0
-              }}>
-                {isHebrew ? 'הגדרות נגישות' : 'Accessibility Settings'}
-              </h3>
-              <button
-                onClick={() => setIsOpen(false)}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  color: '#F2F1F0',
-                  cursor: 'pointer',
-                  padding: '4px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '32px',
-                  height: '32px',
-                  borderRadius: '4px',
-                  transition: 'background-color 0.2s',
-                }}
-                onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'rgba(244,244,242,0.1)'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; }}
-                aria-label={isHebrew ? 'סגור' : 'Close'}
-              >
-                <svg style={{ width: '20px', height: '20px' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
+              {isHebrew ? 'הגדרות נגישות' : 'Accessibility Settings'}
+            </h3>
 
             {/* Font Size */}
             <div style={{ marginBottom: '20px' }}>
