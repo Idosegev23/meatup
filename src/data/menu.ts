@@ -28,6 +28,7 @@ export interface MenuCategory {
 }
 
 export const menuData: MenuCategory[] = [
+  // Row 1: ראשונות | המבורגר
   {
     id: "starters",
     name: {
@@ -74,6 +75,74 @@ export const menuData: MenuCategory[] = [
       }
     ]
   },
+  {
+    id: "burgers",
+    name: {
+      he: "Meat your burger",
+      en: "Meat your burger"
+    },
+    image: "/imgs/meatupimgs/Meat-up/meatuplight/JPEG/Meat-up-burger.jpg",
+    note: {
+      he: "עד השעה 17:00 המנות מוגשות עם שתיה ותוספת לבחירה, בתוספת 16 ₪",
+      en: "Until 5:00 PM, dishes are served with a drink and side of choice, for an additional 16 ₪"
+    },
+    items: [
+      {
+        id: "meatup-burger",
+        name: { he: "מיטאפ בורגר", en: "Meatup Burger" },
+        description: { he: "עשויה מבקר מובחר 230 גר' - איולי של מיט אפ, חסה לאליק, עגבניה, בצל סגול ומלפפון כבוש", en: "Made from premium beef 230g - Meatup aioli, lollo rosso lettuce, tomato, red onion and pickle" },
+        price: 64
+      },
+      {
+        id: "midtown-burger",
+        name: { he: "מידטאון בורגר", en: "Midtown Burger" },
+        description: { he: "עשויה מבקר מובחר 230 גר' ומתובלת בפטרוזיליה ובצל - מיונז צ'ימיצ'ורי ובצל מקורמל", en: "Made from premium beef 230g seasoned with parsley and onion - mayo, chimichurri and caramelized onion" },
+        price: 66
+      },
+      {
+        id: "topas",
+        name: { he: "טופאס", en: "Topas" },
+        description: { he: "עשויה מבקר מובחר 300 גר' - איולי פלפלים שרופים, חסה לאליק וטבעות בצל דקיקות", en: "Made from premium beef 300g - roasted pepper aioli, lollo rosso lettuce and thin onion rings" },
+        price: 82
+      },
+      {
+        id: "smash-and-eggs",
+        name: { he: "סמאש אנד אגס", en: "Smash and Eggs" },
+        description: { he: "סמאש בורגר 200 גר' - סלט ביצים עם בצל ירוק, חסה לאליק ומלפפון כבוש", en: "Smash burger 200g - egg salad with green onion, lollo rosso lettuce and pickle" },
+        price: 66
+      },
+      {
+        id: "chicken-ranch",
+        name: { he: "צ'יקן ראנצ'", en: "Chicken Ranch" },
+        description: { he: "חזה עוף בציפוי פריך - איולי ראנץ', חסות, בצל סגול וקרמבל בצל", en: "Crispy coated chicken breast - ranch aioli, lettuce, red onion and onion crumble" },
+        price: 62
+      },
+      // תוספות מעל
+      { id: "subheader-toppings", name: { he: "Meat your toppings", en: "Meat your toppings" }, price: 0, isSubheader: true },
+      { id: "chili-jam", name: { he: "ריבת צ'ילי", en: "Chili Jam" }, price: 8 },
+      { id: "crispy-onion", name: { he: "בצל פריך", en: "Crispy Onion" }, price: 6 },
+      { id: "caramelized-onion", name: { he: "בצל מקורמל", en: "Caramelized Onion" }, price: 6 },
+      { id: "jalapeno", name: { he: "חלפיניו על הפלאנצ'ה", en: "Grilled Jalapeño" }, price: 6 },
+      { id: "smash-patty-100", name: { he: "קציצת סמאש 100 גר'", en: "Smash Patty 100g" }, price: 22 },
+      { id: "fried-egg", name: { he: "ביצת עין", en: "Fried Egg" }, price: 10 },
+      // תוספות בצד
+      { id: "subheader-sides", name: { he: "Meat your sides", en: "Meat your sides" }, price: 0, isSubheader: true },
+      { id: "ranch-salad", name: { he: "סלט חסות ראנץ'", en: "Ranch Lettuce Salad" }, price: 22 },
+      { id: "green-salad", name: { he: "סלט ירוק", en: "Green Salad" }, price: 22 },
+      { id: "fries", name: { he: "צ'יפס", en: "Fries" }, price: 20 },
+      { id: "potatoes", name: { he: "פוטטוס", en: "Potatoes" }, price: 24 },
+      { id: "green-beans", name: { he: "שעועית ירוקה", en: "Green Beans" }, price: 24 },
+      // רטבים
+      { id: "subheader-sauces", name: { he: "Meat your extra sauce", en: "Meat your extra sauce" }, price: 0, isSubheader: true },
+      {
+        id: "sauce-cup",
+        name: { he: "קוקוס 80 מ\"ל", en: "Sauce Cup 80ml" },
+        description: { he: "איולי כוסברה, איולי שום, איולי מיט אפ, איולי פלפלים שרופים, איולי ראנץ'", en: "Coriander aioli, garlic aioli, Meatup aioli, roasted pepper aioli, ranch aioli" },
+        price: 4
+      }
+    ]
+  },
+  // Row 2: סלטים | עיקריות
   {
     id: "salads",
     name: {
@@ -145,6 +214,7 @@ export const menuData: MenuCategory[] = [
       }
     ]
   },
+  // Row 3: קינוחים | אלכוהול
   {
     id: "desserts",
     name: {
@@ -248,73 +318,7 @@ export const menuData: MenuCategory[] = [
       }
     ]
   },
-  {
-    id: "burgers",
-    name: {
-      he: "Meat your burger",
-      en: "Meat your burger"
-    },
-    image: "/imgs/meatupimgs/Meat-up/meatuplight/JPEG/Meat-up-burger.jpg",
-    note: {
-      he: "עד השעה 17:00 המנות מוגשות עם שתיה ותוספת לבחירה, בתוספת 16 ₪",
-      en: "Until 5:00 PM, dishes are served with a drink and side of choice, for an additional 16 ₪"
-    },
-    items: [
-      {
-        id: "meatup-burger",
-        name: { he: "מיטאפ בורגר", en: "Meatup Burger" },
-        description: { he: "עשויה מבקר מובחר 230 גר' - איולי של מיט אפ, חסה לאליק, עגבניה, בצל סגול ומלפפון כבוש", en: "Made from premium beef 230g - Meatup aioli, lollo rosso lettuce, tomato, red onion and pickle" },
-        price: 64
-      },
-      {
-        id: "midtown-burger",
-        name: { he: "מידטאון בורגר", en: "Midtown Burger" },
-        description: { he: "עשויה מבקר מובחר 230 גר' ומתובלת בפטרוזיליה ובצל - מיונז צ'ימיצ'ורי ובצל מקורמל", en: "Made from premium beef 230g seasoned with parsley and onion - mayo, chimichurri and caramelized onion" },
-        price: 66
-      },
-      {
-        id: "topas",
-        name: { he: "טופאס", en: "Topas" },
-        description: { he: "עשויה מבקר מובחר 300 גר' - איולי פלפלים שרופים, חסה לאליק וטבעות בצל דקיקות", en: "Made from premium beef 300g - roasted pepper aioli, lollo rosso lettuce and thin onion rings" },
-        price: 82
-      },
-      {
-        id: "smash-and-eggs",
-        name: { he: "סמאש אנד אגס", en: "Smash and Eggs" },
-        description: { he: "סמאש בורגר 200 גר' - סלט ביצים עם בצל ירוק, חסה לאליק ומלפפון כבוש", en: "Smash burger 200g - egg salad with green onion, lollo rosso lettuce and pickle" },
-        price: 66
-      },
-      {
-        id: "chicken-ranch",
-        name: { he: "צ'יקן ראנצ'", en: "Chicken Ranch" },
-        description: { he: "חזה עוף בציפוי פריך - איולי ראנץ', חסות, בצל סגול וקרמבל בצל", en: "Crispy coated chicken breast - ranch aioli, lettuce, red onion and onion crumble" },
-        price: 62
-      },
-      // תוספות מעל
-      { id: "subheader-toppings", name: { he: "Meat your toppings", en: "Meat your toppings" }, price: 0, isSubheader: true },
-      { id: "chili-jam", name: { he: "ריבת צ'ילי", en: "Chili Jam" }, price: 8 },
-      { id: "crispy-onion", name: { he: "בצל פריך", en: "Crispy Onion" }, price: 6 },
-      { id: "caramelized-onion", name: { he: "בצל מקורמל", en: "Caramelized Onion" }, price: 6 },
-      { id: "jalapeno", name: { he: "חלפיניו על הפלאנצ'ה", en: "Grilled Jalapeño" }, price: 6 },
-      { id: "smash-patty-100", name: { he: "קציצת סמאש 100 גר'", en: "Smash Patty 100g" }, price: 22 },
-      { id: "fried-egg", name: { he: "ביצת עין", en: "Fried Egg" }, price: 10 },
-      // תוספות בצד
-      { id: "subheader-sides", name: { he: "Meat your sides", en: "Meat your sides" }, price: 0, isSubheader: true },
-      { id: "ranch-salad", name: { he: "סלט חסות ראנץ'", en: "Ranch Lettuce Salad" }, price: 22 },
-      { id: "green-salad", name: { he: "סלט ירוק", en: "Green Salad" }, price: 22 },
-      { id: "fries", name: { he: "צ'יפס", en: "Fries" }, price: 20 },
-      { id: "potatoes", name: { he: "פוטטוס", en: "Potatoes" }, price: 24 },
-      { id: "green-beans", name: { he: "שעועית ירוקה", en: "Green Beans" }, price: 24 },
-      // רטבים
-      { id: "subheader-sauces", name: { he: "Meat your extra sauce", en: "Meat your extra sauce" }, price: 0, isSubheader: true },
-      {
-        id: "sauce-cup",
-        name: { he: "קוקוס 80 מ\"ל", en: "Sauce Cup 80ml" },
-        description: { he: "איולי כוסברה, איולי שום, איולי מיט אפ, איולי פלפלים שרופים, איולי ראנץ'", en: "Coriander aioli, garlic aioli, Meatup aioli, roasted pepper aioli, ranch aioli" },
-        price: 4
-      }
-    ]
-  },
+  // Row 4: ילדים | שתיה קלה
   {
     id: "kids",
     name: {
