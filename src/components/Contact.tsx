@@ -11,11 +11,7 @@ export default function Contact() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleReserveClick = () => {
-    if (typeof window !== 'undefined' && window.innerWidth < 768) {
-      window.location.href = config.tabitUrl;
-    } else {
-      setIsModalOpen(true);
-    }
+    setIsModalOpen(true);
   };
 
   return (
