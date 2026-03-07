@@ -127,11 +127,11 @@ export const menuData: MenuCategory[] = [
       { id: "fried-egg", name: { he: "ביצת עין", en: "Fried Egg" }, price: 10 },
       // תוספות בצד
       { id: "subheader-sides", name: { he: "Meat your sides", en: "Meat your sides" }, price: 0, isSubheader: true },
-      { id: "ranch-salad", name: { he: "סלט חסות ראנץ'", en: "Ranch Lettuce Salad" }, price: 22 },
-      { id: "green-salad", name: { he: "סלט ירוק", en: "Green Salad" }, price: 22 },
-      { id: "fries", name: { he: "צ'יפס", en: "Fries" }, price: 20 },
-      { id: "potatoes", name: { he: "פוטטוס", en: "Potatoes" }, price: 24 },
-      { id: "green-beans", name: { he: "שעועית ירוקה", en: "Green Beans" }, price: 24 },
+      { id: "ranch-salad", name: { he: "סלט חסות ראנץ'", en: "Ranch Lettuce Salad" }, description: { he: "חסות, בצל סגול, צנונית ופרורי לחם קריספיים ברוטב ראנץ'", en: "Lettuce, red onion, radish and crispy breadcrumbs in ranch dressing" }, price: 22 },
+      { id: "green-salad", name: { he: "סלט ירוק", en: "Green Salad" }, description: { he: "חסה, עגבניות, צנונית ועלים ירוקים", en: "Lettuce, tomatoes, radish and green leaves" }, price: 22 },
+      { id: "fries", name: { he: "צ'יפס", en: "Fries" }, description: { he: "צ'יפס זהוב וקריספי", en: "Golden crispy fries" }, price: 20 },
+      { id: "potatoes", name: { he: "פוטטוס", en: "Potatoes" }, description: { he: "תפוחי אדמה אפויים בתיבול פפריקה", en: "Baked potato wedges with paprika seasoning" }, price: 24 },
+      { id: "green-beans", name: { he: "שעועית ירוקה", en: "Green Beans" }, description: { he: "שעועית ירוקה צלויה על הפלאנצ'ה עם לימון", en: "Plancha-grilled green beans with lemon" }, price: 24 },
       // רטבים
       { id: "subheader-sauces", name: { he: "Meat your extra sauce", en: "Meat your extra sauce" }, price: 0, isSubheader: true },
       {
@@ -327,9 +327,9 @@ export const menuData: MenuCategory[] = [
     },
     image: "/imgs/meatupimgs/Meat-up/meatuplight/JPEG/Junior-burger.jpg",
     items: [
-      { id: "kids-burger", name: { he: "בורגר ילדים", en: "Kids Burger" }, price: 58 },
-      { id: "kids-schnitzel", name: { he: "שניצלוני חזה עוף", en: "Chicken Breast Schnitzel" }, price: 58 },
-      { id: "kids-chicken", name: { he: "פרגית ילדים", en: "Kids Chicken" }, price: 58 }
+      { id: "kids-burger", name: { he: "בורגר ילדים", en: "Kids Burger" }, description: { he: "קציצת בקר בלחמניית בריוש עם חסה, עגבניה, בצל סגול ומלפפון כבוש", en: "Beef patty in brioche bun with lettuce, tomato, red onion and pickle" }, price: 58 },
+      { id: "kids-schnitzel", name: { he: "שניצלוני חזה עוף", en: "Chicken Breast Schnitzel" }, description: { he: "שניצלוני חזה עוף פריכים עם רטבים לבחירה", en: "Crispy chicken breast schnitzel bites with dipping sauces" }, price: 58 },
+      { id: "kids-chicken", name: { he: "פרגית ילדים", en: "Kids Chicken" }, description: { he: "פרגית צלויה ברוטב פטרוזיליה ושום, עם צ'יפס ורטבים", en: "Grilled chicken thigh in parsley and garlic sauce, with fries and dipping sauces" }, price: 58 }
     ]
   },
   {

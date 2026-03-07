@@ -11,12 +11,7 @@ export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleReserveClick = () => {
-    // On mobile, redirect directly
-    if (typeof window !== 'undefined' && window.innerWidth < 768) {
-      window.location.href = config.tabitUrl;
-    } else {
-      setIsModalOpen(true);
-    }
+    setIsModalOpen(true);
   };
 
   const handleMenuClick = (e: React.MouseEvent) => {

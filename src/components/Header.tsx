@@ -40,7 +40,8 @@ export default function Header() {
     { href: '#hero', id: 'hero', label: dict.nav.home },
     { href: '#about', id: 'about', label: dict.nav.about },
     { href: '#menu', id: 'menu', label: dict.nav.menu },
-    { href: config.tabitDeliveryUrl, id: 'delivery', label: language === 'he' ? 'משלוח/איסוף' : 'Delivery', isExternal: true },
+    { href: config.tabitDeliveryUrl, id: 'pickup', label: language === 'he' ? 'איסוף' : 'Pickup', isExternal: true },
+    { href: config.woltUrl, id: 'delivery', label: language === 'he' ? 'משלוחים' : 'Delivery', isExternal: true },
   ];
 
   const rightNavItems = [

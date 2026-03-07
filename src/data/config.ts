@@ -26,6 +26,9 @@ export const config = {
   
   // Tabit Delivery/Pickup
   tabitDeliveryUrl: "https://tabitisrael.co.il/tabit-order?siteName=meatup&step=enter",
+
+  // Wolt Delivery
+  woltUrl: "https://wolt.com/en/isr/tel-aviv/restaurant/meat-up-bnei-brak",
   
   // Kosher
   kosher: {

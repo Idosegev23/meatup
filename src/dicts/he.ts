@@ -68,9 +68,11 @@ export const he = {
   
   // Reserve Modal
   reserve: {
-    title: "הזמנת מקום",
-    subtitle: "נשמח לארח אתכם",
-    continue: "להמשיך להזמנה",
+    title: "הזמנה",
+    subtitle: "איך תרצו להזמין?",
+    reserveTable: "הזמנת מקום",
+    pickup: "איסוף עצמי",
+    delivery: "משלוח",
     call: "התקשרו עכשיו",
     whatsapp: "וואטסאפ"
   },
@@ -151,7 +153,9 @@ export interface Dictionary {
   reserve: {
     title: string;
     subtitle: string;
-    continue: string;
+    reserveTable: string;
+    pickup: string;
+    delivery: string;
     call: string;
     whatsapp: string;
   };

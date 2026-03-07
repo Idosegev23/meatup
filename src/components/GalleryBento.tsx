@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Lightbox from './Lightbox';
 
 export default function GalleryBento() {
-  const { dict, language } = useLanguage();
+  const { language } = useLanguage();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [dishPopup, setDishPopup] = useState<{ image: typeof galleryImages[0]; menuItem: MenuItem } | null>(null);
@@ -159,25 +159,14 @@ export default function GalleryBento() {
                   padding: '20px 24px 24px',
                   direction: language === 'he' ? 'rtl' : 'ltr',
                 }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '12px' }}>
-                    <h3 style={{
-                      fontSize: '1.25rem',
-                      fontWeight: 700,
-                      color: '#F2F1F0',
-                      lineHeight: 1.3,
-                      flex: 1,
-                    }}>
-                      {language === 'he' ? dishPopup.menuItem.name.he : dishPopup.menuItem.name.en}
-                    </h3>
-                    <span style={{
-                      fontSize: '1.25rem',
-                      fontWeight: 700,
-                      color: '#BF9B7A',
-                      whiteSpace: 'nowrap',
-                    }}>
-                      {dict.menu.currency}{dishPopup.menuItem.price}
-                    </span>
-                  </div>
+                  <h3 style={{
+                    fontSize: '1.25rem',
+                    fontWeight: 700,
+                    color: '#F2F1F0',
+                    lineHeight: 1.3,
+                  }}>
+                    {language === 'he' ? dishPopup.menuItem.name.he : dishPopup.menuItem.name.en}
+                  </h3>
                   {dishPopup.menuItem.description && (
                     <p style={{
                       fontSize: '0.9rem',

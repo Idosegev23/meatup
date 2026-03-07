@@ -70,9 +70,11 @@ export const en: Dictionary = {
   
   // Reserve Modal
   reserve: {
-    title: "Reserve a Table",
-    subtitle: "We'd love to host you",
-    continue: "Continue to Reservation",
+    title: "Order",
+    subtitle: "How would you like to order?",
+    reserveTable: "Reserve a Table",
+    pickup: "Pickup",
+    delivery: "Delivery",
     call: "Call Now",
     whatsapp: "WhatsApp"
   },
