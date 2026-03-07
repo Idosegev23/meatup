@@ -29,11 +29,7 @@ export default function HomePage() {
   }, []);
 
   const handleReserveClick = () => {
-    if (typeof window !== 'undefined' && window.innerWidth < 768) {
-      window.location.href = config.tabitUrl;
-    } else {
-      setIsModalOpen(true);
-    }
+    setIsModalOpen(true);
   };
 
   const kosherText = language === 'he' ? config.kosher.he : config.kosher.en;
@@ -190,7 +186,7 @@ export default function HomePage() {
             padding: '0 24px',
           }}
         >
-            {/* Reserve Table Card */}
+            {/* Reserve & Pickup Card - Tabit */}
             <a
               href={config.tabitUrl}
               target="_blank"
@@ -205,7 +201,7 @@ export default function HomePage() {
             >
               <Image
                 src="/imgs/meatupimgs/new3.webp"
-                alt={language === 'he' ? 'הזמנת שולחן' : 'Reserve Table'}
+                alt={language === 'he' ? 'הזמנת מקום / איסוף' : 'Reserve / Pickup'}
                 fill
                 className="object-cover transition-transform duration-300 hover:scale-105"
               />
@@ -224,14 +220,14 @@ export default function HomePage() {
                   fontWeight: 600,
                   textShadow: '0 2px 4px rgba(0,0,0,0.3)',
                 }}>
-                  {language === 'he' ? 'הזמנת שולחן' : 'Reserve Table'}
+                  {language === 'he' ? 'הזמנת מקום / איסוף' : 'Reserve / Pickup'}
                 </span>
               </div>
             </a>
 
-            {/* Delivery Card */}
+            {/* Delivery Card - Wolt */}
             <a
-              href={config.tabitUrl}
+              href={config.woltUrl}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -263,7 +259,7 @@ export default function HomePage() {
                   fontWeight: 600,
                   textShadow: '0 2px 4px rgba(0,0,0,0.3)',
                 }}>
-                  {language === 'he' ? 'משלוחים / איסוף עצמי' : 'Delivery / Pickup'}
+                  {language === 'he' ? 'משלוחים' : 'Delivery'}
                 </span>
               </div>
             </a>
