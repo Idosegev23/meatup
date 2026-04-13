@@ -28,12 +28,12 @@ export interface MenuCategory {
 }
 
 export const menuData: MenuCategory[] = [
-  // Row 1: ראשונות | המבורגר
+  // Row 1: Meatup Social | Meat your Burger
   {
     id: "starters",
     name: {
-      he: "ראשונות",
-      en: "Starters"
+      he: "Meatup Social",
+      en: "Meatup Social"
     },
     image: "/imgs/meatupimgs/Meat-up/meatuplight/JPEG/Jerusalem-bagel.jpg",
     items: [
@@ -41,6 +41,12 @@ export const menuData: MenuCategory[] = [
         id: "bagel",
         name: { he: "בייגל ירושלמי", en: "Jerusalem Bagel" },
         description: { he: "חריפים, בלסמי, טחינה, שום קונפי וזיתים", en: "Spicy, balsamic, tahini, confit garlic and olives" },
+        price: 38
+      },
+      {
+        id: "merguez-sausages",
+        name: { he: "נקניקיות מרגז", en: "Merguez Sausages" },
+        description: { he: "עשויות ביצור ביתי מנתחי בקר מובחרים", en: "Homemade from premium beef cuts" },
         price: 38
       },
       {
@@ -52,7 +58,7 @@ export const menuData: MenuCategory[] = [
       {
         id: "beef-cigar",
         name: { he: "סיגר בקר", en: "Beef Cigar" },
-        description: { he: "בקר וטלה טחון מתובל, חסה לאליק, פטרוזיליה, נענע, לימון, צנוברים, טחינה וסלסה חריפה", en: "Seasoned ground beef and lamb, lollo rosso lettuce, parsley, mint, lemon, pine nuts, tahini and spicy salsa" },
+        description: { he: "בקר טחון מתובל, חסה לאליק, פטרוזיליה, נענע, לימון, צנוברים, טחינה וסלסה חריפה", en: "Seasoned ground beef, lollo rosso lettuce, parsley, mint, lemon, pine nuts, tahini and spicy salsa" },
         price: 46
       },
       {
@@ -65,45 +71,45 @@ export const menuData: MenuCategory[] = [
         id: "crispy-nuggets",
         name: { he: "קריספי נאגטס", en: "Crispy Nuggets" },
         description: { he: "נגיסי עוף בציפוי פריך לצד איולי פלפלים שרופים", en: "Crispy chicken nuggets with roasted pepper aioli" },
-        price: 38
+        price: 42
       },
       {
         id: "trio-sausages",
         name: { he: "טריו נקניקיות הבית", en: "House Sausage Trio" },
-        description: { he: "שלישיית נקניקיות - צ'וריסוס פיקנטי, בקר מעושן ובקר-עוף מעושן צ'רבות על הפלאנצ'ה, לצידן כרוב ובצל חום צלויים, איולי חרדל ומלפפונים חמוצים ביתיים", en: "Three sausages - spicy chorizo, smoked beef and smoked beef-chicken - seared on the plancha. Served with roasted cabbage and brown onion, mustard aioli and homemade pickles" },
-        price: 36
+        description: { he: "שלישיית נקניקיות - צ'וריסוס פיקנטי, בקר מעושן ובקר-עוף מעושן - צרובות על הפלאנצ'ה, לצד כרוב ובצל חום צלויים", en: "Three sausages - spicy chorizo, smoked beef and smoked beef-chicken - seared on the plancha, with roasted cabbage and brown onion" },
+        price: 38
       }
     ]
   },
   {
     id: "burgers",
     name: {
-      he: "Meat your burger",
-      en: "Meat your burger"
+      he: "Meat your Burger",
+      en: "Meat your Burger"
     },
     image: "/imgs/meatupimgs/Meat-up/meatuplight/JPEG/Meat-up-burger.jpg",
     note: {
-      he: "עד השעה 17:00 המנות מוגשות עם שתיה ותוספת לבחירה, בתוספת 16 ₪",
-      en: "Until 5:00 PM, dishes are served with a drink and side of choice, for an additional 16 ₪"
+      he: "ניתן להזמין לחמניה ללא גלוטן, בתוספת תשלום 4 ₪",
+      en: "Gluten-free bun available for an additional 4 ₪"
     },
     items: [
       {
+        id: "chicken-ranch",
+        name: { he: "צ'יקן ראנצ'", en: "Chicken Ranch" },
+        description: { he: "חזה עוף בציפוי פריך - איולי ראנץ', חסות, בצל סגול וקרמבל בצל", en: "Crispy coated chicken breast - ranch aioli, lettuce, red onion and onion crumble" },
+        price: 62
+      },
+      {
         id: "meatup-burger",
         name: { he: "מיטאפ בורגר", en: "Meatup Burger" },
-        description: { he: "עשויה מבקר מובחר 230 גר' - איולי של מיט אפ, חסה לאליק, עגבניה, בצל סגול ומלפפון כבוש", en: "Made from premium beef 230g - Meatup aioli, lollo rosso lettuce, tomato, red onion and pickle" },
+        description: { he: "עשויה מנתחי בקר מובחר 230 גר' - איולי מיט אפ, חסה לאליק, עגבניה, בצל סגול ומלפפון כבוש", en: "Made from premium beef cuts 230g - Meatup aioli, lollo rosso lettuce, tomato, red onion and pickle" },
         price: 64
       },
       {
         id: "midtown-burger",
         name: { he: "מידטאון בורגר", en: "Midtown Burger" },
-        description: { he: "עשויה מבקר מובחר 230 גר' ומתובלת בפטרוזיליה ובצל - מיונז צ'ימיצ'ורי ובצל מקורמל", en: "Made from premium beef 230g seasoned with parsley and onion - mayo, chimichurri and caramelized onion" },
+        description: { he: "עשויה מנתחי בקר מובחר 230 גר' ומתובלת בפטרוזיליה ובצל - מיונז, צ'ימצ'ורי ובצל מקורמל", en: "Made from premium beef cuts 230g seasoned with parsley and onion - mayo, chimichurri and caramelized onion" },
         price: 66
-      },
-      {
-        id: "topas",
-        name: { he: "טופאס", en: "Topas" },
-        description: { he: "עשויה מבקר מובחר 300 גר' - איולי פלפלים שרופים, חסה לאליק וטבעות בצל דקיקות", en: "Made from premium beef 300g - roasted pepper aioli, lollo rosso lettuce and thin onion rings" },
-        price: 82
       },
       {
         id: "smash-and-eggs",
@@ -112,28 +118,41 @@ export const menuData: MenuCategory[] = [
         price: 66
       },
       {
-        id: "chicken-ranch",
-        name: { he: "צ'יקן ראנצ'", en: "Chicken Ranch" },
-        description: { he: "חזה עוף בציפוי פריך - איולי ראנץ', חסות, בצל סגול וקרמבל בצל", en: "Crispy coated chicken breast - ranch aioli, lettuce, red onion and onion crumble" },
-        price: 62
+        id: "topap-300",
+        name: { he: "טופאפ 300", en: "Topap 300" },
+        description: { he: "עשויה מנתחי בקר מובחר 300 גר' - איולי פלפלים שרופים, חסה לאליק וטבעות בצל דקיקות", en: "Made from premium beef cuts 300g - roasted pepper aioli, lollo rosso lettuce and thin onion rings" },
+        price: 82
+      },
+      {
+        id: "beyond-burger",
+        name: { he: "המבורגר צמחוני מבוסס Beyond Burger", en: "Vegetarian Beyond Burger" },
+        description: { he: "קציצה מהצומח עם מרקם וטעם שמזכירים בשר, עסיסית ועשירה בחלבון - איולי פלפלים שרופים, חסה לאליק, עגבניה, בצל סגול ומלפפון חמוץ", en: "Plant-based patty with meat-like texture and flavor, juicy and protein-rich - roasted pepper aioli, lollo rosso lettuce, tomato, red onion and pickle" },
+        price: 64
       },
       // תוספות מעל
-      { id: "subheader-toppings", name: { he: "Meat your toppings", en: "Meat your toppings" }, price: 0, isSubheader: true },
-      { id: "chili-jam", name: { he: "ריבת צ'ילי", en: "Chili Jam" }, price: 8 },
+      { id: "subheader-toppings", name: { he: "Meat your Toppings", en: "Meat your Toppings" }, price: 0, isSubheader: true },
       { id: "crispy-onion", name: { he: "בצל פריך", en: "Crispy Onion" }, price: 6 },
       { id: "caramelized-onion", name: { he: "בצל מקורמל", en: "Caramelized Onion" }, price: 6 },
       { id: "jalapeno", name: { he: "חלפיניו על הפלאנצ'ה", en: "Grilled Jalapeño" }, price: 6 },
-      { id: "smash-patty-100", name: { he: "קציצת סמאש 100 גר'", en: "Smash Patty 100g" }, price: 22 },
+      { id: "chili-jam", name: { he: "ריבת צ'ילי", en: "Chili Jam" }, price: 8 },
       { id: "fried-egg", name: { he: "ביצת עין", en: "Fried Egg" }, price: 10 },
+      { id: "smash-patty-100", name: { he: "קציצת סמאש 100 גר'", en: "Smash Patty 100g" }, price: 22 },
+      { id: "burger-patty-230", name: { he: "קציצת בורגר 230 גר'", en: "Burger Patty 230g" }, price: 30 },
       // תוספות בצד
-      { id: "subheader-sides", name: { he: "Meat your sides", en: "Meat your sides" }, price: 0, isSubheader: true },
-      { id: "ranch-salad", name: { he: "סלט חסות ראנץ'", en: "Ranch Lettuce Salad" }, description: { he: "חסות, בצל סגול, צנונית ופרורי לחם קריספיים ברוטב ראנץ'", en: "Lettuce, red onion, radish and crispy breadcrumbs in ranch dressing" }, price: 22 },
-      { id: "green-salad", name: { he: "סלט ירוק", en: "Green Salad" }, description: { he: "חסה, עגבניות, צנונית ועלים ירוקים", en: "Lettuce, tomatoes, radish and green leaves" }, price: 22 },
-      { id: "fries", name: { he: "צ'יפס", en: "Fries" }, description: { he: "צ'יפס זהוב וקריספי", en: "Golden crispy fries" }, price: 20 },
-      { id: "potatoes", name: { he: "פוטטוס", en: "Potatoes" }, description: { he: "תפוחי אדמה אפויים בתיבול פפריקה", en: "Baked potato wedges with paprika seasoning" }, price: 24 },
-      { id: "green-beans", name: { he: "שעועית ירוקה", en: "Green Beans" }, description: { he: "שעועית ירוקה צלויה על הפלאנצ'ה עם לימון", en: "Plancha-grilled green beans with lemon" }, price: 24 },
+      { id: "subheader-sides", name: { he: "Meat your Sides", en: "Meat your Sides" }, price: 0, isSubheader: true },
+      {
+        id: "fries",
+        name: { he: "צ'יפס קטן / גדול", en: "Fries Small / Large" },
+        description: { he: "22 / 44 ₪", en: "22 / 44 ₪" },
+        price: 22,
+        priceAlt: 44
+      },
+      { id: "ranch-salad", name: { he: "סלט חסות ראנץ'", en: "Ranch Lettuce Salad" }, price: 22 },
+      { id: "green-salad", name: { he: "סלט ירוק", en: "Green Salad" }, price: 22 },
+      { id: "potatoes", name: { he: "פוטטוס", en: "Potatoes" }, price: 24 },
+      { id: "green-beans", name: { he: "שעועית ירוקה", en: "Green Beans" }, price: 24 },
       // רטבים
-      { id: "subheader-sauces", name: { he: "Meat your extra sauce", en: "Meat your extra sauce" }, price: 0, isSubheader: true },
+      { id: "subheader-sauces", name: { he: "Meat your Extra Sauce", en: "Meat your Extra Sauce" }, price: 0, isSubheader: true },
       {
         id: "sauce-cup",
         name: { he: "קוקוס 80 מ\"ל", en: "Sauce Cup 80ml" },
@@ -146,21 +165,22 @@ export const menuData: MenuCategory[] = [
   {
     id: "salads",
     name: {
-      he: "סלטים",
-      en: "Salads"
+      he: "Meat your Salads",
+      en: "Meat your Salads"
     },
     image: "/imgs/meatupimgs/Meat-up/meatuplight/JPEG/Grilled-chicken-thighs-and-avocado-salad.jpg",
     items: [
       {
-        id: "lettuce-salad",
-        name: { he: "סלט פרגית צלויה וחסות", en: "Grilled Chicken Thigh & Lettuce Salad" },
-        description: { he: "רוטב ראנץ', בצל סגול צלוי, שרי, אבוקדו, צנונית, פרורי לחם קריספיים עם שברי בצל", en: "Ranch dressing, roasted red onion, cherry tomatoes, avocado, radish, crispy breadcrumbs with onion bits" },
-        price: 66
+        id: "citrus-garden-salad",
+        name: { he: "סלט גן הדרים", en: "Citrus Garden Salad" },
+        description: { he: "חסה ועלי בייבי עם פרוסות פינק ליידי, צנוניות ובצל סגול, ברוטב ויניגרט הדרים, בתוספת שקדים ופקאנים מסוכרים", en: "Lettuce and baby leaves with Pink Lady apple slices, radishes and red onion, in citrus vinaigrette, topped with candied almonds and pecans" },
+        price: 52
       },
       {
-        id: "extra-chicken-thigh",
-        name: { he: "תוספת מנת פרגית", en: "Extra Chicken Thigh Portion" },
-        price: 26
+        id: "soy-caramel-salad",
+        name: { he: "סלט רצועות עוף סויה וקרמל", en: "Soy & Caramel Chicken Strip Salad" },
+        description: { he: "ויניגרט עשבי תיבול, חסה לאליק, מיקס פלפלים קלויים, שעועית ירוקה צלויה, שרי, בצל סגול, וקוביות אבוקדו טרי", en: "Herb vinaigrette, lollo rosso lettuce, roasted pepper mix, grilled green beans, cherry tomatoes, red onion and fresh avocado cubes" },
+        price: 64
       },
       {
         id: "kebab-salad",
@@ -169,48 +189,55 @@ export const menuData: MenuCategory[] = [
         price: 66
       },
       {
-        id: "extra-kebab",
-        name: { he: "תוספת קבב אנטריקוט", en: "Extra Entrecote Kebab" },
+        id: "lettuce-salad",
+        name: { he: "סלט פרגית צלויה וחסות", en: "Grilled Chicken Thigh & Lettuce Salad" },
+        description: { he: "רוטב ראנץ', בצל סגול צלוי, שרי, אבוקדו, צנונית, פרורי לחם קריספיים עם שברי בצל", en: "Ranch dressing, roasted red onion, cherry tomatoes, avocado, radish, crispy breadcrumbs with onion bits" },
+        price: 68
+      },
+      {
+        id: "extra-protein",
+        name: { he: "תוספת מנת עוף / פרגית / קבב", en: "Extra Chicken / Thigh / Kebab Portion" },
         price: 26
-      },
-      {
-        id: "soy-caramel-salad",
-        name: { he: "סלט חזה עוף סויה וקרמל", en: "Soy & Caramel Chicken Breast Salad" },
-        description: { he: "ויניגרט עשבי תיבול, חסה לאליק, מיקס פלפלים קלויים, שעועית ירוקה צלויה, שרי, בצל סגול, וקוביות אבוקדו טרי", en: "Herb vinaigrette, lollo rosso lettuce, roasted pepper mix, grilled green beans, cherry tomatoes, red onion and fresh avocado cubes" },
-        price: 62
-      },
-      {
-        id: "extra-chicken-breast",
-        name: { he: "תוספת מנת חזה עוף", en: "Extra Chicken Breast Portion" },
-        price: 24
       }
     ]
   },
   {
     id: "mains",
     name: {
-      he: "עיקריות",
-      en: "Main Courses"
+      he: "Meat your Main",
+      en: "Meat your Main"
     },
     image: "/imgs/meatupimgs/Meat-up/meatuplight/JPEG/Ribeye-steak-antricot.jpg",
     items: [
       {
+        id: "beef-soup",
+        name: { he: "מרק בשר בבישול ארוך", en: "Slow-Cooked Beef Soup" },
+        description: { he: "בשר ראש ואונטריב בבישול ארוך עם עצמות מח, ציר בקר וירקות, מוגש לצד טוסטונים", en: "Slow-cooked head meat and entrecote with marrow bones, beef stock and vegetables, served with tostones" },
+        price: 52
+      },
+      {
         id: "chicken-breast",
         name: { he: "חזה עוף בפלאנצ'ה", en: "Grilled Chicken Breast" },
-        description: { he: "בסלסת פטרוזיליה, שום ולימון. עם תוספת לבחירה - סלט חסות ראנץ', סלט ירוק, צ'יפס, פוטטוס או שעועית ירוקה", en: "In parsley, garlic and lemon salsa, with choice of side - ranch lettuce salad, green salad, fries, potatoes or green beans" },
+        description: { he: "בסלסת פטרוזיליה, שום ולימון, עם תוספת לבחירה", en: "In parsley, garlic and lemon salsa, with choice of side" },
         price: 62
       },
       {
-        id: "beef-soup",
-        name: { he: "מרק בשר בבישול ארוך", en: "Slow-Cooked Beef Soup" },
-        description: { he: "בשר ראש ואנטרב בבישול ארוך עם עצמות מח, ציר בקר וירקות, מוגש לצד טוסטונס", en: "Slow-cooked head meat and entrecote in long cook with marrow bones, beef stock and vegetables, served with tostones" },
-        price: 52
+        id: "chicken-thigh-marinade",
+        name: { he: "פרגית במרינדה", en: "Marinated Chicken Thigh" },
+        description: { he: "שיפודי פרגית במרינדה פיקנטית, נצרבים על הגריל ומוגשים לצד הומפרייז קריספי", en: "Chicken thigh skewers in spicy marinade, seared on the grill, served with crispy home fries" },
+        price: 66
+      },
+      {
+        id: "entrecote-kebab",
+        name: { he: "קבב אנטריקוט", en: "Entrecote Kebab" },
+        description: { he: "שיפודי קבב עסיסיים עשויים מנתחי בקר מובחר עם בצל ופטרוזיליה קצוצים ותוספת לבחירה", en: "Juicy kebab skewers made from premium beef cuts with chopped onion and parsley, with choice of side" },
+        price: 72
       },
       {
         id: "ribeye-select",
         name: { he: "Ribeye Select", en: "Ribeye Select" },
-        description: { he: "אנטריקוט בלאק אנגוס מיושן 300 גר', לצד פח עצם ותוספת לבחירה - פירה קרמי, שעועית ירוקה, צ'יפס או סלט ירוק", en: "Aged Black Angus ribeye 300g, with bone marrow and choice of side - creamy mash, green beans, fries or green salad" },
-        price: 168
+        description: { he: "אנטריקוט בלאק אנגוס מיושן 300 גר', לצד מח עצם ותוספת לבחירה - פירה קרמי, שעועית ירוקה, צ'יפס או סלט ירוק", en: "Aged Black Angus ribeye 300g, with bone marrow and choice of side - creamy mash, green beans, fries or green salad" },
+        price: 178
       }
     ]
   },
@@ -252,13 +279,13 @@ export const menuData: MenuCategory[] = [
   {
     id: "alcohol",
     name: {
-      he: "אלכוהול",
-      en: "Alcohol"
+      he: "Meat your Alcohol",
+      en: "Meat your Alcohol"
     },
     image: "/imgs/meatupimgs/wine.webp",
     items: [
       // בירות בחבית
-      { id: "subheader-draft", name: { he: "בירות בחבית", en: "Draft Beers" }, price: 0, isSubheader: true },
+      { id: "subheader-draft", name: { he: "בירות מהחבית", en: "Draft Beers" }, price: 0, isSubheader: true },
       {
         id: "carlsberg-draft",
         name: { he: "קרלסברג", en: "Carlsberg" },
@@ -275,83 +302,115 @@ export const menuData: MenuCategory[] = [
       },
       // בירות בבקבוק
       { id: "subheader-bottle", name: { he: "בירות בבקבוק", en: "Bottled Beers" }, price: 0, isSubheader: true },
+      { id: "nesher-malt", name: { he: "נשר מאלט", en: "Nesher Malt" }, price: 14 },
       { id: "tuborg-bottle", name: { he: "טובורג", en: "Tuborg" }, price: 26 },
       { id: "carlsberg-bottle", name: { he: "קרלסברג", en: "Carlsberg" }, price: 28 },
-      { id: "nesher-malt", name: { he: "נשר מאלט", en: "Nesher Malt" }, price: 14 },
+      { id: "goldstar", name: { he: "גולדסטאר", en: "Goldstar" }, price: 28 },
+      { id: "french-wheat-beer", name: { he: "בירה חיטת צרפתית", en: "French Wheat Beer" }, price: 28 },
       // יינות - בקבוקים
       { id: "subheader-wine", name: { he: "יינות - בקבוקים", en: "Wines - Bottles" }, price: 0, isSubheader: true },
-      {
-        id: "ramat-hagolan",
-        name: { he: "רמת הגולן, בלנד אדום", en: "Ramat HaGolan, Red Blend" },
-        price: 145
-      },
-      {
-        id: "barkan-seven-hills",
-        name: { he: "ברקן סגן הילס, אדום", en: "Barkan Seven Hills, Red" },
-        description: { he: "ק.ס.", en: "C.S." },
-        price: 120
-      },
-      {
-        id: "morelli-red",
-        name: { he: "מורלי, בלנד אדום", en: "Morelli, Red Blend" },
-        description: { he: "ק.ס.", en: "C.S." },
-        price: 96
-      },
       {
         id: "morelli-white",
         name: { he: "מורלי, לבן", en: "Morelli, White" },
         description: { he: "שרדונה", en: "Chardonnay" },
         price: 96
       },
+      {
+        id: "morelli-red",
+        name: { he: "מורלי, בלנד אדום", en: "Morelli, Red Blend" },
+        price: 96
+      },
+      {
+        id: "barkan-seven-hills",
+        name: { he: "ברקן, סבן אילס - אדום", en: "Barkan Seven Hills, Red" },
+        price: 120
+      },
+      {
+        id: "ramat-hagolan",
+        name: { he: "רמת הגולן, בלנד אדום", en: "Ramat HaGolan, Red Blend" },
+        price: 145
+      },
+      {
+        id: "ramat-hagolan-yarden",
+        name: { he: "רמת הגולן, ירדן, ק.ס.", en: "Ramat HaGolan, Yarden, C.S." },
+        price: 189
+      },
       // יינות - כוסות
       { id: "subheader-wine-glass", name: { he: "יינות - כוסות", en: "Wines - By the Glass" }, price: 0, isSubheader: true },
       {
         id: "carmi-shai",
-        name: { he: "כרמי שי, פריים", en: "Carmi Shai, Prime" },
-        description: { he: "ק.ס.", en: "C.S." },
+        name: { he: "כרמי שי, פריים ק.ס.", en: "Carmi Shai, Prime C.S." },
         price: 22
       },
       {
         id: "kumbia-white",
         name: { he: "קומביה, שרדונה, לבן", en: "Kumbia, Chardonnay, White" },
         price: 22
-      }
+      },
+      // אניס
+      { id: "subheader-anis", name: { he: "אניס", en: "Anise" }, price: 0, isSubheader: true },
+      { id: "arak-ayalot", name: { he: "ערק איילות", en: "Arak Ayalot" }, price: 26 },
+      { id: "ouzo-12", name: { he: "אוזו 12", en: "Ouzo 12" }, price: 28 },
+      // וודקה
+      { id: "subheader-vodka", name: { he: "וודקה", en: "Vodka" }, price: 0, isSubheader: true },
+      { id: "smirnoff", name: { he: "סמירנוף", en: "Smirnoff" }, price: 28 },
+      { id: "grey-goose", name: { he: "גרייגוס", en: "Grey Goose" }, price: 42 },
+      // ג'ין
+      { id: "subheader-gin", name: { he: "ג'ין", en: "Gin" }, price: 0, isSubheader: true },
+      { id: "gordons", name: { he: "גורדונס", en: "Gordon's" }, price: 36 },
+      { id: "tanqueray", name: { he: "טנקרי", en: "Tanqueray" }, price: 36 },
+      // וויסקי
+      { id: "subheader-whisky", name: { he: "וויסקי", en: "Whisky" }, price: 0, isSubheader: true },
+      { id: "jack-daniels", name: { he: "ג'ק דניאלס", en: "Jack Daniel's" }, price: 38 },
+      { id: "glenlivet", name: { he: "גלנליווט", en: "Glenlivet" }, price: 42 },
+      { id: "johnny-walker-gold", name: { he: "ג'וני ווקר גולד", en: "Johnnie Walker Gold" }, price: 55 },
+      { id: "macallan-12", name: { he: "מקאלן 12", en: "Macallan 12" }, price: 76 },
+      // טקילה
+      { id: "subheader-tequila", name: { he: "טקילה", en: "Tequila" }, price: 0, isSubheader: true },
+      { id: "cuervo", name: { he: "קווארבו", en: "José Cuervo" }, price: 34 },
+      { id: "don-julio-reposado", name: { he: "דון חוליו רפוסדו", en: "Don Julio Reposado" }, price: 42 },
+      { id: "patron", name: { he: "פטרון", en: "Patrón" }, price: 55 }
     ]
   },
   // Row 4: ילדים | שתיה קלה
   {
     id: "kids",
     name: {
-      he: "מנות ילדים",
-      en: "Kids Menu"
+      he: "Meat Kids",
+      en: "Meat Kids"
     },
     image: "/imgs/meatupimgs/Meat-up/meatuplight/JPEG/Junior-burger.jpg",
+    note: {
+      he: "מוגש לצד תוספת לבחירה - צ'יפס, פוטטוס או סלט ירוק ופריגת ענבים",
+      en: "Served with choice of side - fries, potatoes or green salad, and grape juice"
+    },
     items: [
-      { id: "kids-burger", name: { he: "בורגר ילדים", en: "Kids Burger" }, description: { he: "קציצת בקר בלחמניית בריוש עם חסה, עגבניה, בצל סגול ומלפפון כבוש", en: "Beef patty in brioche bun with lettuce, tomato, red onion and pickle" }, price: 58 },
-      { id: "kids-schnitzel", name: { he: "שניצלוני חזה עוף", en: "Chicken Breast Schnitzel" }, description: { he: "שניצלוני חזה עוף פריכים עם רטבים לבחירה", en: "Crispy chicken breast schnitzel bites with dipping sauces" }, price: 58 },
-      { id: "kids-chicken", name: { he: "פרגית ילדים", en: "Kids Chicken" }, description: { he: "פרגית צלויה ברוטב פטרוזיליה ושום, עם צ'יפס ורטבים", en: "Grilled chicken thigh in parsley and garlic sauce, with fries and dipping sauces" }, price: 58 }
+      { id: "kids-burger", name: { he: "בורגר 150 גר'", en: "Burger 150g" }, price: 58 },
+      { id: "kids-schnitzel", name: { he: "שניצלונים", en: "Schnitzel Bites" }, price: 58 },
+      { id: "kids-chicken-breast", name: { he: "חזה עוף", en: "Chicken Breast" }, price: 58 },
+      { id: "kids-chicken-thigh", name: { he: "פרגית צלויה", en: "Grilled Chicken Thigh" }, price: 58 }
     ]
   },
   {
     id: "soft-drinks",
     name: {
-      he: "שתיה קלה",
-      en: "Soft Drinks"
+      he: "Meat your Drinks",
+      en: "Meat your Drinks"
     },
     image: "/imgs/meatupimgs/bevreges.webp",
     items: [
+      { id: "mineral-water", name: { he: "מים מינרליים", en: "Mineral Water" }, price: 12 },
+      { id: "soda", name: { he: "סודה", en: "Soda" }, price: 12 },
       { id: "coca-cola", name: { he: "קולה / קולה זירו / ספרייט / ספרייט זירו", en: "Cola / Cola Zero / Sprite / Sprite Zero" }, price: 14 },
       { id: "prigat", name: { he: "פריגת ענבים / תפוזים / אשכוליות / לימונענע", en: "Prigat Grapes / Orange / Grapefruit / Lemonade" }, price: 14 },
       { id: "fuze-tea", name: { he: "פיוזטי אפרסק", en: "Fuze Tea Peach" }, price: 14 },
-      { id: "neviot", name: { he: "נביעות בטעמים אפרסק / תפוח / ענבים", en: "Neviot Peach / Apple / Grapes" }, price: 14 },
-      { id: "mineral-water", name: { he: "מים מינרלים", en: "Mineral Water" }, price: 12 },
-      { id: "soda", name: { he: "סודה", en: "Soda" }, price: 12 }
+      { id: "neviot", name: { he: "נביעות בטעמים אפרסק / תפוח / ענבים", en: "Neviot Peach / Apple / Grapes" }, price: 14 }
     ]
   }
 ];
 
 // Allergen notice
 export const allergenNotice = {
-  he: "המנות המוצעות עשויות להכיל אלרגני מסוגים שונים - ניתן להזמין את מנת ההמבורגר עם לחמניה ללא גלוטן, אך סביבת העבודה אינה נקיה מגלוטן ועל כן עשויה להכיל עקבות גלוטן.",
-  en: "The dishes offered may contain various allergens - burger dishes can be ordered with gluten-free buns, but the work environment is not gluten-free and may contain traces of gluten."
+  he: "המנות המוצעות עשויות להכיל אלרגני מסוגים שונים. ניתן להזמין את מנות ההמבורגר והצ'יקן עם לחמניה ללא גלוטן, המנות כולן עלולות להכיל עקבות של גלוטן או אלרגנים שונים.",
+  en: "The dishes offered may contain various allergens. Burger and chicken dishes can be ordered with gluten-free buns. All dishes may contain traces of gluten or various allergens."
 };
