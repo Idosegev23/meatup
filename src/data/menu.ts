@@ -155,7 +155,7 @@ export const menuData: MenuCategory[] = [
       { id: "subheader-sauces", name: { he: "Meat your Extra Sauce", en: "Meat your Extra Sauce" }, price: 0, isSubheader: true },
       {
         id: "sauce-cup",
-        name: { he: "קוקוס 80 מ\"ל", en: "Sauce Cup 80ml" },
+        name: { he: "קוקוט 80 מ\"ל", en: "Sauce Cup 80ml" },
         description: { he: "איולי כוסברה, איולי שום, איולי מיט אפ, איולי פלפלים שרופים, איולי ראנץ'", en: "Coriander aioli, garlic aioli, Meatup aioli, roasted pepper aioli, ranch aioli" },
         price: 4
       }
