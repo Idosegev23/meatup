@@ -120,7 +120,7 @@ export const menuData: MenuCategory[] = [
       {
         id: "topap-300",
         name: { he: "טופאפ 300", en: "Topap 300" },
-        description: { he: "עשויה מנתחי בקר מובחר 300 גר' - איולי פלפלים שרופים, חסה לאליק וטבעות בצל דקיקות", en: "Made from premium beef cuts 300g - roasted pepper aioli, lollo rosso lettuce and thin onion rings" },
+        description: { he: "עשויה מנתחי בקר מובחר 300 גר' - איולי פלפלים שרופים, חסה לאליק ובצל פריך", en: "Made from premium beef cuts 300g - roasted pepper aioli, lollo rosso lettuce and crispy onion" },
         price: 82
       },
       {
@@ -230,13 +230,13 @@ export const menuData: MenuCategory[] = [
       {
         id: "entrecote-kebab",
         name: { he: "קבב אנטריקוט", en: "Entrecote Kebab" },
-        description: { he: "שיפודי קבב עסיסיים עשויים מנתחי בקר מובחר עם בצל ופטרוזיליה קצוצים ותוספת לבחירה", en: "Juicy kebab skewers made from premium beef cuts with chopped onion and parsley, with choice of side" },
+        description: { he: "שיפודי קבב (280 גר') עשויים מנתחי בקר מובחר עם בצל ופטרוזיליה קצוצים, מוגשים לצד תפו\"א קריספי, שום קונפי ושרי צלוי", en: "Kebab skewers (280g) made from premium beef cuts with chopped onion and parsley, served with crispy potatoes, confit garlic and roasted cherry tomatoes" },
         price: 72
       },
       {
         id: "ribeye-select",
         name: { he: "Ribeye Select", en: "Ribeye Select" },
-        description: { he: "אנטריקוט בלאק אנגוס מיושן 300 גר', לצד מח עצם ותוספת לבחירה - פירה קרמי, שעועית ירוקה, צ'יפס או סלט ירוק", en: "Aged Black Angus ribeye 300g, with bone marrow and choice of side - creamy mash, green beans, fries or green salad" },
+        description: { he: "אנטריקוט בלאק אנגוס מיושן 330 גר', לצד מח עצם ותוספת לבחירה - פירה קרמי, שעועית ירוקה, צ'יפס או סלט ירוק", en: "Aged Black Angus ribeye 330g, with bone marrow and choice of side - creamy mash, green beans, fries or green salad" },
         price: 178
       }
     ]
