@@ -10,10 +10,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function Menu() {
   const { dict, language } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState<MenuCategory | null>(null);
+  const [expandedItemId, setExpandedItemId] = useState<string | null>(null);
 
   const kosherText = language === 'he' ? config.kosher.he : config.kosher.en;
 
-  const closeModal = () => setSelectedCategory(null);
+  const closeModal = () => {
+    setSelectedCategory(null);
+    setExpandedItemId(null);
+  };
+
+  const toggleItem = (itemId: string) => {
+    setExpandedItemId((prev) => (prev === itemId ? null : itemId));
+  };
 
   return (
     <>
@@ -188,14 +196,38 @@ export default function Menu() {
                           transition={{ delay: index * 0.03 }}
                           className={`py-3 ${
                             index !== selectedCategory.items.length - 1 && !selectedCategory.items[index + 1]?.isSubheader
-                              ? 'border-b border-[#F2F1F0]/10' 
+                              ? 'border-b border-[#F2F1F0]/10'
                               : ''
                     }`}
                   >
-                    <div className="flex justify-between items-start gap-4">
+                    <div
+                      onClick={() => item.image && toggleItem(item.id)}
+                      role={item.image ? 'button' : undefined}
+                      tabIndex={item.image ? 0 : undefined}
+                      onKeyDown={(e) => {
+                        if (item.image && (e.key === 'Enter' || e.key === ' ')) {
+                          e.preventDefault();
+                          toggleItem(item.id);
+                        }
+                      }}
+                      className={`flex justify-between items-start gap-4 ${
+                        item.image ? 'cursor-pointer group' : ''
+                      }`}
+                    >
                       <div className="flex-1">
-                              <h4 className="text-base font-medium text-[#F2F1F0]">
+                              <h4 className="text-base font-medium text-[#F2F1F0] flex items-center gap-2">
                           {language === 'he' ? item.name.he : item.name.en}
+                                {item.image && (
+                                  <svg
+                                    className="w-4 h-4 text-[#BF9B7A]/50 group-hover:text-[#BF9B7A] transition-colors"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                  >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                  </svg>
+                                )}
                               </h4>
                               {item.description && (
                                 <p className="text-[#F2F1F0]/50 text-sm leading-relaxed mt-1">
@@ -207,6 +239,37 @@ export default function Menu() {
                         {dict.menu.currency}{item.price}
                       </div>
                     </div>
+                    <AnimatePresence initial={false}>
+                      {item.image && expandedItemId === item.id && (
+                        <motion.div
+                          key="item-image"
+                          initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                          animate={{ opacity: 1, height: 'auto', marginTop: 12 }}
+                          exit={{ opacity: 0, height: 0, marginTop: 0 }}
+                          transition={{ duration: 0.25, ease: 'easeOut' }}
+                          style={{ overflow: 'hidden' }}
+                        >
+                          <div
+                            style={{
+                              position: 'relative',
+                              width: '100%',
+                              aspectRatio: '16 / 10',
+                              borderRadius: '12px',
+                              overflow: 'hidden',
+                              border: '1px solid rgba(191, 155, 122, 0.25)',
+                            }}
+                          >
+                            <Image
+                              src={item.image}
+                              alt={language === 'he' ? item.name.he : item.name.en}
+                              fill
+                              sizes="(max-width: 768px) 100vw, 600px"
+                              className="object-cover"
+                            />
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                         </motion.div>
                       )
                     ))}

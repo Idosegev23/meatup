@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 import { menuData } from '@/data/menu';
 import { config } from '@/data/config';
@@ -9,8 +10,13 @@ import { config } from '@/data/config';
 export default function MenuPage() {
   const { dict, language } = useLanguage();
   const [activeCategory, setActiveCategory] = useState(menuData[0].id);
+  const [expandedItemId, setExpandedItemId] = useState<string | null>(null);
 
   const kosherText = language === 'he' ? config.kosher.he : config.kosher.en;
+
+  const toggleItem = (itemId: string) => {
+    setExpandedItemId((prev) => (prev === itemId ? null : itemId));
+  };
 
   return (
     <>
@@ -78,28 +84,87 @@ export default function MenuPage() {
 
                 <div className="space-y-0">
                   {category.items.map((item, index) => (
-                    <div
-                      key={item.id}
-                      className={`py-6 ${
-                        index !== category.items.length - 1 ? 'border-b border-charcoal/10' : ''
-                      }`}
-                    >
-                      <div className="flex justify-between items-start gap-4">
-                        <div className="flex-1">
-                          <h3 className="text-lg font-semibold text-charcoal mb-1">
-                            {language === 'he' ? item.name.he : item.name.en}
-                          </h3>
-                          {item.description && (
-                          <p className="text-charcoal/60 text-sm leading-relaxed">
-                            {language === 'he' ? item.description.he : item.description.en}
-                          </p>
-                          )}
-                        </div>
-                        <div className="text-lg font-semibold text-bronze whitespace-nowrap">
-                          {dict.menu.currency}{item.price}
-                        </div>
+                    item.isSubheader ? (
+                      <div
+                        key={item.id}
+                        className={`pt-6 pb-2 ${index === 0 ? '' : 'mt-4 border-t border-charcoal/15'}`}
+                      >
+                        <h4 className="text-base font-semibold text-bronze">
+                          {language === 'he' ? item.name.he : item.name.en}
+                        </h4>
                       </div>
-                    </div>
+                    ) : (
+                      <div
+                        key={item.id}
+                        className={`py-6 ${
+                          index !== category.items.length - 1 && !category.items[index + 1]?.isSubheader
+                            ? 'border-b border-charcoal/10'
+                            : ''
+                        }`}
+                      >
+                        <div
+                          onClick={() => item.image && toggleItem(item.id)}
+                          role={item.image ? 'button' : undefined}
+                          tabIndex={item.image ? 0 : undefined}
+                          onKeyDown={(e) => {
+                            if (item.image && (e.key === 'Enter' || e.key === ' ')) {
+                              e.preventDefault();
+                              toggleItem(item.id);
+                            }
+                          }}
+                          className={`flex justify-between items-start gap-4 ${
+                            item.image ? 'cursor-pointer group' : ''
+                          }`}
+                        >
+                          <div className="flex-1">
+                            <h3 className="text-lg font-semibold text-charcoal mb-1 flex items-center gap-2">
+                              {language === 'he' ? item.name.he : item.name.en}
+                              {item.image && (
+                                <svg
+                                  className="w-4 h-4 text-bronze/60 group-hover:text-bronze transition-colors"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                  aria-hidden="true"
+                                >
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                              )}
+                            </h3>
+                            {item.description && (
+                            <p className="text-charcoal/60 text-sm leading-relaxed">
+                              {language === 'he' ? item.description.he : item.description.en}
+                            </p>
+                            )}
+                          </div>
+                          <div className="text-lg font-semibold text-bronze whitespace-nowrap">
+                            {dict.menu.currency}{item.price}
+                          </div>
+                        </div>
+                        <AnimatePresence initial={false}>
+                          {item.image && expandedItemId === item.id && (
+                            <motion.div
+                              key="item-image"
+                              initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                              animate={{ opacity: 1, height: 'auto', marginTop: 16 }}
+                              exit={{ opacity: 0, height: 0, marginTop: 0 }}
+                              transition={{ duration: 0.25, ease: 'easeOut' }}
+                              style={{ overflow: 'hidden' }}
+                            >
+                              <div className="relative w-full max-w-lg rounded-xl overflow-hidden border border-bronze/25" style={{ aspectRatio: '16 / 10' }}>
+                                <Image
+                                  src={item.image}
+                                  alt={language === 'he' ? item.name.he : item.name.en}
+                                  fill
+                                  sizes="(max-width: 768px) 100vw, 500px"
+                                  className="object-cover"
+                                />
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    )
                   ))}
                 </div>
               </div>
