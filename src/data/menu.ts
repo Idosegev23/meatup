@@ -41,11 +41,10 @@ export const menuData: MenuCategory[] = [
     image: `${dishImg}/Jerusalem-bagel.jpg`,
     items: [
       {
-        id: "bagel",
-        name: { he: "בייגל ירושלמי", en: "Jerusalem Bagel" },
-        description: { he: "חריפים, בלסמי, טחינה, שום קונפי וזיתים", en: "Spicy, balsamic, tahini, confit garlic and olives" },
-        price: 38,
-        image: `${dishImg}/Jerusalem-bagel.jpg`
+        id: "frena-bread",
+        name: { he: "לחם פרנה", en: "Frena Bread" },
+        description: { he: "מתבלים, טחינה, שום קונפי וזיתים", en: "Spices, tahini, confit garlic and olives" },
+        price: 28
       },
       {
         id: "merguez-sausages",
@@ -149,12 +148,13 @@ export const menuData: MenuCategory[] = [
       { id: "jalapeno", name: { he: "חלפיניו על הפלאנצ'ה", en: "Grilled Jalapeño" }, price: 6 },
       { id: "chili-jam", name: { he: "ריבת צ'ילי", en: "Chili Jam" }, price: 8 },
       { id: "fried-egg", name: { he: "ביצת עין", en: "Fried Egg" }, price: 10 },
+      { id: "portobello", name: { he: "פטריית פורטובלו", en: "Portobello Mushroom" }, price: 12 },
+      { id: "entrecote-strip", name: { he: "סטריפ אנטריקוט", en: "Entrecote Strip" }, price: 15 },
       { id: "smash-patty-100", name: { he: "קציצת סמאש 100 גר'", en: "Smash Patty 100g" }, price: 22 },
       { id: "burger-patty-230", name: { he: "קציצת בורגר 230 גר'", en: "Burger Patty 230g" }, price: 30 },
       // תוספות בצד
       { id: "subheader-sides", name: { he: "Meat your Sides", en: "Meat your Sides" }, price: 0, isSubheader: true },
-      { id: "ranch-salad", name: { he: "סלט חסות ראנץ'", en: "Ranch Lettuce Salad" }, price: 22, image: `${dishImg}/Ranch-lettuce-salad.jpg` },
-      { id: "green-salad", name: { he: "סלט ירוק", en: "Green Salad" }, price: 22, image: `${dishImg}/Green-market-salad.jpg` },
+      { id: "white-rice", name: { he: "אורז לבן", en: "White Rice" }, price: 17 },
       {
         id: "fries",
         name: { he: "צ'יפס קטן / גדול", en: "Fries Small / Large" },
@@ -163,8 +163,11 @@ export const menuData: MenuCategory[] = [
         priceAlt: 44,
         image: `${dishImg}/French-fries.jpg`
       },
+      { id: "ranch-salad", name: { he: "סלט חסות ראנץ'", en: "Ranch Lettuce Salad" }, price: 22, image: `${dishImg}/Ranch-lettuce-salad.jpg` },
+      { id: "green-salad", name: { he: "סלט ירוק", en: "Green Salad" }, price: 22, image: `${dishImg}/Green-market-salad.jpg` },
       { id: "potatoes", name: { he: "פוטטוס", en: "Potatoes" }, price: 24, image: `${dishImg}/Potatos.jpg` },
       { id: "green-beans", name: { he: "שעועית ירוקה", en: "Green Beans" }, price: 24, image: `${dishImg}/Green-beans.jpg` },
+      { id: "onion-rings", name: { he: "טבעות בצל", en: "Onion Rings" }, price: 26 },
       // רטבים
       { id: "subheader-sauces", name: { he: "Meat your Extra Sauce", en: "Meat your Extra Sauce" }, price: 0, isSubheader: true },
       {
@@ -227,11 +230,10 @@ export const menuData: MenuCategory[] = [
     image: `${dishImg}/Ribeye-steak-antricot.jpg`,
     items: [
       {
-        id: "beef-soup",
-        name: { he: "מרק בשר בבישול ארוך", en: "Slow-Cooked Beef Soup" },
-        description: { he: "בשר ראש ואונטריב בבישול ארוך עם עצמות מח, ציר בקר וירקות, מוגש לצד טוסטונים", en: "Slow-cooked head meat and entrecote with marrow bones, beef stock and vegetables, served with tostones" },
-        price: 52,
-        image: `${dishImg}/Beef-soup.jpg`
+        id: "araisi-shuk",
+        name: { he: "עראייס שוק", en: "Araisi Shuk" },
+        description: { he: "שלישיית חצאי פיתות ממולאות בבקר מתובל, פטרוזיליה ובצל, מוגשות לצד טחינה לימונית, סלסת עגבניות וצ'יפס", en: "Three half-pitas filled with seasoned beef, parsley and onion, served with lemon tahini, tomato salsa and fries" },
+        price: 58
       },
       {
         id: "chicken-breast",
@@ -241,17 +243,17 @@ export const menuData: MenuCategory[] = [
         image: `${dishImg}/Plancha-chicken-breast.jpg`
       },
       {
+        id: "entrecote-kebab",
+        name: { he: "קבב אנטריקוט", en: "Entrecote Kebab" },
+        description: { he: "שיפודי קבב עסיסיים (320 גר') עשויים מנתחי בקר מובחרים עם בצל ופטרוזיליה קצוצים, מוגשים לצד תפו\"א קריספי, שום קונפי נימוח ועגבניות שרי צלויות", en: "Juicy kebab skewers (320g) made from premium beef cuts with chopped onion and parsley, served with crispy potatoes, soft confit garlic and roasted cherry tomatoes" },
+        price: 72
+      },
+      {
         id: "chicken-thigh-marinade",
         name: { he: "פרגית במרינדה", en: "Marinated Chicken Thigh" },
         description: { he: "שיפודי פרגית במרינדה פיקנטית, נצרבים על הגריל ומוגשים לצד הומפרייז קריספי", en: "Chicken thigh skewers in spicy marinade, seared on the grill, served with crispy home fries" },
-        price: 66,
+        price: 74,
         image: `${dishImg}/Roasted-chicken-leg.jpg`
-      },
-      {
-        id: "entrecote-kebab",
-        name: { he: "קבב אנטריקוט", en: "Entrecote Kebab" },
-        description: { he: "שיפודי קבב (280 גר') עשויים מנתחי בקר מובחר עם בצל ופטרוזיליה קצוצים, מוגשים לצד תפו\"א קריספי, שום קונפי ושרי צלוי", en: "Kebab skewers (280g) made from premium beef cuts with chopped onion and parsley, served with crispy potatoes, confit garlic and roasted cherry tomatoes" },
-        price: 72
       },
       {
         id: "ribeye-select",
@@ -312,89 +314,119 @@ export const menuData: MenuCategory[] = [
       // בירות בחבית
       { id: "subheader-draft", name: { he: "בירות מהחבית", en: "Draft Beers" }, price: 0, isSubheader: true },
       {
-        id: "carlsberg-draft",
-        name: { he: "קרלסברג", en: "Carlsberg" },
-        description: { he: "1/3 - 24 ₪  |  1/2 - 32 ₪", en: "1/3 - 24₪  |  1/2 - 32₪" },
-        price: 24,
-        priceAlt: 32
-      },
-      {
-        id: "weihenstephan",
-        name: { he: "ויינשטפן", en: "Weihenstephan" },
-        description: { he: "1/3 - 26 ₪  |  1/2 - 34 ₪", en: "1/3 - 26₪  |  1/2 - 34₪" },
-        price: 26,
+        id: "corona-draft",
+        name: { he: "קורונה", en: "Corona" },
+        description: { he: "רבע 18 ₪  |  שליש 26 ₪  |  חצי 34 ₪", en: "1/4 - 18₪  |  1/3 - 26₪  |  1/2 - 34₪" },
+        price: 18,
         priceAlt: 34
       },
       // בירות בבקבוק
-      { id: "subheader-bottle", name: { he: "בירות בבקבוק", en: "Bottled Beers" }, price: 0, isSubheader: true },
+      { id: "subheader-bottle", name: { he: "בירה מחבית", en: "Bottled Beers" }, price: 0, isSubheader: true },
       { id: "nesher-malt", name: { he: "נשר מאלט", en: "Nesher Malt" }, price: 14 },
       { id: "tuborg-bottle", name: { he: "טובורג", en: "Tuborg" }, price: 26 },
       { id: "carlsberg-bottle", name: { he: "קרלסברג", en: "Carlsberg" }, price: 28 },
-      { id: "goldstar", name: { he: "גולדסטאר", en: "Goldstar" }, price: 28 },
-      { id: "french-wheat-beer", name: { he: "בירה חיטת צרפתית", en: "French Wheat Beer" }, price: 28 },
-      // יינות - בקבוקים
-      { id: "subheader-wine", name: { he: "יינות - בקבוקים", en: "Wines - Bottles" }, price: 0, isSubheader: true },
-      {
-        id: "morelli-white",
-        name: { he: "מורלי, לבן", en: "Morelli, White" },
-        description: { he: "שרדונה", en: "Chardonnay" },
-        price: 96
-      },
-      {
-        id: "morelli-red",
-        name: { he: "מורלי, בלנד אדום", en: "Morelli, Red Blend" },
-        price: 96
-      },
-      {
-        id: "barkan-seven-hills",
-        name: { he: "ברקן, סבן אילס - אדום", en: "Barkan Seven Hills, Red" },
-        price: 120
-      },
-      {
-        id: "ramat-hagolan",
-        name: { he: "רמת הגולן, בלנד אדום", en: "Ramat HaGolan, Red Blend" },
-        price: 145
-      },
-      {
-        id: "ramat-hagolan-yarden",
-        name: { he: "רמת הגולן, ירדן, ק.ס.", en: "Ramat HaGolan, Yarden, C.S." },
-        price: 189
-      },
-      // יינות - כוסות
-      { id: "subheader-wine-glass", name: { he: "יינות - כוסות", en: "Wines - By the Glass" }, price: 0, isSubheader: true },
-      {
-        id: "carmi-shai",
-        name: { he: "כרמי שי, פריים ק.ס.", en: "Carmi Shai, Prime C.S." },
-        price: 22
-      },
-      {
-        id: "kumbia-white",
-        name: { he: "קומביה, שרדונה, לבן", en: "Kumbia, Chardonnay, White" },
-        price: 22
-      },
+      { id: "goldstar-unfiltered", name: { he: "גולדסטאר (לא מסונן)", en: "Goldstar (Unfiltered)" }, price: 28 },
+      { id: "french-wheat-1664", name: { he: "בירה חיטת צרפתית 1664", en: "French Wheat Beer 1664" }, price: 30 },
       // אניס
-      { id: "subheader-anis", name: { he: "אניס", en: "Anise" }, price: 0, isSubheader: true },
-      { id: "arak-ayalot", name: { he: "ערק איילות", en: "Arak Ayalot" }, price: 26 },
-      { id: "ouzo-12", name: { he: "אוזו 12", en: "Ouzo 12" }, price: 28 },
-      // וודקה
-      { id: "subheader-vodka", name: { he: "וודקה", en: "Vodka" }, price: 0, isSubheader: true },
-      { id: "smirnoff", name: { he: "סמירנוף", en: "Smirnoff" }, price: 28 },
-      { id: "grey-goose", name: { he: "גרייגוס", en: "Grey Goose" }, price: 42 },
-      // ג'ין
-      { id: "subheader-gin", name: { he: "ג'ין", en: "Gin" }, price: 0, isSubheader: true },
-      { id: "gordons", name: { he: "גורדונס", en: "Gordon's" }, price: 36 },
-      { id: "tanqueray", name: { he: "טנקרי", en: "Tanqueray" }, price: 36 },
-      // טקילה
-      { id: "subheader-tequila", name: { he: "טקילה", en: "Tequila" }, price: 0, isSubheader: true },
-      { id: "cuervo", name: { he: "קווארבו", en: "José Cuervo" }, price: 34 },
-      { id: "don-julio-reposado", name: { he: "דון חוליו רפוסדו", en: "Don Julio Reposado" }, price: 42 },
-      { id: "patron", name: { he: "פטרון", en: "Patrón" }, price: 55 },
+      { id: "subheader-anis", name: { he: "אניס (מנה / צ'ייסר)", en: "Anise (Serving / Chaser)" }, price: 0, isSubheader: true },
+      {
+        id: "arak-ayalot",
+        name: { he: "ערק איילות", en: "Arak Ayalot" },
+        description: { he: "מנה 32 ₪  |  צ'ייסר 19 ₪", en: "Serving 32₪  |  Chaser 19₪" },
+        price: 19,
+        priceAlt: 32
+      },
+      {
+        id: "ouzo-12",
+        name: { he: "אוזו 12", en: "Ouzo 12" },
+        description: { he: "מנה 34 ₪  |  צ'ייסר 21 ₪", en: "Serving 34₪  |  Chaser 21₪" },
+        price: 21,
+        priceAlt: 34
+      },
       // וויסקי
-      { id: "subheader-whisky", name: { he: "וויסקי", en: "Whisky" }, price: 0, isSubheader: true },
-      { id: "jack-daniels", name: { he: "ג'ק דניאלס", en: "Jack Daniel's" }, price: 38 },
-      { id: "glenlivet", name: { he: "גלנליווט", en: "Glenlivet" }, price: 42 },
-      { id: "johnny-walker-gold", name: { he: "ג'וני ווקר גולד", en: "Johnnie Walker Gold" }, price: 55 },
-      { id: "macallan-12", name: { he: "מקאלן 12", en: "Macallan 12" }, price: 76 }
+      { id: "subheader-whisky", name: { he: "וויסקי (מנה / צ'ייסר)", en: "Whisky (Serving / Chaser)" }, price: 0, isSubheader: true },
+      {
+        id: "jack-daniels",
+        name: { he: "ג'ק דניאלס", en: "Jack Daniel's" },
+        description: { he: "מנה 48 ₪  |  צ'ייסר 28 ₪", en: "Serving 48₪  |  Chaser 28₪" },
+        price: 28,
+        priceAlt: 48
+      },
+      {
+        id: "glenlivet-12",
+        name: { he: "גלנליווט 12", en: "Glenlivet 12" },
+        description: { he: "מנה 58 ₪  |  צ'ייסר 34 ₪", en: "Serving 58₪  |  Chaser 34₪" },
+        price: 34,
+        priceAlt: 58
+      },
+      {
+        id: "macallan-12",
+        name: { he: "מקאלן 12", en: "Macallan 12" },
+        description: { he: "מנה 85 ₪  |  צ'ייסר 45 ₪", en: "Serving 85₪  |  Chaser 45₪" },
+        price: 45,
+        priceAlt: 85
+      },
+      // טקילה
+      { id: "subheader-tequila", name: { he: "טקילה (מנה / צ'ייסר)", en: "Tequila (Serving / Chaser)" }, price: 0, isSubheader: true },
+      {
+        id: "patron-silver",
+        name: { he: "פטרון סילבר", en: "Patrón Silver" },
+        description: { he: "מנה 55 ₪  |  צ'ייסר 32 ₪", en: "Serving 55₪  |  Chaser 32₪" },
+        price: 32,
+        priceAlt: 55
+      },
+      {
+        id: "patron-gold",
+        name: { he: "פטרון גולד", en: "Patrón Gold" },
+        description: { he: "מנה 75 ₪  |  צ'ייסר 45 ₪", en: "Serving 75₪  |  Chaser 45₪" },
+        price: 45,
+        priceAlt: 75
+      },
+      // ג'ין
+      { id: "subheader-gin", name: { he: "ג'ין (מנה / צ'ייסר)", en: "Gin (Serving / Chaser)" }, price: 0, isSubheader: true },
+      {
+        id: "gordons",
+        name: { he: "גורדונס", en: "Gordon's" },
+        description: { he: "מנה 36 ₪  |  צ'ייסר 20 ₪", en: "Serving 36₪  |  Chaser 20₪" },
+        price: 20,
+        priceAlt: 36
+      },
+      // וודקה
+      { id: "subheader-vodka", name: { he: "וודקה (מנה / צ'ייסר)", en: "Vodka (Serving / Chaser)" }, price: 0, isSubheader: true },
+      {
+        id: "smirnoff",
+        name: { he: "סמירנוף", en: "Smirnoff" },
+        description: { he: "מנה 36 ₪  |  צ'ייסר 20 ₪", en: "Serving 36₪  |  Chaser 20₪" },
+        price: 20,
+        priceAlt: 36
+      },
+      {
+        id: "grey-goose",
+        name: { he: "גרייגוס", en: "Grey Goose" },
+        description: { he: "מנה 48 ₪  |  צ'ייסר 38 ₪", en: "Serving 48₪  |  Chaser 38₪" },
+        price: 38,
+        priceAlt: 48
+      },
+      // קוקטיילים
+      { id: "subheader-cocktails", name: { he: "קוקטייל", en: "Cocktails" }, price: 0, isSubheader: true },
+      {
+        id: "blooming-anise",
+        name: { he: "אניס פורח", en: "Blooming Anise" },
+        description: { he: "ערק, אפרסק ובזיליקום טרי. שילוב טעמים נקי, רענן ומתוחכם שנותן כבוד לחומרי הגלם", en: "Arak, peach and fresh basil. A clean, fresh and sophisticated flavor combination" },
+        price: 42
+      },
+      {
+        id: "summer-crush",
+        name: { he: "סאמר קראש", en: "Summer Crush" },
+        description: { he: "וודקה, פסיפלורה טרייה, אבטיח ונגיעת ספרייט. מתוק, חמצמץ ומאוזן להפליא", en: "Vodka, fresh passion fruit, watermelon and a touch of Sprite. Sweet, tangy and beautifully balanced" },
+        price: 42
+      },
+      {
+        id: "electric-blue",
+        name: { he: "אלקטריק בלו", en: "Electric Blue" },
+        description: { he: "וודקה, ליקר תפוזי קירסאו כחול ומיץ לימון טרי. קוקטייל תוסס בטעם חמוץ-מתוק", en: "Vodka, blue Curaçao orange liqueur and fresh lemon juice. A vibrant sweet-and-sour cocktail" },
+        price: 42
+      }
     ]
   },
   // Row 4: ילדים | שתיה קלה
@@ -424,12 +456,30 @@ export const menuData: MenuCategory[] = [
     },
     image: "/imgs/meatupimgs/bevreges.webp",
     items: [
+      // משקאות קלים
+      { id: "subheader-soft", name: { he: "משקאות קלים", en: "Soft Drinks" }, price: 0, isSubheader: true },
       { id: "mineral-water", name: { he: "מים מינרליים", en: "Mineral Water" }, price: 12 },
       { id: "soda", name: { he: "סודה", en: "Soda" }, price: 12 },
       { id: "coca-cola", name: { he: "קולה / קולה זירו / ספרייט / ספרייט זירו", en: "Cola / Cola Zero / Sprite / Sprite Zero" }, price: 14 },
       { id: "prigat", name: { he: "פריגת ענבים / תפוזים / אשכוליות / לימונענע", en: "Prigat Grapes / Orange / Grapefruit / Lemonade" }, price: 14 },
       { id: "fuze-tea", name: { he: "פיוזטי אפרסק", en: "Fuze Tea Peach" }, price: 14 },
-      { id: "neviot", name: { he: "נביעות בטעמים אפרסק / תפוח / ענבים", en: "Neviot Peach / Apple / Grapes" }, price: 14 }
+      { id: "neviot", name: { he: "נביעות בטעמים אפרסק / תפוח / ענבים", en: "Neviot Peach / Apple / Grapes" }, price: 14 },
+      // משקאות חמים
+      { id: "subheader-hot", name: { he: "משקאות חמים", en: "Hot Drinks" }, price: 0, isSubheader: true },
+      { id: "tea", name: { he: "תה", en: "Tea" }, price: 12 },
+      {
+        id: "espresso",
+        name: { he: "אספרסו קצר / כפול", en: "Espresso Short / Double" },
+        description: { he: "12 / 14 ₪", en: "12 / 14 ₪" },
+        price: 12,
+        priceAlt: 14
+      },
+      {
+        id: "affogato",
+        name: { he: "אפוגטו", en: "Affogato" },
+        description: { he: "אספרסו על גלידת קרם וניל", en: "Espresso over vanilla cream ice cream" },
+        price: 24
+      }
     ]
   }
 ];

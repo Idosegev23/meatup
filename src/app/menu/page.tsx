@@ -45,10 +45,10 @@ export default function MenuPage() {
       </section>
 
       {/* Menu Content */}
-      <section className="py-16 md:py-24 bg-off-white">
+      <section className="py-16 md:py-24 bg-charcoal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Category Tabs - Sticky on mobile */}
-          <div className="sticky top-16 md:top-20 z-20 bg-off-white py-4 -mx-4 px-4 md:mx-0 md:px-0 mb-8">
+          <div className="sticky top-16 md:top-20 z-20 bg-charcoal py-4 -mx-4 px-4 md:mx-0 md:px-0 mb-8">
             <div className="overflow-x-auto scrollbar-hide">
               <div className="flex gap-2 md:justify-center min-w-max pb-2">
                 {menuData.map((category) => (
@@ -57,8 +57,8 @@ export default function MenuPage() {
                     onClick={() => setActiveCategory(category.id)}
                     className={`px-5 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                       activeCategory === category.id
-                        ? 'bg-charcoal text-off-white shadow-lg'
-                        : 'bg-charcoal/10 text-charcoal hover:bg-charcoal/20'
+                        ? 'bg-bronze text-charcoal shadow-lg'
+                        : 'bg-off-white/10 text-off-white hover:bg-off-white/20'
                     }`}
                   >
                     {language === 'he' ? category.name.he : category.name.en}
@@ -77,17 +77,26 @@ export default function MenuPage() {
               >
                 {/* Category Header */}
                 <div className="text-center mb-8">
-                  <h2 className="text-2xl md:text-3xl font-semibold text-charcoal">
+                  <h2 className="text-2xl md:text-3xl font-semibold text-off-white">
                     {language === 'he' ? category.name.he : category.name.en}
                   </h2>
                 </div>
+
+                {/* Category Note */}
+                {category.note && (
+                  <div className="mb-6 mx-auto max-w-2xl rounded-lg border border-bronze/30 bg-bronze/10 px-4 py-3">
+                    <p className="text-sm text-bronze leading-relaxed text-center">
+                      {language === 'he' ? category.note.he : category.note.en}
+                    </p>
+                  </div>
+                )}
 
                 <div className="space-y-0">
                   {category.items.map((item, index) => (
                     item.isSubheader ? (
                       <div
                         key={item.id}
-                        className={`pt-6 pb-2 ${index === 0 ? '' : 'mt-4 border-t border-charcoal/15'}`}
+                        className={`pt-6 pb-2 ${index === 0 ? '' : 'mt-4 border-t border-off-white/15'}`}
                       >
                         <h4 className="text-base font-semibold text-bronze">
                           {language === 'he' ? item.name.he : item.name.en}
@@ -98,7 +107,7 @@ export default function MenuPage() {
                         key={item.id}
                         className={`py-6 ${
                           index !== category.items.length - 1 && !category.items[index + 1]?.isSubheader
-                            ? 'border-b border-charcoal/10'
+                            ? 'border-b border-off-white/10'
                             : ''
                         }`}
                       >
@@ -117,7 +126,7 @@ export default function MenuPage() {
                           }`}
                         >
                           <div className="flex-1">
-                            <h3 className="text-lg font-semibold text-charcoal mb-1 flex items-center gap-2">
+                            <h3 className="text-lg font-semibold text-off-white mb-1 flex items-center gap-2">
                               {language === 'he' ? item.name.he : item.name.en}
                               {item.image && (
                                 <svg
@@ -132,7 +141,7 @@ export default function MenuPage() {
                               )}
                             </h3>
                             {item.description && (
-                            <p className="text-charcoal/60 text-sm leading-relaxed">
+                            <p className="text-off-white/60 text-sm leading-relaxed">
                               {language === 'he' ? item.description.he : item.description.en}
                             </p>
                             )}
@@ -174,11 +183,11 @@ export default function MenuPage() {
           {/* Decorative element */}
           <div className="flex justify-center mt-16">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-px bg-charcoal/20" />
+              <div className="w-12 h-px bg-off-white/20" />
               <svg className="w-6 h-6 text-bronze" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
               </svg>
-              <div className="w-12 h-px bg-charcoal/20" />
+              <div className="w-12 h-px bg-off-white/20" />
             </div>
           </div>
         </div>
