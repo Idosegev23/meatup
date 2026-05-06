@@ -141,7 +141,7 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 md:py-28 bg-[#0a1628]">
+      <section id="about" className="py-20 md:py-28 bg-[#1A1A1A]">
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
           {/* Text Content */}
           <h2 style={{ fontSize: '2.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '24px' }}>
@@ -316,7 +316,7 @@ export default function HomePage() {
             rel="noopener noreferrer"
             style={{
               backgroundColor: '#BF9B7A',
-              color: '#0a1628',
+              color: '#1A1A1A',
               padding: '12px 28px',
               fontWeight: 600,
               fontSize: '0.95rem',
@@ -325,7 +325,7 @@ export default function HomePage() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              border: '2px solid #0a1628',
+              border: '2px solid #1A1A1A',
             }}
             onMouseEnter={(e) => { 
               e.currentTarget.style.backgroundColor = '#A8876A'; 

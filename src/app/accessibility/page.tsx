@@ -8,7 +8,7 @@ export default function AccessibilityPage() {
   const isHebrew = language === 'he';
 
   return (
-    <div style={{ backgroundColor: '#0a1628', minHeight: '100vh', paddingTop: '140px', paddingBottom: '80px' }}>
+    <div style={{ backgroundColor: '#1A1A1A', minHeight: '100vh', paddingTop: '140px', paddingBottom: '80px' }}>
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 24px' }}>
         <h1 style={{ fontSize: '2.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '16px', textAlign: 'center' }}>
           {isHebrew ? 'הצהרת נגישות' : 'Accessibility Statement'}

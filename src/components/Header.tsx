@@ -83,7 +83,7 @@ export default function Header() {
       style={{
         fontSize: '16px',
         fontWeight: 500,
-        color: activeSection === item.id ? '#BF9B7A' : '#0a1628',
+        color: activeSection === item.id ? '#BF9B7A' : '#1A1A1A',
         transition: 'color 0.2s',
         whiteSpace: 'nowrap',
       }}
@@ -94,7 +94,7 @@ export default function Header() {
       }}
       onMouseLeave={(e) => {
         if (activeSection !== item.id) {
-          e.currentTarget.style.color = '#0a1628';
+          e.currentTarget.style.color = '#1A1A1A';
         }
       }}
     >
@@ -152,7 +152,7 @@ export default function Header() {
               width: '38px',
               height: '38px',
               borderRadius: '50%',
-              backgroundColor: '#0a1628',
+              backgroundColor: '#1A1A1A',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -161,7 +161,7 @@ export default function Header() {
           >
             <svg width="22" height="22" viewBox="0 0 122.71 122.88" style={{ overflow: 'visible' }}>
               {/* Face fill - black */}
-              <path fill="#0a1628" d="M55.14,104.21c4.22,0,8.44,0.19,12.66-0.09c3.84-0.19,7.88-0.56,11.63-1.5c29.82-7.31,45.76-40.23,32.72-68.07 C104.27,17.76,90.77,8.19,72.3,6.22c-14.16-1.5-26.82,2.72-37.51,12.28c-10.5,9.47-15.94,21.28-16.31,35.44 c-0.09,3.28,0,6.66,0,9.94C18.38,71.02,14.35,76.55,7.5,78.7c-0.09,0-0.28,0.19-0.38,0.19c2.63,6.94,13.31,17.16,19.97,19.69 C35.45,87.14,52.32,91.18,55.14,104.21L55.14,104.21z"/>
+              <path fill="#1A1A1A" d="M55.14,104.21c4.22,0,8.44,0.19,12.66-0.09c3.84-0.19,7.88-0.56,11.63-1.5c29.82-7.31,45.76-40.23,32.72-68.07 C104.27,17.76,90.77,8.19,72.3,6.22c-14.16-1.5-26.82,2.72-37.51,12.28c-10.5,9.47-15.94,21.28-16.31,35.44 c-0.09,3.28,0,6.66,0,9.94C18.38,71.02,14.35,76.55,7.5,78.7c-0.09,0-0.28,0.19-0.38,0.19c2.63,6.94,13.31,17.16,19.97,19.69 C35.45,87.14,52.32,91.18,55.14,104.21L55.14,104.21z"/>
               {/* Outline - orange */}
               <path fill="#BF9B7A" d="M54.95,110.49c-1.03,4.69-3.56,8.16-7.69,10.31c-5.25,2.72-10.6,2.63-15.57-0.56c-5.16-3.28-7.41-8.25-7.03-14.35 c0.09-1.03-0.19-1.41-1.03-1.88c-9.1-4.78-16.31-11.44-21.28-20.44c-0.94-1.78-1.69-3.66-2.16-5.63c-0.66-2.72,0.38-4.03,3.19-4.31 c3.38-0.38,6.38-1.69,7.88-4.88c0.66-1.41,1.03-3.09,1.03-4.69c0.19-4.03,0-8.06,0.19-12.1c1.03-15.57,7.5-28.5,19.32-38.63 C42.67,3.97,55.42-0.43,69.76,0.03c25.04,0.94,46.51,18.57,51.57,43.23c4.59,22.32-2.34,40.98-20.07,55.51 c-1.03,0.84-2.16,1.69-3.38,2.44c-0.66,0.47-0.84,0.84-0.56,1.59c2.34,7.13-0.94,15-7.5,18.38c-8.91,4.41-19.22-0.09-21.94-9.66 c-0.09-0.38-0.56-0.84-0.84-0.84C63.11,110.4,59.07,110.49,54.95,110.49L54.95,110.49z M55.14,104.21c4.22,0,8.44,0.19,12.66-0.09 c3.84-0.19,7.88-0.56,11.63-1.5c29.82-7.31,45.76-40.23,32.72-68.07C104.27,17.76,90.77,8.19,72.3,6.22 c-14.16-1.5-26.82,2.72-37.51,12.28c-10.5,9.47-15.94,21.28-16.31,35.44c-0.09,3.28,0,6.66,0,9.94 C18.38,71.02,14.35,76.55,7.5,78.7c-0.09,0-0.28,0.19-0.38,0.19c2.63,6.94,13.31,17.16,19.97,19.69 C35.45,87.14,52.32,91.18,55.14,104.21L55.14,104.21z"/>
               {/* Smile - orange */}
@@ -180,7 +180,7 @@ export default function Header() {
               width: '38px',
               height: '38px',
               borderRadius: '50%',
-              backgroundColor: '#0a1628',
+              backgroundColor: '#1A1A1A',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -227,7 +227,7 @@ export default function Header() {
               position: 'absolute',
               width: '90px',  // Bigger circle
               height: '90px',
-              backgroundColor: '#0a1628',
+              backgroundColor: '#1A1A1A',
               borderRadius: '50%',
               boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
             }}
@@ -267,7 +267,7 @@ export default function Header() {
             display: 'block',
             width: '32px', 
             height: '2px', 
-            backgroundColor: '#0a1628', 
+            backgroundColor: '#1A1A1A', 
             transition: 'all 0.3s ease',
             transform: isMobileMenuOpen ? 'translateY(9px) rotate(45deg)' : 'none',
           }} />
@@ -275,7 +275,7 @@ export default function Header() {
             display: 'block',
             width: '32px', 
             height: '2px', 
-            backgroundColor: '#0a1628', 
+            backgroundColor: '#1A1A1A', 
             transition: 'all 0.3s ease',
             opacity: isMobileMenuOpen ? 0 : 1,
           }} />
@@ -283,7 +283,7 @@ export default function Header() {
             display: 'block',
             width: '32px', 
             height: '2px', 
-            backgroundColor: '#0a1628', 
+            backgroundColor: '#1A1A1A', 
             transition: 'all 0.3s ease',
             transform: isMobileMenuOpen ? 'translateY(-9px) rotate(-45deg)' : 'none',
           }} />
@@ -327,7 +327,7 @@ export default function Header() {
                   position: 'absolute',
                   width: '110px',
                   height: '110px',
-                  backgroundColor: '#0a1628',
+                  backgroundColor: '#1A1A1A',
                   borderRadius: '50%',
                   boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
                 }}
@@ -420,11 +420,11 @@ export default function Header() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: '#0a1628',
+                    color: '#1A1A1A',
                     transition: 'color 0.2s',
                   }}
                   onMouseEnter={(e) => { e.currentTarget.style.color = '#BF9B7A'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.color = '#0a1628'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.color = '#1A1A1A'; }}
                   aria-label="Facebook"
                 >
                   <svg style={{ width: '18px', height: '18px' }} fill="currentColor" viewBox="0 0 24 24">
@@ -443,11 +443,11 @@ export default function Header() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: '#0a1628',
+                    color: '#1A1A1A',
                     transition: 'color 0.2s',
                   }}
                   onMouseEnter={(e) => { e.currentTarget.style.color = '#BF9B7A'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.color = '#0a1628'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.color = '#1A1A1A'; }}
                   aria-label="Instagram"
                 >
                   <svg style={{ width: '18px', height: '18px' }} fill="currentColor" viewBox="0 0 24 24">
@@ -484,7 +484,7 @@ export default function Header() {
                     padding: '14px 16px',
                     fontSize: '18px',
                     fontWeight: 500,
-                    color: activeSection === item.id ? '#BF9B7A' : '#0a1628',
+                    color: activeSection === item.id ? '#BF9B7A' : '#1A1A1A',
                     textAlign: 'center',
                     borderBottom: '1px solid rgba(0,0,0,0.1)',
                     textDecoration: 'none',

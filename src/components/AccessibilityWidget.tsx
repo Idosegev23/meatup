@@ -61,7 +61,7 @@ export default function AccessibilityWidget() {
           height: '56px',
           borderRadius: '50%',
           backgroundColor: '#BF9B7A',
-          color: '#0a1628',
+          color: '#1A1A1A',
           border: 'none',
           cursor: 'pointer',
           boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
@@ -108,7 +108,7 @@ export default function AccessibilityWidget() {
               left: isHebrew ? '24px' : 'auto',
               right: isHebrew ? 'auto' : '24px',
               width: '320px',
-              backgroundColor: '#0a1628',
+              backgroundColor: '#1A1A1A',
               borderRadius: '16px',
               padding: '24px',
               zIndex: 1002,
@@ -217,7 +217,7 @@ export default function AccessibilityWidget() {
                   justifyContent: 'center',
                 }}>
                   {settings.contrast && (
-                    <svg style={{ width: '14px', height: '14px' }} fill="#0a1628" viewBox="0 0 24 24">
+                    <svg style={{ width: '14px', height: '14px' }} fill="#1A1A1A" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
                   )}
@@ -253,7 +253,7 @@ export default function AccessibilityWidget() {
                   justifyContent: 'center',
                 }}>
                   {settings.highlightLinks && (
-                    <svg style={{ width: '14px', height: '14px' }} fill="#0a1628" viewBox="0 0 24 24">
+                    <svg style={{ width: '14px', height: '14px' }} fill="#1A1A1A" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
                   )}
@@ -289,7 +289,7 @@ export default function AccessibilityWidget() {
                   justifyContent: 'center',
                 }}>
                   {settings.pauseAnimations && (
-                    <svg style={{ width: '14px', height: '14px' }} fill="#0a1628" viewBox="0 0 24 24">
+                    <svg style={{ width: '14px', height: '14px' }} fill="#1A1A1A" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
                   )}

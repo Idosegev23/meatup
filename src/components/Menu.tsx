@@ -25,7 +25,7 @@ export default function Menu() {
 
   return (
     <>
-      <section id="menu" className="bg-[#0a1628]" style={{ padding: '80px 0 100px 0' }}>
+      <section id="menu" className="bg-[#1A1A1A]" style={{ padding: '80px 0 100px 0' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
         {/* Header */}
           <h2 style={{ fontSize: '2.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '24px' }}>
@@ -114,7 +114,7 @@ export default function Menu() {
                 transition={{ type: 'spring', damping: 25, stiffness: 300 }}
                 onClick={(e) => e.stopPropagation()}
               >
-              <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0a1628] rounded-2xl overflow-hidden shadow-2xl border border-[#BF9B7A]/20" style={{ margin: '16px' }}>
+              <div className="bg-gradient-to-br from-[#1A1A1A] to-[#1A1A1A] rounded-2xl overflow-hidden shadow-2xl border border-[#BF9B7A]/20" style={{ margin: '16px' }}>
                 {/* Header */}
                 <div className="relative h-32 md:h-40">
                   <Image
@@ -128,7 +128,7 @@ export default function Menu() {
                   {/* Close Button */}
                   <button
                     onClick={closeModal}
-                    className="absolute top-4 left-4 w-10 h-10 rounded-full bg-[#0a1628]/60 backdrop-blur-sm flex items-center justify-center text-[#F2F1F0] hover:bg-[#BF9B7A] transition-colors"
+                    className="absolute top-4 left-4 w-10 h-10 rounded-full bg-[#1A1A1A]/60 backdrop-blur-sm flex items-center justify-center text-[#F2F1F0] hover:bg-[#BF9B7A] transition-colors"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

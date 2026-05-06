@@ -56,8 +56,8 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/logoicon.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/logoicon.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="msapplication-TileColor" content="#0a1628" />
-        <meta name="theme-color" content="#0a1628" />
+        <meta name="msapplication-TileColor" content="#1A1A1A" />
+        <meta name="theme-color" content="#1A1A1A" />
       </head>
       <body
         className={`${heebo.variable} antialiased bg-charcoal text-off-white font-heebo`}

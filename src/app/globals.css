@@ -2,15 +2,15 @@
 
 :root {
   /* Brand Colors - Updated */
-  --charcoal: #0a1628;
+  --charcoal: #1A1A1A;
   --off-white: #F2F1F0;
   --bronze: #BF9B7A;
   --wood: #5C3E2B;
-  
+
   /* Functional */
   --background: var(--charcoal);
   --foreground: var(--off-white);
-  
+
   /* MagicBento */
   --glow-color: 205, 127, 50;
   --border-color: var(--wood);
@@ -18,7 +18,7 @@
 }
 
 @theme inline {
-  --color-charcoal: #0a1628;
+  --color-charcoal: #1A1A1A;
   --color-off-white: #F2F1F0;
   --color-bronze: #BF9B7A;
   --color-wood: #5C3E2B;

@@ -16,7 +16,7 @@ export default function Contact() {
 
   return (
     <>
-      <section id="contact" className="bg-[#0a1628]" style={{ padding: '80px 0 100px 0' }}>
+      <section id="contact" className="bg-[#1A1A1A]" style={{ padding: '80px 0 100px 0' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
           {/* Header */}
           <h2 style={{ fontSize: '2.5rem', fontWeight: 600, color: '#F2F1F0', marginBottom: '24px' }}>
@@ -98,7 +98,7 @@ export default function Contact() {
                 gap: '12px', 
                 padding: '16px 32px', 
                 backgroundColor: '#BF9B7A', 
-                color: '#0a1628', 
+                color: '#1A1A1A', 
                 fontWeight: 600, 
                 border: 'none', 
                 cursor: 'pointer',
