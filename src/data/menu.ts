@@ -268,8 +268,8 @@ export const menuData: MenuCategory[] = [
   {
     id: "desserts",
     name: {
-      he: "קינוחים",
-      en: "Desserts"
+      he: "Meat your Sweets",
+      en: "Meat your Sweets"
     },
     image: `${dishImg}/Warm-chocolate-fondant.jpg`,
     items: [
@@ -283,14 +283,20 @@ export const menuData: MenuCategory[] = [
       {
         id: "pistachio-tart",
         name: { he: "טארט פיסטוק לימון", en: "Pistachio Lemon Tart" },
-        description: { he: "קריספי פייט פיסטוק ושוקולד לבן קרמו לימון, קרם שנטילי וניל", en: "Crispy pistachio feuillantine and white chocolate, lemon cremeux, vanilla chantilly cream" },
+        description: { he: "קריספי פייטה פיסטוק ושוקולד לבן, קרמו לימון, קרם שנטילי וניל", en: "Crispy pistachio feuillantine and white chocolate, lemon cremeux, vanilla chantilly cream" },
         price: 42,
         image: `${dishImg}/Pistachio-lemon-tart.jpg`
       },
       {
+        id: "sorbet-fruits",
+        name: { he: "גלידת סורבה ופירות העונה", en: "Sorbet & Seasonal Fruits" },
+        description: { he: "תות / מנגו / פסיפלורה - שני כדורים לבחירה", en: "Strawberry / Mango / Passion Fruit - two scoops of your choice" },
+        price: 44
+      },
+      {
         id: "panna-cotta",
         name: { he: "קרם פנקוטה", en: "Panna Cotta" },
-        description: { he: "רוטב פסיפלורה, טוויל פריחת וקוליס פירות יער", en: "Passion fruit sauce, fruit tuile and berry coulis" },
+        description: { he: "רוטב פסיפלורה, טוויל פירות ורוטב פירות יער", en: "Passion fruit sauce, fruit tuile and berry sauce" },
         price: 46,
         image: `${dishImg}/Vanilla-panna-cotta-and-berries.jpg`
       },
@@ -300,6 +306,92 @@ export const menuData: MenuCategory[] = [
         description: { he: "עוגת שוקולד חמה ונימוחה, העשויה ללא קמח ומוגשת עם גלידת קרם וניל", en: "Hot and melting chocolate cake, made without flour, served with vanilla cream ice cream" },
         price: 48,
         image: `${dishImg}/Warm-chocolate-fondant.jpg`
+      }
+    ]
+  },
+  {
+    id: "wine",
+    name: {
+      he: "Meat your Wine",
+      en: "Meat your Wine"
+    },
+    image: "/imgs/meatupimgs/wine.webp",
+    note: {
+      he: "ליינות נוספים המשתנים בתפריט, ניתן לפנות למלצר היין",
+      en: "For additional rotating wines, please consult the wine server"
+    },
+    items: [
+      // אדום
+      { id: "subheader-red-wine", name: { he: "אדום", en: "Red" }, price: 0, isSubheader: true },
+      {
+        id: "house-red",
+        name: { he: "יין הבית אדום (כוס)", en: "House Red (Glass)" },
+        description: { he: "יין צעיר ורענן, גוף קליל ונעים, פירות יער אדומים ושחורים, דובדבן ונגיעה של פלפל שחור, סיומת חלקה", en: "Young and fresh wine, light and pleasant body, red and black berries, cherry and a touch of black pepper, smooth finish" },
+        price: 26
+      },
+      {
+        id: "darom-red-yatir",
+        name: { he: "דרום אדום, יתיר", en: "Darom Red, Yatir" },
+        description: { he: "בלנד אדום מאזור הנגב, גוף בינוני, פרי אדום רענן ואופי ים-תיכוני, חומציות מאוזנת וסיומת חלקה", en: "Red blend from the Negev region, medium body, fresh red fruit and Mediterranean character, balanced acidity and smooth finish" },
+        price: 120
+      },
+      {
+        id: "ramat-hagolan-red",
+        name: { he: "בלנד אדום, רמת הגולן", en: "Red Blend, Ramat HaGolan" },
+        description: { he: "בלנד מהאקלים הקריר של רמת הגולן, גוף בינוני-מלא, ארומות דובדבן ושזיף, נגיעות תבלין וסיומת מאוזנת", en: "Blend from the cool climate of Ramat HaGolan, medium-full body, cherry and plum aromas, hints of spice and balanced finish" },
+        price: 146
+      },
+      {
+        id: "har-amasa-red-yatir",
+        name: { he: "הר עמשא אדום, יתיר", en: "Har Amasa Red, Yatir" },
+        description: { he: "בלנד מדרום הרי יהודה, גוף מלא, פרי כהה בשל, תיבול עדין, מבנה מאוזן וסיומת ארוכה", en: "Blend from the southern Judean Hills, full body, ripe dark fruit, delicate spice, balanced structure and long finish" },
+        price: 170
+      },
+      {
+        id: "yaar-yatir",
+        name: { he: "יער יתיר, יתיר", en: "Yaar Yatir, Yatir" },
+        description: { he: "יין הדגל מדרום הרי יהודה, בלנד מורכב, עשיר ועוצמתי, גוף מלא, עומק של פרי שחור, תבלינים ועץ אלון, סיומת ארוכה ואלגנטית", en: "Flagship wine from the southern Judean Hills, complex blend, rich and powerful, full body, depth of black fruit, spices and oak, long and elegant finish" },
+        price: 380
+      },
+      // לבן
+      { id: "subheader-white-wine", name: { he: "לבן", en: "White" }, price: 0, isSubheader: true },
+      {
+        id: "house-white",
+        name: { he: "יין הבית לבן (כוס)", en: "House White (Glass)" },
+        description: { he: "יין קליל ורענן, ארומות של פירות בר, רמזי הדר, סיומת נקייה ונעימה", en: "Light and fresh wine, aromas of wild fruits, hints of citrus, clean and pleasant finish" },
+        price: 26
+      },
+      {
+        id: "darom-white-yatir",
+        name: { he: "דרום לבן, יתיר", en: "Darom White, Yatir" },
+        description: { he: "בלנד מאזור הנגב, גוף קל־בינוני, פרי הדר ופירות לבנים, רעננות נעימה וסיומת נקייה", en: "Blend from the Negev region, light-medium body, citrus and white fruits, pleasant freshness and clean finish" },
+        price: 120
+      },
+      {
+        id: "talpiot-white-la-pourah",
+        name: { he: "תלפיות לבן, לה פורה בלאנש", en: "Talpiot White, La Poire Blanche" },
+        description: { he: "בלנד בסגנון עמק הלואר מכרם שדה כלב שבדרום הר חברון, גוף בינוני, הדרים ופירות טרופיים, מינרליות עדינה, חומציות רעננה וסיומת יבשה ומאוזנת", en: "Loire Valley-style blend from the Sde Kalev vineyard in the southern Hebron Hills, medium body, citrus and tropical fruits, delicate minerality, fresh acidity and dry balanced finish" },
+        price: 120
+      },
+      {
+        id: "har-amasa-white-yatir",
+        name: { he: "הר עמשא לבן, יתיר", en: "Har Amasa White, Yatir" },
+        description: { he: "בלנד מדרום הרי יהודה, גוף בינוני, ארומות אפרסק ופירות לבנים, חומציות מאוזנת וסיומת אלגנטית", en: "Blend from the southern Judean Hills, medium body, peach and white fruit aromas, balanced acidity and elegant finish" },
+        price: 170
+      },
+      // רוזה
+      { id: "subheader-rose-wine", name: { he: "רוזה", en: "Rosé" }, price: 0, isSubheader: true },
+      {
+        id: "har-amasa-rose-yatir",
+        name: { he: "הר עמשא רוזה, יתיר", en: "Har Amasa Rosé, Yatir" },
+        description: { he: "רוזה יבש מדרום הרי יהודה, גוף קל־בינוני, תות שדה ופירות אדומים רעננים, חומציות נעימה וסיומת פריכה", en: "Dry rosé from the southern Judean Hills, light-medium body, strawberry and fresh red fruits, pleasant acidity and crisp finish" },
+        price: 120
+      },
+      {
+        id: "talpiot-rose-la-pourah",
+        name: { he: "תלפיות רוזה, לה פורה בלאנש", en: "Talpiot Rosé, La Poire Blanche" },
+        description: { he: "רוזה יבש בסגנון פרובאנס מכרם שדה כלב שבדרום הר חברון, גוף קל, תותי בר ופריחה עדינה, פירות יער רעננים, חומציות מרעננת וסיומת נקייה", en: "Provence-style dry rosé from the Sde Kalev vineyard in the southern Hebron Hills, light body, wild strawberries and delicate blossom, fresh berries, refreshing acidity and clean finish" },
+        price: 120
       }
     ]
   },
