@@ -69,6 +69,9 @@ export default function Contact() {
                 <a href={config.mapLink} target="_blank" rel="noopener noreferrer" style={{ color: '#F2F1F0', textDecoration: 'none' }}>
                     {language === 'he' ? config.address.he : config.address.en}
                   </a>
+                <p style={{ fontSize: '0.875rem', color: 'rgba(244,244,242,0.6)', marginTop: '2px' }}>
+                    {language === 'he' ? config.addressLine2.he : config.addressLine2.en}
+                  </p>
                 </div>
               </div>
 

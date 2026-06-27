@@ -11,14 +11,18 @@ export const config = {
   
   // Address
   address: {
-    he: "בן גוריון 13, בני ברק",
-    en: "13 Ben Gurion St, Bnei Brak"
+    he: "בר כוכבא 21, בני ברק",
+    en: "21 Bar Kochva St, Bnei Brak"
   },
-  
-  // Hours (placeholder - update with real hours)
+  addressLine2: {
+    he: "מתחם ה-BBC, בני ברק",
+    en: "BBC Complex, Bnei Brak"
+  },
+
+  // Hours
   hours: {
-    he: "א'-ה' 12:00-23:00 | מוצ\"ש 20:00-24:00",
-    en: "Sun-Thu 12:00-23:00 | Sat night 20:00-24:00"
+    he: "א'-ה' 11:00-00:00 | מוצ\"ש משעה לאחר צאת השבת ועד חצות או עד אחרון הסועדים",
+    en: "Sun-Thu 11:00-00:00 | Sat night: from 1hr after Shabbat ends until midnight or last guests"
   },
   
   // Tabit Reservation
@@ -40,8 +44,8 @@ export const config = {
   instagram: "https://instagram.com/meatup.bb",
   facebook: "https://facebook.com/meatup.bb",
   
-  // Google Maps - Ben Gurion 13, Bnei Brak
-  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d844.5!2d34.8328!3d32.0853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b9a1234abcd%3A0x1234567890abcdef!2z15HXnyDXkteV16jXmdeV158gMTMsINeR16DXmSDXkdeo16c!5e0!3m2!1siw!2sil!4v1704365000000!5m2!1siw!2sil",
-  mapLink: "https://www.google.com/maps/search/?api=1&query=בן+גוריון+13+בני+ברק",
-  wazeLink: "https://waze.com/ul?q=בן+גוריון+13+בני+ברק&navigate=yes"
+  // Google Maps - Bar Kochva 21, Bnei Brak (BBC Complex)
+  mapEmbed: "https://maps.google.com/maps?q=בר+כוכבא+21+בני+ברק&hl=iw&z=16&output=embed",
+  mapLink: "https://www.google.com/maps/search/?api=1&query=בר+כוכבא+21+בני+ברק",
+  wazeLink: "https://waze.com/ul?q=בר+כוכבא+21+בני+ברק&navigate=yes"
 } as const;

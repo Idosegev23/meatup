@@ -45,6 +45,7 @@ export default function ContactPage() {
       ),
       label: dict.contact.address,
       value: language === 'he' ? config.address.he : config.address.en,
+      subValue: language === 'he' ? config.addressLine2.he : config.addressLine2.en,
       href: config.mapLink,
       external: true
     },
@@ -109,6 +110,9 @@ export default function ContactPage() {
                     </a>
                   ) : (
                     <p className="text-lg text-off-white font-medium">{item.value}</p>
+                  )}
+                  {item.subValue && (
+                    <p className="text-sm text-off-white/60 mt-1">{item.subValue}</p>
                   )}
                 </div>
               ))}
