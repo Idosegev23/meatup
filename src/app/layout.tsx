@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageLoaderWrapper from "@/components/PageLoaderWrapper";
 import AccessibilityWidget from "@/components/AccessibilityWidget";
+import { Analytics } from "@vercel/analytics/next";
 import { restaurantJsonLd } from "@/lib/seo";
 import "./globals.css";
 
@@ -101,6 +102,7 @@ export default function RootLayout({
             <AccessibilityWidget />
           </LoadingProvider>
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );
