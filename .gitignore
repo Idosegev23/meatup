@@ -24,6 +24,10 @@
 .DS_Store
 *.pem
 
+# archived source photos (heavy raw camera + zip + old _processed webps)
+# moved out of /public so Vercel doesn't deploy them. Keep local for reference only.
+/_archive/
+
 # debug
 npm-debug.log*
 yarn-debug.log*

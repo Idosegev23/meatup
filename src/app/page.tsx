@@ -10,9 +10,9 @@ import GalleryBento from '@/components/GalleryBento';
 import Contact from '@/components/Contact';
 
 const heroImages = [
-  '/imgs/meatupimgs/img23_processed.webp',
-  '/imgs/meatupimgs/meats.webp',
-  '/imgs/meatupimgs/burgers.webp',
+  '/imgs/dishes/Ribeye-steak-antricot.webp',
+  '/imgs/dishes/meats.webp',
+  '/imgs/dishes/burgers.webp',
 ];
 
 export default function HomePage() {
@@ -165,7 +165,7 @@ export default function HomePage() {
           {/* Image */}
           <div style={{ position: 'relative', aspectRatio: '16/9', borderRadius: '12px', overflow: 'hidden' }}>
             <Image
-              src="/imgs/meatupimgs/img3.webp"
+              src="/imgs/dishes/img3.webp"
               alt="Restaurant ambiance"
               fill
               className="object-cover"
@@ -200,7 +200,7 @@ export default function HomePage() {
               }}
             >
               <Image
-                src="/imgs/meatupimgs/new3.webp"
+                src="/imgs/dishes/new3.webp"
                 alt={language === 'he' ? 'הזמנת מקום / איסוף' : 'Reserve / Pickup'}
                 fill
                 className="object-cover transition-transform duration-300 hover:scale-105"
@@ -239,7 +239,7 @@ export default function HomePage() {
               }}
             >
               <Image
-                src="/imgs/meatupimgs/new2.webp"
+                src="/imgs/dishes/new2.webp"
                 alt={language === 'he' ? 'משלוחים' : 'Delivery'}
                 fill
                 className="object-cover transition-transform duration-300 hover:scale-105"
@@ -274,7 +274,7 @@ export default function HomePage() {
         style={{
           position: 'relative',
           padding: '48px 16px',
-          backgroundImage: 'url(/imgs/meatupimgs/new1.webp)',
+          backgroundImage: 'url(/imgs/dishes/new1.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
