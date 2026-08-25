@@ -67,8 +67,8 @@ export default function ContactPage() {
       <section className="relative" style={{ paddingTop: '6rem', paddingBottom: '4rem' }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=1920&q=80"
-            alt=""
+            src="/imgs/dishes/img6_processed.webp"
+            alt={language === 'he' ? 'סועדים ותאורת הבר בחלל המסעדה של מיט אפ' : 'Diners and bar lighting in the MEATUP dining room'}
             fill
             priority
             className="object-cover"

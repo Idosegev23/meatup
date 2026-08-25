@@ -30,8 +30,8 @@ export default function Hero() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1920&q=80"
-            alt=""
+            src="/imgs/dishes/meats.webp"
+            alt={language === 'he' ? 'נתח סטייק פרוס מונף על מזלג במיט אפ' : 'A slice of steak lifted on a fork at MEATUP'}
             fill
             priority
             className="object-cover"

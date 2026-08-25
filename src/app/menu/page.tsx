@@ -24,8 +24,8 @@ export default function MenuPage() {
       <section className="relative" style={{ paddingTop: '6rem', paddingBottom: '4rem' }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1920&q=80"
-            alt=""
+            src="/imgs/dishes/img9_processed.webp"
+            alt={language === 'he' ? 'מגש מטבלים ולחם פרנה על שולחן במיט אפ' : 'Mezze platter and frena bread on a table at MEATUP'}
             fill
             priority
             className="object-cover"

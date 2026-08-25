@@ -36,8 +36,8 @@ export default function GalleryPage() {
       <section className="relative" style={{ paddingTop: '6rem', paddingBottom: '4rem' }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&q=80"
-            alt=""
+            src="/imgs/dishes/new2.webp"
+            alt={language === 'he' ? 'המבורגר בשר על רקע חלל המסעדה של מיט אפ' : 'Beef burger against the MEATUP dining room'}
             fill
             priority
             className="object-cover"
