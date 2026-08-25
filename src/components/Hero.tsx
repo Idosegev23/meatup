@@ -31,7 +31,7 @@ export default function Hero() {
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1920&q=80"
-            alt="Premium steak"
+            alt=""
             fill
             priority
             className="object-cover"

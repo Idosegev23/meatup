@@ -58,7 +58,7 @@ export default function About() {
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
-                alt="Restaurant ambiance"
+                alt=""
                 fill
                 className="object-cover"
               />

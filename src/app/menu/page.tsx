@@ -25,7 +25,7 @@ export default function MenuPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1920&q=80"
-            alt="Menu background"
+            alt=""
             fill
             priority
             className="object-cover"

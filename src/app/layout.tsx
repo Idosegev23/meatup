@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Heebo } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { LoadingProvider } from "@/context/LoadingContext";
@@ -17,13 +17,37 @@ const heebo = Heebo({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#1A1A1A",
+  colorScheme: "dark",
+};
+
 export const metadata: Metadata = {
   title: {
-    default: "MEATUP | Grill Burger & More",
+    default: "MEATUP | מסעדת בשרים והמבורגרים כשרה בבני ברק",
     template: "%s | MEATUP",
   },
-  description: "מיט אפ - המבורגריה ובשרים פרימיום בבני ברק. תפריט כשר בהשגחת הרבנות.",
-  keywords: ["מסעדת בשרים", "המבורגר", "בני ברק", "כשר", "MEATUP", "מיט אפ", "גריל", "סטייק", "מסעדה כשרה"],
+  description:
+    "מיט אפ - מסעדת בשרים והמבורגרים כשרה בבני ברק. סטייקים, המבורגרים ומנות גריל בהשגחת הרבנות בני ברק. בר כוכבא 21, מתחם ה-BBC. הזמנת מקום, משלוחים ואיסוף עצמי.",
+  applicationName: "MEATUP",
+  authors: [{ name: "MEATUP" }],
+  creator: "MEATUP",
+  publisher: "MEATUP",
+  category: "restaurant",
+  keywords: [
+    "מסעדת בשרים",
+    "המבורגר",
+    "בני ברק",
+    "כשר",
+    "MEATUP",
+    "מיט אפ",
+    "גריל",
+    "סטייק",
+    "מסעדה כשרה",
+    "מסעדה כשרה בבני ברק",
+    "המבורגר כשר",
+    "מתחם BBC",
+  ],
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://meatup.co.il"),
   alternates: { canonical: "/" },
   robots: {
@@ -34,26 +58,24 @@ export const metadata: Metadata = {
       follow: true,
       "max-image-preview": "large",
       "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
   verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION },
-  icons: {
-    icon: [
-      { url: '/logoicon.png' },
-      { url: '/logoicon.png', sizes: '192x192', type: 'image/png' },
-      { url: '/logoicon.png', sizes: '512x512', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
-    other: [
-      { rel: 'android-chrome-192x192', url: '/android-chrome-192x192.png' },
-      { rel: 'android-chrome-512x512', url: '/android-chrome-512x512.png' },
-    ],
+  // Icons come from the App Router file conventions — src/app/favicon.ico,
+  // icon.png and apple-icon.png. Declaring them here as well produced duplicate
+  // and contradictory <link> tags, so this field is intentionally omitted.
+  manifest: "/site.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: "MEATUP",
+    statusBarStyle: "black-translucent",
   },
+  formatDetection: { telephone: true, address: true },
   openGraph: {
-    title: "MEATUP | Grill Burger & More",
-    description: "מיט אפ - המבורגריה ובשרים פרימיום בבני ברק",
+    title: "MEATUP | מסעדת בשרים והמבורגרים כשרה בבני ברק",
+    description:
+      "סטייקים, המבורגרים ומנות גריל בהשגחת הרבנות בני ברק. בר כוכבא 21, מתחם ה-BBC, בני ברק.",
     url: "/",
     siteName: "MEATUP",
     locale: "he_IL",
@@ -62,10 +84,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MEATUP | Grill Burger & More",
-    description: "מיט אפ - המבורגריה ובשרים פרימיום בבני ברק",
+    title: "MEATUP | מסעדת בשרים והמבורגרים כשרה בבני ברק",
+    description: "סטייקים, המבורגרים ומנות גריל בהשגחת הרבנות בני ברק.",
   },
-  manifest: '/site.webmanifest',
+  other: { "msapplication-TileColor": "#1A1A1A" },
 };
 
 export default function RootLayout({
@@ -76,13 +98,6 @@ export default function RootLayout({
   return (
     <html lang="he" dir="rtl" className="scroll-smooth">
       <head>
-        <link rel="icon" type="image/png" href="/logoicon.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/logoicon.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/logoicon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="msapplication-TileColor" content="#1A1A1A" />
-        <meta name="theme-color" content="#1A1A1A" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantJsonLd) }}

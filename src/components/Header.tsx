@@ -234,7 +234,7 @@ export default function Header() {
           />
           <img
             src="/logofull.png"
-            alt="MEATUP"
+            alt="MEATUP מיט אפ"
             style={{ 
               height: '70px',  // Bigger logo
               width: 'auto',
@@ -334,7 +334,7 @@ export default function Header() {
               />
               <img
                 src="/logofull.png"
-                alt="MEATUP"
+                alt="MEATUP מיט אפ"
                 style={{ 
                   height: '80px', 
                   width: 'auto',

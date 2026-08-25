@@ -37,7 +37,7 @@ export default function GalleryPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&q=80"
-            alt="Gallery background"
+            alt=""
             fill
             priority
             className="object-cover"

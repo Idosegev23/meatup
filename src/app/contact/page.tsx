@@ -68,7 +68,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=1920&q=80"
-            alt="Contact background"
+            alt=""
             fill
             priority
             className="object-cover"

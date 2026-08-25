@@ -10,9 +10,27 @@ import GalleryBento from '@/components/GalleryBento';
 import Contact from '@/components/Contact';
 
 const heroImages = [
-  '/imgs/dishes/Ribeye-steak-antricot.webp',
-  '/imgs/dishes/meats.webp',
-  '/imgs/dishes/burgers.webp',
+  {
+    src: '/imgs/dishes/Ribeye-steak-antricot.webp',
+    alt: {
+      he: 'אנטריקוט ריביי פרוס עם מח עצם ורטבים',
+      en: 'Sliced ribeye steak with bone marrow and sauces',
+    },
+  },
+  {
+    src: '/imgs/dishes/meats.webp',
+    alt: {
+      he: 'נתח סטייק פרוס מונף על מזלג מעל צלחת הגשה',
+      en: 'A slice of steak lifted on a fork above a serving plate',
+    },
+  },
+  {
+    src: '/imgs/dishes/burgers.webp',
+    alt: {
+      he: 'המבורגר בשר עם בצל מקורמל ועשבי תיבול',
+      en: 'Beef burger with caramelized onion and herbs',
+    },
+  },
 ];
 
 export default function HomePage() {
@@ -45,9 +63,9 @@ export default function HomePage() {
       <section id="hero" className="relative min-h-screen flex items-end justify-center" style={{ paddingBottom: '35vh' }}>
         {/* Background Images - Rotating */}
         <div className="absolute inset-0 z-0">
-          {heroImages.map((src, index) => (
+          {heroImages.map((image, index) => (
             <div
-              key={src}
+              key={image.src}
               style={{
                 position: 'absolute',
                 inset: 0,
@@ -56,8 +74,8 @@ export default function HomePage() {
               }}
             >
               <Image
-                src={src}
-                alt="Premium steak"
+                src={image.src}
+                alt={language === 'he' ? image.alt.he : image.alt.en}
                 fill
                 priority={index === 0}
                 className="object-cover"
@@ -166,7 +184,7 @@ export default function HomePage() {
           <div style={{ position: 'relative', aspectRatio: '16/9', borderRadius: '12px', overflow: 'hidden' }}>
             <Image
               src="/imgs/dishes/img3.webp"
-              alt="Restaurant ambiance"
+              alt={language === 'he' ? 'מלצר מגיש המבורגר עוף פריך' : 'Server presenting a crispy chicken burger'}
               fill
               className="object-cover"
             />

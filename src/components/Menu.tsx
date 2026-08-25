@@ -38,7 +38,7 @@ export default function Menu() {
           <div style={{ marginBottom: '48px' }}>
             <Image
               src="/kosher.png"
-              alt="כשר"
+              alt={kosherText}
               width={80}
               height={80}
               style={{ margin: '0 auto', filter: 'brightness(0) invert(1)' }}

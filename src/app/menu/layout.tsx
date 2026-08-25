@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogImage } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "תפריט",
@@ -9,6 +10,18 @@ export const metadata: Metadata = {
     title: "תפריט | MEATUP",
     description: "המבורגרים, סטייקים, מנות גריל, סלטים, קינוחים ויינות - כשר בבני ברק.",
     url: "/menu",
+    // siteName/locale/type are repeated here on purpose: Next merges metadata
+    // shallowly, so a route-level openGraph replaces the root one outright.
+    siteName: "MEATUP",
+    locale: "he_IL",
+    type: "website",
+    images: [ogImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [ogImage.url],
+    title: "תפריט | MEATUP",
+    description: "המבורגרים, סטייקים, מנות גריל, סלטים, קינוחים ויינות - כשר בבני ברק.",
   },
 };
 
