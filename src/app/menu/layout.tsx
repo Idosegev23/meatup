@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ogImage } from "@/lib/seo";
+import { ogImage, menuJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "תפריט",
@@ -26,5 +26,17 @@ export const metadata: Metadata = {
 };
 
 export default function MenuLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("תפריט", "/menu")) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(menuJsonLd) }}
+      />
+      {children}
+    </>
+  );
 }

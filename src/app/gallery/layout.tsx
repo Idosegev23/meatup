@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ogImage } from "@/lib/seo";
+import { ogImage, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "גלריה",
@@ -26,5 +26,13 @@ export const metadata: Metadata = {
 };
 
 export default function GalleryLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("גלריה", "/gallery")) }}
+      />
+      {children}
+    </>
+  );
 }

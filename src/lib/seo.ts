@@ -1,4 +1,5 @@
 import { config } from "@/data/config";
+import { menuData } from "@/data/menu";
 
 /** Production site URL. Override per-environment via NEXT_PUBLIC_SITE_URL. */
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://meatup.co.il";
@@ -104,3 +105,51 @@ export const restaurantJsonLd = {
     },
   ],
 };
+
+/**
+ * schema.org/Menu built from `menuData` itself rather than a hand-kept copy,
+ * so a price edit in menu.ts flows into the structured data automatically.
+ *
+ * Subheader rows are dividers, not dishes, so they are filtered out. Hebrew is
+ * used throughout because the site has no /en route for a crawler to reach.
+ */
+export const menuJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "@id": `${SITE_URL}/menu#menu`,
+  name: "התפריט של MEATUP",
+  url: `${SITE_URL}/menu`,
+  inLanguage: "he-IL",
+  provider: { "@id": `${SITE_URL}/#restaurant` },
+  hasMenuSection: menuData.map((category) => ({
+    "@type": "MenuSection",
+    name: category.name.he,
+    ...(category.note ? { description: category.note.he } : {}),
+    hasMenuItem: category.items
+      .filter((item) => !item.isSubheader)
+      .map((item) => ({
+        "@type": "MenuItem",
+        name: item.name.he,
+        ...(item.description ? { description: item.description.he } : {}),
+        ...(item.image ? { image: `${SITE_URL}${item.image}` } : {}),
+        offers: [
+          { "@type": "Offer", price: item.price, priceCurrency: "ILS" },
+          ...(item.priceAlt
+            ? [{ "@type": "Offer", price: item.priceAlt, priceCurrency: "ILS" }]
+            : []),
+        ],
+      })),
+  })),
+};
+
+/** Breadcrumb trail for an inner page, rooted at the homepage. */
+export function breadcrumbJsonLd(name: string, path: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "דף הבית", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name, item: `${SITE_URL}${path}` },
+    ],
+  };
+}
