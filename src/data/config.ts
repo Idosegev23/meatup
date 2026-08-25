@@ -41,7 +41,7 @@ export const config = {
   },
   
   // Social
-  instagram: "https://instagram.com/meatup.bb",
+  instagram: "https://www.instagram.com/meatup_grill_burger/",
   facebook: "https://facebook.com/meatup.bb",
   
   // Google Maps - Bar Kochva 21, Bnei Brak (BBC Complex)
